@@ -77,7 +77,7 @@
 #set($js_full_path = $full_templates_path + "/../js")
 
 ## If set to true, theme_js_scripts are loaded inline in page (i.e. directly inside a script tag) which reduces the number of http requests
-#set($theme_js_inline = true)
+#set($theme_js_inline = false)
 
 #set($theme_js_scripts = [
     "fixes/ios-orientationchange-fix.js",
