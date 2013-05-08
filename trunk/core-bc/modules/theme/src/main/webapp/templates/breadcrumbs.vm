@@ -1,0 +1,15 @@
+#if($use_rp_breadcrumbs_portlet)
+	#set ($VOID = $velocityPortletPreferences.setValue("portlet-setup-show-borders", "false"))
+	$taglibLiferay.runtime($rp_breadcrumbs_portlet_id, "", $velocityPortletPreferences.toString())
+	#set ($VOID = $velocityPortletPreferences.reset())
+#else
+    <nav class="site-breadcrumbs aui-helper-hidden_ clearfix" id="breadcrumbs">
+    	<div class="breadcrumbs-list-wrap clearfix">
+    		<div class="breadcrumbs-label">
+    			$breadcrumbs_label:
+    		</div>
+    		#breadcrumbs()
+    	</div>
+    	##<h1>$the_title</h1>
+    </nav>
+#end

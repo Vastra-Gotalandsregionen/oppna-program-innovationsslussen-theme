@@ -1,0 +1,337 @@
+/*----------------------------------------------------------------------
+=All devices with width 940px or less and iPad both landscape and portrait
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 940px),
+	screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+/* ----------------- Banner / header ----------------------- */
+
+.company-title {
+	display: none;
+}
+
+.company-title-responsive {
+	display: block;
+}
+
+.company-title {
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#banner .company-title .logo {
+	float: none;
+	margin: 0 auto;
+}
+
+.top-navigation {
+	float: none;
+	margin: 0 0 10px 0;
+	position: relative;
+}
+
+ul.top-nav-list {
+	float: none;
+}
+
+.header-inner,
+.content-inner,
+.footer-inner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/* -----------------  Layout ----------------------- */
+
+/*---- VAP Columns ----*/
+
+.rp-columns-vap-start-page #column-2,
+.rp-columns-vap-start-page #column-3 {
+	width: 49.9%;
+}
+
+.rp-columns-vap-start-page #column-4 {
+	width: 100.0%;
+}
+
+/* ----------------- Liferay Portlets ----------------------- */
+
+/*---- Navigation Portlet ----*/
+
+ul.section-navigation-list li {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+ul.section-navigation-list li a .inner {
+	min-height: auto;
+}
+	
+/* ----------------- Custom Portlets ----------------------- */
+
+/*---- VAP Search Portlet ----*/
+
+
+.vap-search-wrap {
+	padding: 0 2%;
+}
+
+/* ----------------- Navigation ----------------------- */
+
+/* -- Main Navigation -- */
+
+.rp-navigation-portlet,
+#navigation {
+	display: none;
+}
+/* -- Navigation Menu Button -- */
+
+#navigationTrigger,
+#navigationButtonMenu {
+	display: block;
+}
+
+#navigationButtonMenu ul {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+	
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 800px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 800px) {
+	
+	
+/* -----------------  Layout ----------------------- */
+
+/*---- RP Columns ----*/
+
+#content .rp-columns .portlet-column {
+	width: 100.0%;
+}
+
+.rp-columns .portlet-column-content {
+	padding: 5px 0;
+}
+	
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 600px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 600px) {
+	
+	
+/* ----------------- Banner / header ----------------------- */
+
+.header-inner,
+.content-inner,
+.footer-inner {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+	
+ul.top-nav-list .top-nav-settings,
+ul.top-nav-list .top-nav-quick-access {
+	display: none;
+}
+
+.company-title-responsive,
+#banner .company-title-responsive .logo {
+	width: 205px;
+}
+
+#banner .company-title-responsive .logo {
+	background-position: 0 -50px;
+	height: 22px;
+}
+
+#banner .company-title .server-node-info  {
+	display: none;
+}
+
+#toolsSidebar {
+	display: none;
+}
+
+#main-content {
+	margin-right: 0;
+	margin: 0;
+}
+
+/* -----------------  Layout ----------------------- */
+
+/*---- RP Columns ----*/
+
+#content .rp-columns .portlet-column {
+	width: 100.0%;
+}
+
+.rp-columns .portlet-column-content {
+	padding: 5px 0;
+}
+
+/*---- RP Landing Page ----*/
+
+.rp-columns-landing-page #column-sidebar {
+	display: none;
+}
+
+/* -----------------  Navigation ----------------------- */
+
+#navigationButtonMenu ul {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+ul.site-navigation-list > li {
+	display: block;
+	min-width: auto;
+	width: 100%;
+}
+
+/* ----------------- Liferay Portlets ----------------------- */
+
+/*---- Navigation Portlet ----*/
+
+ul.section-navigation-list li {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+	
+/* ----------------- Custom Portlets ----------------------- */
+
+/*---- VAP Search Portlet ----*/
+
+.vap-search-wrap {
+	padding: 0;
+}
+
+.search-box-left,
+.search-box-right,
+.search-box-center {
+	background: none;
+}
+
+.search-box-left,
+.search-box-right {
+	padding: 0;
+}
+
+.search-box-center {
+	padding: 0;
+}
+
+.vap-search-wrap .search-input-wrap {
+	border: 1px solid #cad5de;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius:  4px;	
+	-moz-box-shadow: 0px 1px 4px 0px #cccccc;
+	-webkit-box-shadow: 0px 1px 4px 0px #cccccc;
+	box-shadow: 0px 1px 4px 0px #cccccc;
+}
+
+/*---- VAP Search Results ----*/
+
+.vap-search-results-summary {
+	font-size: 1.6em;
+}
+
+
+/*---- VAP Latest Documents ----*/
+
+.vap-latest-documents > .bd {
+	min-height: 0;
+}
+
+/* ----------------- Articles ----------------------- */
+
+/*---- News box article ----*/
+
+.news-box-wrap {
+	display: none;
+}
+
+}
+/*----------------------------------------------------------------------
+=Desktops and laptops
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1320px) {
+	
+	
+	#main-content {
+		margin-right: 0;
+	}
+	
+}
+
+/*----------------------------------------------------------------------
+=iPads  - portrait and landscape
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {	}
+
+/*----------------------------------------------------------------------
+=Smartphones - landscape 
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 321px) {}
+
+/*----------------------------------------------------------------------
+=Smartphones - portrait 
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 320px) {}
+
+
+/*----------------------------------------------------------------------
+=iPads  - portrait and landscape
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+
+/*----------------------------------------------------------------------
+=iPads  - landscape
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+}
+
+/*----------------------------------------------------------------------
+=iPads  - portrait
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+}
+
+/*----------------------------------------------------------------------
+=Desktops and laptops
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1224px) {}
+
+/*----------------------------------------------------------------------
+=Large screens
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1824px) {}
+
+/*----------------------------------------------------------------------
+=iPhone 4
+----------------------------------------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {}

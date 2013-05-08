@@ -1,0 +1,123 @@
+##
+## Null
+##
+
+#set($null = $some-never-used-variable)
+
+##
+## Theme settings
+##
+
+#set($show_breadcrumbs = false)
+
+#if ($theme.getSetting("show-breadcrumbs") == "true")
+	#set($show_breadcrumbs = true)
+#end
+
+#if($show_breadcrumbs)
+	#set($css_class = $css_class + " has-breadcrumbs")
+#end
+
+##
+## Services
+##
+
+##
+## Piwik Tracking Portlet
+##
+
+#set ($piwik_tracking_portlet_id = "piwiktracking_WAR_piwiktrackingportlet")
+
+##
+## Dockbar
+##
+
+#set($showDockbar = 
+	$permissionChecker.isOmniadmin() ||
+	$permissionChecker.isCompanyAdmin($company_id) ||
+	$permissionChecker.isCommunityAdmin($group_id) ||
+	$permissionChecker.isCommunityOwner($group_id)
+)
+##set($showDockbar = true)
+
+##
+## Phrases
+##
+
+##
+## Top navigation
+##
+
+#set($topnavSettingsShowText = "Visa meny f&ouml;r inst&auml;llningar")
+#set($topnavSettingsHideText = "G&ouml;m meny f&ouml;r inst&auml;llningar")
+
+##
+## Tyck till
+##
+
+#set($tycktillPortalURL = "#tyck-till")
+#set($tycktillDialogURL = "http://tycktill.vgregion.se/tyck-till/tycktill/KontaktaOss?formName=portalen&breadcrumb=portalen-tycktill")
+
+##
+## Login Link Portlet
+##
+
+#set ($loginlink_portlet_id = "loginlink_WAR_navigationportlet")
+
+
+##
+## RP Admin
+##
+#set($show_sign_in_link = true)
+
+##
+## Theme Javascript
+##
+
+#set($js_full_path = $full_templates_path + "/../js")
+
+## If set to true, theme_js_scripts are loaded inline in page (i.e. directly inside a script tag) which reduces the number of http requests
+#set($theme_js_inline = true)
+
+#set($theme_js_scripts = [
+    "fixes/ios-orientationchange-fix.js",
+	"modules/rp-footer-plugin.js",
+    "modules/rp-tyck-till.js",
+    "modules/rp-navigation-button.js",
+	"modules/rp-iframe-link-plugin.js",
+    "modules/innovationsslussen-theme.js",
+    "theme-main.js"
+])
+
+##
+## Portal type
+##
+
+#set ($portalURL = $portalUtil.getPortalURL($themeDisplay))
+
+#set ($url_server_local = "localhost")
+#set ($url_server_test = "portalen-test")
+#set ($url_server_stage = "portalen-stage")
+
+#set ($is_server_local = $stringUtil.contains($portalURL, $url_server_local, ""))
+#set ($is_server_test = $stringUtil.contains($portalURL, $url_server_test, ""))
+#set ($is_server_stage = $stringUtil.contains($portalURL, $url_server_stage, ""))
+
+##
+## Piwik
+##
+#set($piwikActive = false)
+#if ($propsUtil.get("web.tracking.piwik.active") == "true")
+	#set ($piwik_active = true)
+#elseif ($propsUtil.get("web.tracking.piwik.active") == true)
+	#set ($piwik_active = true)
+#end
+
+
+#set ($piwik_base_url = "piwik.vgregion.se/" )
+#set ($protocol_url_prefix = "http://")
+#if($themeDisplay.isSecure())
+	#set ($protocol_url_prefix = "https://")	
+#end	
+#set ($piwik_url = $protocol_url_prefix + $piwik_base_url)
+#set ($piwik_site_id = 77 )

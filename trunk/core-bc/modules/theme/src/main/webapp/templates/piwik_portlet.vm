@@ -1,0 +1,3 @@
+#set ($VOID = $velocityPortletPreferences.setValue("portlet-setup-show-borders", "false"))
+$taglibLiferay.runtime($piwik_tracking_portlet_id, "", $velocityPortletPreferences.toString())
+#set ($VOID = $velocityPortletPreferences.reset())

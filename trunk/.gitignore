@@ -1,0 +1,15 @@
+/core-bc/modules/portlet/src/main/resources/rebel.xml
+/core-bc/modules/theme/src/main/resources/rebel.xml
+
+.DS_Store
+
+.settings/*
+.classpath
+.project
+
+core-bc/modules/theme/target/*
+core-bc/modules/theme/.settings/*
+
+_sprite.properties
+_sprite.png
+_sprite.gif
