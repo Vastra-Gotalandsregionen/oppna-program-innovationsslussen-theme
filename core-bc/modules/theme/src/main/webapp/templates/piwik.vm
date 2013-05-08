@@ -1,0 +1,13 @@
+<script type="text/javascript" src="${piwik_url}piwik.js"></script>
+
+<script type="text/javascript">
+	try {
+		var piwikTracker = Piwik.getTracker('${piwik_url}' + 'piwik.php', ${piwik_site_id});
+		piwikTracker.trackPageView();
+		piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+</script>
+
+<noscript>
+	<p><img src="${piwik_url}piwik.php?idsite=${piwik_site_id}" style="border:0" alt="" /></p>
+</noscript>

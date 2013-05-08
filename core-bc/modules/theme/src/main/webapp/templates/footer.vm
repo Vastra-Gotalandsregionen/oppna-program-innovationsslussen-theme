@@ -1,0 +1,18 @@
+<div class="footer-inner">
+	<div class="footer-content clearfix">
+		<span class="logo">
+			<span>$region_portal_name</span>
+		</span>
+		#if($is_server_local || $is_server_test || $is_server_stage)
+    		<div class="server-info">
+        		#if($is_server_local)
+        			Server: Local
+        		#elseif($is_server_test)
+        			Server: Test
+        		#elseif($is_server_stage)
+        			Server: Stage
+    			#end
+    		</div>
+		#end
+	</div>
+</div>
