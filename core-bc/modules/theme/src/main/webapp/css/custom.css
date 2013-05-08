@@ -3164,18 +3164,14 @@ ul.rp-simple-list li a {
 
 .banner-box {
 	background: url(../images/carousel/carousel-shadow-24.png) bottom center no-repeat;
-	/*height: 300px;*/
 	overflow: hidden;
 	padding: 0 0 27px 0;
 	position: relative;
-	margin: 0;	
+	margin: 0;
+	zoom: 1;
 }
 
 .banner-box .banner-box-content {
-	border: 1px solid #d5e3ee;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
 	height: 100%;
 	margin: 0;
 	overflow: hidden;
@@ -3183,12 +3179,21 @@ ul.rp-simple-list li a {
 	z-index: 2;
 }
 
+.banner-box .banner-box-content .aui-carousel-item {
+	border: 1px solid #d5e3ee;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: block;
+	margin: 0;
+}
+
 .banner-box .banner-box-content a.banner-box-link {
 	display: block;
-	width: 100%;
 }
 
 .banner-box .banner-box-link img {
+	display: block;
 	width: 100%;
 }
 
@@ -3199,7 +3204,7 @@ ul.rp-simple-list li a {
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
-	position: absolute;
+	position: relative;
 	top: 0;
 	z-index: 2;	
 }

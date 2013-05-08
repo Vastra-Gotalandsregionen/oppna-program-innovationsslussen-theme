@@ -53,21 +53,16 @@ AUI().add('innovationsslussen-theme',function(A) {
 					_initBannerCarousel: function() {
 						var instance = this;
 						
-						console.log('foo');
-						
 						var bannerBox = instance.get(BANNER_BOX);
 						
 						if(isNull(bannerBox)) {return;}
-						
-						var computedHeightBannerBox = parseInt(bannerBox.getComputedStyle('height').replace('px', ''));
-						bannerBox.setStyle('height', computedHeightBannerBox);
 						
 						var bannerBoxContent = bannerBox.one('.banner-box-content');
 						
 						if(isNull(bannerBoxContent)) {return;}
 						
-						var computedWidth = parseInt(bannerBoxContent.getComputedStyle('width').replace('px', ''));
-						var computedHeight = parseInt(bannerBoxContent.getComputedStyle('height').replace('px', ''));
+						var bannerBoxContentWidth = instance._getNodeWidth(bannerBox);
+						var bannerBoxContentHeight = instance._getNodeHeight(bannerBox);
 						
                         var bannerBoxMenu = bannerBox.one('.banner-box-menu');
                         bannerBoxMenu.show();
@@ -76,8 +71,8 @@ AUI().add('innovationsslussen-theme',function(A) {
 							intervalTime: 8,
 							contentBox: bannerBoxContent,
 							activeIndex: 'rand',
-							height: computedHeight,
-							width: computedWidth,
+							height: bannerBoxContentHeight,
+							width: bannerBoxContentWidth,
                             nodeMenu: bannerBoxMenu,
                             nodeMenuItemSelector: 'li'
 						}).render();
@@ -85,37 +80,73 @@ AUI().add('innovationsslussen-theme',function(A) {
 						bannerBoxContent.all('a.banner-box-link').removeClass('aui-helper-hidden');
 						bannerBox.addClass('banner-box-js');
 						
+						// Move carousel to next item (needed due to bug in ie7 with height and a bug in aui-carousel that prevents carousel.next() to work properly)
+						var currentIndex = instance.bannerCarousel.get('activeIndex');
+						var nodeSelectionSize = instance.bannerCarousel.nodeSelection.size();
+
+						var newIndex = currentIndex + 1;
+
+						if (newIndex > (nodeSelectionSize - 1)) {
+							newIndex = 0;
+						}
+
+						instance.bannerCarousel.item(newIndex);
+						
                         // Bind window size change event
-                        A.on('windowresize', function(e) {
+                        A.after('windowresize', function(e) {
+                        	var instance = this;
+                        	
                         	var bannerBox = instance.get(BANNER_BOX);
                         	
                             if(isNull(bannerBox)) {return;}
                             
-                            var bannerBoxContent = bannerBox.one('.banner-box-content');
+                            var carouselNode = bannerBox.one('.aui-carousel');
                             
-                            if(isNull(bannerBoxContent)) {return;}
+                            if(isNull(carouselNode)) {return;}
                             
-    						var computedWidth = parseInt(bannerBoxContent.getComputedStyle('width').replace('px', ''));
-    						var computedHeight = parseInt(bannerBoxContent.getComputedStyle('height').replace('px', ''));
-    						
-    						var width = computedWidth;
-    						var height = computedHeight;
-    						
-    						if(height > 300) {
-    							height = 300;
-    						}
-    						
-    						//alert('resize width and height is: ' + width + ', ' + height);
-    							
+                            var carouselHeight = instance._getNodeHeight(carouselNode);
+                            var carouselWidth = instance._getNodeWidth(carouselNode);
+                            var carouselRatio = carouselHeight/carouselWidth;
                             
-                            instance.bannerCarousel.set('width', width);
-                            //instance.bannerCarousel.set('height', height);
+                            carouselNode.setStyle('width', 'auto');
                             
-                            instance.bannerCarousel.render();
+                            var carouselWidthNew = instance._getNodeWidth(carouselNode);
+                            var carouselHeightNew = carouselRatio * carouselWidthNew;
 
-                        });
+                            instance.bannerCarousel.set('width', carouselWidthNew);
+                            instance.bannerCarousel.set('height', carouselHeightNew);
+    						
+                            instance.bannerCarousel.render();
+                        }, instance);
 						
+					},
+					
+					_getNodeHeight: function(node) {
+						var instance = this;
 						
+						var height = 0;
+						
+						var computedHeightStr = node.getComputedStyle('height');
+						
+						if(computedHeightStr) {
+							height = parseInt(computedHeightStr.replace('px', ''));
+						}
+						
+						return height;
+					},
+					
+					_getNodeWidth: function(node) {
+						var instance = this;
+						
+						var width = 0;
+						
+						var computedWidthStr = node.getComputedStyle('width');
+						
+						if(computedWidthStr) {
+							width = parseInt(computedWidthStr.replace('px', ''));
+						}
+						
+						return width;
 					},
                     
                     _initBreadcrumbs: function() {
