@@ -10,7 +10,7 @@
 			<setting key="show-breadcrumbs" value="true" />
 		</settings>
 	</theme>
-	<theme id="vgr-theme-2-no-breadcrumbs" name="Innovationsslussen Theme (no breadcrumbs)">
+	<theme id="innovationsslussen-no-breadcrumbs" name="Innovationsslussen Theme (no breadcrumbs)">
 		<settings>
 			<setting key="show-breadcrumbs" value="false" />
 		</settings>

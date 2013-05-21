@@ -247,6 +247,12 @@ h4 {
 	font-size: 14px;
 }
 
+p.intro {
+	color: #555;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
 a,
 a:visited {
 	color: #2f72a9;
@@ -502,8 +508,18 @@ ul.top-nav-list li .login-link-portlet > a {
 	font-weight: normal;
 	line-height: 1.0;
 	margin: 0;
-	padding: 10px 14px;
+	padding: 0;
 	text-decoration: none;
+}
+
+#navigation ul.nav-list li a span {
+	display: block;
+	padding: 10px 14px;
+}
+
+#navigation ul.nav-list li:first-child a span {
+	background: url(../images/navigation/nav-home-icon.png) 8px 47% no-repeat;
+	padding-left: 30px;
 }
 
 /* Hover */
@@ -2444,6 +2460,12 @@ ul.idea-list > li {
 	width: 32.55%;
 }
 
+.ie7 ul.idea-list > li {
+	display: inline;
+	zoom: 1;
+}
+
+
 .idea-list .idea {
 	background: #bcd3e6;
 	border: 1px solid #aac9e2;
@@ -2947,6 +2969,58 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	display: block;
 	padding: 3px 0 3px 36px;
 }
+
+
+/*------- FAQ -------*/
+
+.faq-wrap {}
+
+.faq-section {   
+	margin: 10px 0;
+}
+    
+.faq-section h2 {
+	font-size: 1.6em;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+    
+.faq-section ul {
+	list-style: none;
+	margin: 10px 0;
+	padding: 0 0 0 10px;
+}
+.faq-section ul li {
+	margin: 5px 0 0 0;
+}
+
+.faq-question:hover,
+.faq-question.hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.faq-question.active {
+	font-weight: bold;	
+}
+
+.faq-question .faq-answer {
+	background: #efefef;
+	border: 1px dashed #ddd;
+	margin: 2px 0 0 0;
+	padding: 10px;
+}
+
+.faq-question .faq-answer p:last-child {
+	margin-bottom: 0;
+}
+
+.js .faq-wrap-not-active .faq-answer {
+	display: none;
+}
+
+
 
 /*----------------------------------------------------------------------
 =Debugging
