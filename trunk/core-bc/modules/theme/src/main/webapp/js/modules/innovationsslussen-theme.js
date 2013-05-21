@@ -44,10 +44,32 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._initMainNavigation();
                         instance._initOverlayLinks();
                         instance._initTyckTill();
+                        instance._initFaq();
                     },
     
                     bindUI: function() {
                         var instance = this;
+                        
+                        instance._bindFaq();
+                    },
+                    
+                    _bindFaq: function () {
+                    	var instance = this;
+                    	
+                    	var faqQuestionNodes = A.all('.faq-question');
+                    	
+                    	if(faqQuestionNodes) {
+                        	faqQuestionNodes.on('click', instance._onFaqQuestionClick, instance);
+                        	
+                        	faqQuestionNodes.on('mouseover', function(e) {
+                        		var currentTarget = e.currentTarget;
+                        		currentTarget.addClass('hover');
+                        	});
+                        	faqQuestionNodes.on('mouseout', function(e) {
+                        		var currentTarget = e.currentTarget;
+                        		currentTarget.removeClass('hover');
+                        	});
+                    	}
                     },
                     
 					_initBannerCarousel: function() {
@@ -120,6 +142,22 @@ AUI().add('innovationsslussen-theme',function(A) {
                         }, instance);
 						
 					},
+					
+                    _initFaq: function() {
+                    	var instance = this;
+                    	
+                    	var answerNodes = A.all('.faq-answer');
+                    	if(answerNodes) {
+                    		answerNodes.hide();	
+                    	}
+                    	
+                    	var faqWrap = A.all('.faq-wrap');
+                    	
+                    	if(faqWrap) {
+                    		faqWrap.removeClass('faq-wrap-not-active');	
+                    	}
+                    },
+					
 					
 					_getNodeHeight: function(node) {
 						var instance = this;
@@ -210,6 +248,30 @@ AUI().add('innovationsslussen-theme',function(A) {
             			
             			tyckTill.render();
             		},
+            		
+                    _onFaqQuestionClick: function(e) {
+                    	var instance = this;
+                    	
+                    	var questionNode = e.currentTarget;
+                    	var answerNodes = questionNode.siblings('.faq-answer');
+                    	var faqWrap = questionNode.ancestor('.faq-wrap');
+                    	
+                    	var allQuestionNodes = faqWrap.all('.faq-question');
+                    	var allAnswerNodes = faqWrap.all('.faq-answer');
+                    	
+                    	var isTargetActive = questionNode.hasClass('active');
+                    	
+                    	allAnswerNodes.hide();
+                    	allQuestionNodes.removeClass('active');
+                    	
+                    	if(isTargetActive) {
+                    		questionNode.removeClass('active');
+                    	}
+                    	else {
+                    		questionNode.addClass('active');
+                    		answerNodes.show();
+                    	}
+                    },
             		
             		_onMainNavEnter: function(e) {
             			var instance = this;
