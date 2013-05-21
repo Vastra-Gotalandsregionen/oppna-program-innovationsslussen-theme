@@ -3020,7 +3020,66 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	display: none;
 }
 
+/*------- Puff Box -------*/
 
+.puff-box {
+	background: url(../images/articles/box-shadow-24.png) bottom center no-repeat;
+	padding: 0 0 14px 0;
+	position: relative;
+	margin: 0;	
+}
+
+.puff-box-inner {
+	background: #f0faeb;
+	border: 1px solid #e5e5e5;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;	
+	margin: 0;
+	padding: 20px;
+	position: relative;
+}
+
+.puff-box h2 {
+	color: #456c29;
+	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+	font-size: 1.9em;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+
+.puff-box .puff-box-content {
+	
+}
+
+.puff-box .puff-box-link-wrap {
+	margin: 0 auto;
+	text-align: center;	
+}
+
+.puff-box .puff-box-link-wrap a {
+	background: #548332 url(../images/articles/puff-box-link-bg.png) 0 0 repeat-x;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+	color: #fff;
+	display: inline-block;
+	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+	font-size: 1.4em;
+	padding: 10px 15px;
+	text-decoration: none;	
+}
+
+.puff-box .puff-box-link-wrap a:hover {
+	background: #5b8b38 url(../images/articles/puff-box-link-bg-hover.png) 0 0 repeat-x;
+	text-decoration: none;
+}
+
+.ie7 .puff-box .puff-box-link-wrap a {
+	display: inline;
+	zoom: 1;
+}
 
 /*----------------------------------------------------------------------
 =Debugging
