@@ -3030,7 +3030,7 @@ ul.news-box-menu li.aui-carousel-menu-active {
 }
 
 .puff-box-inner {
-	background: #f0faeb;
+	background: #eef5fa;
 	border: 1px solid #e5e5e5;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -3041,7 +3041,7 @@ ul.news-box-menu li.aui-carousel-menu-active {
 }
 
 .puff-box h2 {
-	color: #456c29;
+	color: #327cb4;
 	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
 	font-size: 1.9em;
 	font-weight: normal;
@@ -3050,7 +3050,12 @@ ul.news-box-menu li.aui-carousel-menu-active {
 }
 
 .puff-box .puff-box-content {
-	
+	margin-bottom: 10px;
+}
+
+.puff-box .puff-box-content p {
+	font-size: 1.2em;
+	line-height: 1.5;
 }
 
 .puff-box .puff-box-link-wrap {
@@ -3059,7 +3064,7 @@ ul.news-box-menu li.aui-carousel-menu-active {
 }
 
 .puff-box .puff-box-link-wrap a {
-	background: #548332 url(../images/articles/puff-box-link-bg.png) 0 0 repeat-x;
+	background: #2f6ea1 url(../images/articles/puff-box-link-sprite.png) 0 0 repeat-x;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;	
@@ -3072,7 +3077,8 @@ ul.news-box-menu li.aui-carousel-menu-active {
 }
 
 .puff-box .puff-box-link-wrap a:hover {
-	background: #5b8b38 url(../images/articles/puff-box-link-bg-hover.png) 0 0 repeat-x;
+	background-color: #3685c2;
+	background-position: 0 -100px;
 	text-decoration: none;
 }
 
@@ -3080,6 +3086,52 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	display: inline;
 	zoom: 1;
 }
+
+/*- Puff Box Alternative 2 (green) -*/
+
+.puff-box-alt2 .puff-box-inner {
+	background: #f0faeb;
+}
+
+.puff-box-alt2 h2 {
+	color: #456c29;
+}
+
+.puff-box-alt2 .puff-box-link-wrap a {
+	background-color: #548332;
+	background-position: 0 -200px;
+	color: #fff;
+}
+
+.puff-box-alt2 .puff-box-link-wrap a:hover {
+	background-color: #5b8b38;
+	background-position: 0 -300px;
+	
+}
+
+/*- Puff Box Alternative 2 (yellow) -*/
+
+.puff-box-alt3 .puff-box-inner {
+	background: #fef6db;
+}
+
+.puff-box-alt3 h2 {
+	color: #af8602;
+}
+
+.puff-box-alt3 .puff-box-link-wrap a {
+	background-color: #d7a702;
+	background-position: 0 -400px;
+
+
+	color: #5e4a11;
+}
+
+.puff-box-alt3 .puff-box-link-wrap a:hover {
+	background-color: #e2b002;
+	background-position: 0 -500px;
+}
+
 
 /*----------------------------------------------------------------------
 =Debugging
