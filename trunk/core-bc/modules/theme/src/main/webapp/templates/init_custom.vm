@@ -85,6 +85,7 @@
     "modules/rp-tyck-till.js",
     "modules/rp-navigation-button.js",
 	"modules/rp-iframe-link-plugin.js",
+	"modules/rp-expanding-textarea-plugin.js",
     "modules/innovationsslussen-theme.js",
     "theme-main.js"
 ])
