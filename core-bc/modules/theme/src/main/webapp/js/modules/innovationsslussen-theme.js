@@ -43,6 +43,7 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._initNavigationButton();
                         instance._initMainNavigation();
                         instance._initOverlayLinks();
+                        instance._initExpandingTextareas();
                         instance._initTyckTill();
                         instance._initFaq();
                     },
@@ -200,6 +201,18 @@ AUI().add('innovationsslussen-theme',function(A) {
                     	}
                     	
                     },
+                    
+            		_initExpandingTextareas: function() {
+            			var instance = this;
+            			
+            			var textareas = A.all('.rp-expanding-textarea');
+            			textareas.plug(A.Plugin.RpExpandingTextarea);
+            			
+            			// Also cater for textareas created with aui-input tag
+            			var auiTextareas = A.all('.rp-expanding-textarea textarea');
+            			auiTextareas.plug(A.Plugin.RpExpandingTextarea);
+            		},
+                    
 
             		_initOverlayLinks: function() {
             			var instance = this;
@@ -322,6 +335,7 @@ AUI().add('innovationsslussen-theme',function(A) {
 	    	'event-resize',
 	    	'rp-iframe-link-plugin',
 	    	'rp-navigation-button',
+	    	'rp-expanding-textarea-plugin',
 	    	'rp-tyck-till'
       ]
     }

@@ -2821,9 +2821,46 @@ ul.idea-list > li {
 	color: #555;
 	font-size: 1.2em;
 	font-weight: normal;
+	margin: 0 0 20px 0;
 	min-height: 72px;
 	padding: 10px 360px 0 0;
-	
+}
+
+.create-idea .intro p {
+	margin: 10px 0;
+}
+
+.create-idea .intro .element-mandatory-desc {
+	font-size: 0.9em;
+}
+
+.create-idea .intro .element-mandatory {
+	display: inline-block;
+	font-size: 1.3em;
+}
+
+.create-confirmation .intro {
+	background-image: url(../images/ideas/idea-created.png);
+	min-height: 92px;
+	padding: 40px 360px 0 0;
+}
+
+.create-idea .info-section {
+	margin: 10px 0;
+}
+
+.create-idea .info-section-hd {
+	border-bottom: 1px solid #d5e3ee;
+	color: #666;
+	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+	font-size: 1.4em;
+	font-weight: normal;
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+}
+
+.create-idea .info-section-bd {
+	padding: 10px;
 }
 
 .create-idea-form {}
