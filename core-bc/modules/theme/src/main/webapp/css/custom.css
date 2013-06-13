@@ -2485,7 +2485,7 @@ ul.idea-list > li {
 	border: 1px solid #aac9e2;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
-	border-radius: 3px;	
+	border-radius: 3px;
 	margin: 0 15px 15px 0;
 	padding: 10px;
 	position: relative;
@@ -2496,7 +2496,8 @@ ul.idea-list > li {
 	border: 1px solid #a9bdcf;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
-	border-radius: 3px;	
+	border-radius: 3px;
+	min-height: 80px;	
 	padding: 10px;
 }
 
@@ -2561,6 +2562,14 @@ ul.idea-list > li {
 	-webkit-border-radius: 3px;
 	border-radius: 3px;	
 	padding: 15px;
+}
+
+.idea-outer-private .idea {
+	background: #af8602;
+}
+
+.idea-outer-private .idea-inner {
+	border-color: #fef6db;
 }
 
 .idea  .idea-toolbar-wrap {
