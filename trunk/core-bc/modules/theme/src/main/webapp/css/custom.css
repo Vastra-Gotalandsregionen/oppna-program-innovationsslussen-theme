@@ -2564,14 +2564,6 @@ ul.idea-list > li {
 	padding: 15px;
 }
 
-.idea-outer-private .idea {
-	background: #af8602;
-}
-
-.idea-outer-private .idea-inner {
-	border-color: #fef6db;
-}
-
 .idea  .idea-toolbar-wrap {
 	float: left;
 	position: relative;
@@ -2599,8 +2591,24 @@ ul.idea-list > li {
 	background-position: 4px  -196px;
 }
 
+.idea-toolbar-wrap li.open a {
+	background-position: 4px  -296px;
+}
+
+.idea-toolbar-wrap li.closed a {
+	background-position: 4px  -396px;
+}
+
 .idea h1 {
 	margin: 0.8em 0 0.8em 0;
+}
+
+.idea .idea-content-item {
+	margin: 0 0 10px 0;
+}
+
+.idea .label {
+	color: #555;
 }
 
 .idea .intro {
@@ -2809,6 +2817,53 @@ ul.idea-list > li {
 	background: #eef5fa;
 	color: #424242;
 }
+
+/* -- Private view -- */
+
+.idea-outer-private .idea {
+	background: #fef6da;
+	border-color: #f1e9cf;
+}
+
+.idea-outer-private .idea-inner {
+	border-color: #e1dac1;
+}
+
+.idea-outer-private h1 {
+	color: #b08700;
+}
+
+.idea-outer-private h1 span {
+	color: #555;
+	font-size: 0.6em;
+}
+
+.idea-outer-private .idea-toolbar-wrap li.icon a {
+	background-image: url(../images/toolbar/idea-toolbar-private-icon-sprite-24.png);
+	color: #b08700;
+}
+
+/* Comments */
+
+.idea-outer-private .add-comment-form .field-wrap label {
+	color: #5e4d03;
+}
+
+.idea-outer-private .idea-comments .comment {
+	background: #fef9e9;
+	border-color: #f1e9cf;
+}
+
+.idea-outer-private .idea-comments .comment-alt {
+	background: #fff;
+	border-color: #d5e3ee;
+}
+
+.idea-outer-private .idea-comments .comment .comment-author-name {
+	color: #5e4d03;
+}
+
+.idea-outer-private .rp-button input[type="submit"] {}
 
 /*------- Create Idea portlet -------*/
 
