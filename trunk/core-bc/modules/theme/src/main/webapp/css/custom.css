@@ -2523,6 +2523,28 @@ ul.idea-list > li {
 	margin: 0 0 10px 0;
 }
 
+.idea-list .idea h2 a {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	position: relative;
+}
+
+.idea-list .idea h2 span.likes {
+	
+	background: url(../images/toolbar/idea-toolbar-icon-sprite-24.png) 0  -100px no-repeat;
+	
+	display: block;
+	float: right;
+	font-size: 12px;
+	min-height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	position: relative;
+	text-align: center;
+	
+}
+
 .idea-list .idea .description {
 	margin: 5px 0;
 }
