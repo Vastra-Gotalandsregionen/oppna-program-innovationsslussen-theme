@@ -22,6 +22,46 @@
 ## Services
 ##
 
+#set ($layoutLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+#set ($layoutSetLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutSetLocalService"))
+
+##
+## Virtual host
+##
+
+#set ($urlPrefix = "")
+
+#set($scopeLayoutSet = $layoutSetLocalService.getLayoutSet($group_id, $layout.isPrivateLayout()))
+
+#set($scopeLayoutSetVirtualHost = $scopeLayoutSet.getVirtualHostname())
+
+#set($hasVirtualHost = false)
+
+#if($scopeLayoutSetVirtualHost != $null && $scopeLayoutSetVirtualHost != "")
+	#set($hasVirtualHost = true)
+#end
+
+#if(!$hasVirtualHost)
+
+	#if($scopeLayout.isPrivateLayout())
+		#set($urlPrefix = "/group")
+	#else
+		#set($urlPrefix = "/web")
+	#end
+	
+	#set($urlPrefix = $urlPrefix + $theme_display.getScopeGroup().getFriendlyURL())
+
+#end
+
+##
+## Layouts
+##
+
+#set($add_idea_friendly_url = "/skicka-in-din-ide")
+
+#set($add_idea_layout = $layoutLocalService.getFriendlyURLLayout($group_id, $layout.isPrivateLayout(), $add_idea_friendly_url) )
+
+
 ##
 ## Piwik Tracking Portlet
 ##
