@@ -2454,6 +2454,21 @@ ul.idea-flow-list li.done span {
 	color: #fff;
 }
 
+.idea-outer-private ul.idea-flow-list {
+	background-image: url(../images/ideas/flow-line-private.png);	
+}
+
+.idea-outer-private ul.idea-flow-list span {
+	background: #fff;
+	color: #b08700;
+	border: 1px solid #b08700;
+}
+
+.idea-outer-private ul.idea-flow-list li.done span {
+	background: #b08700;
+	color: #fff;
+}
+
 /*------- Idea List portlet -------*/
 
 ul.idea-list {
@@ -2587,7 +2602,7 @@ ul.idea-list > li {
 	background-position: 4px  -96px;
 }
 
-.idea-toolbar-wrap li.favourite a {
+.idea-toolbar-wrap li.favorite a {
 	background-position: 4px  -196px;
 }
 
