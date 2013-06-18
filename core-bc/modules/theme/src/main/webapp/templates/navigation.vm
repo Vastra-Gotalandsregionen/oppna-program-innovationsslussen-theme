@@ -29,5 +29,13 @@
 				#end
 			</li>
 		#end
+		#if($add_idea_layout != $null)
+            <li class="add-idea">
+                <a href="${urlPrefix}${add_idea_layout.getFriendlyURL()}">
+                    <span>Skicka in din id&eacute;</span>
+    			</a>
+    		</li>
+		#end
+		
 	</ul>
 </nav>

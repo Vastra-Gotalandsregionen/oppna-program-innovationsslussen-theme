@@ -514,12 +514,16 @@ ul.top-nav-list li .login-link-portlet > a {
 
 #navigation ul.nav-list li a span {
 	display: block;
+	height: 16px;
+	line-height: 16px;
 	padding: 10px 14px;
 }
 
 #navigation ul.nav-list li:first-child a span {
-	background: url(../images/navigation/nav-home-icon.png) 8px 47% no-repeat;
+	background: url(../images/navigation/nav-home-icon.png) 50% 50% no-repeat;
 	padding-left: 30px;
+	font-size: 0;
+	text-indent: -9999em;
 }
 
 /* Hover */
@@ -535,6 +539,22 @@ ul.top-nav-list li .login-link-portlet > a {
 #navigation ul.nav-list > li.selected:hover > a {	
 	background: #548332 url(../images/navigation/navigation-bg-active.png) top left repeat-x;
 	color: #fff;
+}
+
+#navigation ul.nav-list li.add-idea {
+	float: right;
+}
+
+#navigation ul.nav-list li.add-idea a {
+	background: #f2f2f2 url(../images/navigation/navigation-bg-highlight.png) 0 0 repeat-x;
+	color: #3177ae;
+	font-weight: bold;
+}
+
+#navigation ul.nav-list li.add-idea a span {
+	background: transparent url(../images/icons/icon-add-24.png) 10px 50% no-repeat;
+	min-height: 16px;
+	padding-left: 32px;
 }
 
 #navigation .nav-list-sub-wrap {
