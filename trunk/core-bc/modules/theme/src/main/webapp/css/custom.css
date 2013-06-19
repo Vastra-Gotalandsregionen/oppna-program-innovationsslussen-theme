@@ -784,7 +784,7 @@ ul.top-nav-list li .login-link-portlet > a {
 /* ---------- Layouts (general) ---------- */
 
 .portlet-column-content {
-	padding: 10px 20px;
+	padding: 5px 20px;
 }
 
 .portlet-column-content-only,
@@ -2513,8 +2513,8 @@ ul.idea-flow-list li.done span {
 	border-bottom: 1px solid #d5e3ee;
 	color: #555;
 	font-size: 1.6em;
-	margin: 10px 0 15px 0;
-	padding: 10px 0;
+	margin: 0 0 15px 0;
+	padding: 0 0 10px 0;
 }
 
 ul.idea-list {
