@@ -2536,33 +2536,38 @@ ul.idea-list > li {
 	padding: 10px;
 }
 
+.idea-list .idea-info {
+	margin-right: 50px;
+}
+
+.idea-list ul.idea-stats {
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 40px;
+}
+
+.idea-list ul.idea-stats li {
+	display: block;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 0 5px 0;
+	padding-left: 20px;
+	text-align: center;
+}
+
+.idea-list ul.idea-stats li.likes {
+	background: url(../images/toolbar/idea-toolbar-icon-sprite-24.png) 0  -100px no-repeat;
+}
+
 .idea-list .idea h2 {
 	color: #006aad;
 	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
 	font-size: 1.4em;
 	margin: 0 0 10px 0;
-}
-
-.idea-list .idea h2 a {
-	display: block;
-	float: left;
-	margin-right: 10px;
-	position: relative;
-}
-
-.idea-list .idea h2 span.likes {
-	
-	background: url(../images/toolbar/idea-toolbar-icon-sprite-24.png) 0  -100px no-repeat;
-	
-	display: block;
-	float: right;
-	font-size: 12px;
-	min-height: 20px;
-	line-height: 20px;
-	padding-left: 20px;
-	position: relative;
-	text-align: center;
-	
 }
 
 .idea-list .idea .description {
