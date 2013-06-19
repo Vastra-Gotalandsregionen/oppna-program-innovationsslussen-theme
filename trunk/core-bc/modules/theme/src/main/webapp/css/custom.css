@@ -781,6 +781,24 @@ ul.top-nav-list li .login-link-portlet > a {
 =Layout
 ----------------------------------------------------------------------*/
 
+/* ---------- Layouts (general) ---------- */
+
+.portlet-column-content {
+	padding: 10px 20px;
+}
+
+.portlet-column-content-only,
+.ltr .portlet-column-content-last,
+.rtl .portlet-column-content-first {
+	padding-right: 0;
+}
+
+.portlet-column-content-only,
+.ltr .portlet-column-content-first,
+.rtl .portlet-column-content-last {
+	padding-left: 0;
+}
+
 /* ---------- RP columns (general) ---------- */
 
 .rp-columns {}
@@ -2490,6 +2508,14 @@ ul.idea-flow-list li.done span {
 }
 
 /*------- Idea List portlet -------*/
+
+.idea-list-wrap > h2 {
+	border-bottom: 1px solid #d5e3ee;
+	color: #555;
+	font-size: 1.6em;
+	margin: 10px 0 15px 0;
+	padding: 10px 0;
+}
 
 ul.idea-list {
 	list-style: none;
