@@ -3099,6 +3099,12 @@ ul.idea-list > li {
 	min-height: 100px;
 }
 
+.create-idea-form .element-has-errors .aui-field input[type="text"],
+.create-idea-form .element-has-errors .aui-field textarea,
+.create-idea-form .element-has-errors .aui-field select {
+	border-color: #f00;
+}
+
 .create-idea span.element-mandatory {
 	color: #af2222;
 	font-size: 1.2em;
