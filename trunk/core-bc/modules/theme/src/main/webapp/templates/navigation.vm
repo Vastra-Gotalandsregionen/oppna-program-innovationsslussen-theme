@@ -31,7 +31,12 @@
 		#end
 		#if($add_idea_layout != $null)
             <li class="add-idea">
-                <a href="${urlPrefix}${add_idea_layout.getFriendlyURL()}">
+				#set($add_idea_link_css_class = "innovationsslussen-signin-prompt")
+				#if($is_signed_in)
+					#set($add_idea_link_css_class = "")
+				#end
+				
+                <a class="$add_idea_link_css_class" href="${urlPrefix}${add_idea_layout.getFriendlyURL()}">
                     <span>Skicka in din id&eacute;</span>
     			</a>
     		</li>

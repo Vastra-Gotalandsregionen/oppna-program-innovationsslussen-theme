@@ -14,11 +14,11 @@
 				</a>
 			</li>			
 		#elseif($show_sign_in_link)
-			<li class="top-nav-signout last">
+			<li class="top-nav-signin last">
 				
                 ##$taglibLiferay.runtime($loginlink_portlet_id, "", $velocityPortletPreferences.toString())&nbsp;
 				
-				<a href="$sign_in_url">
+				<a class="signin-link" href="$sign_in_url">
 					<span>$sign_in_text</span>
 				</a>
 				
