@@ -1678,18 +1678,27 @@ li.vgr-list-view-item .hd h3 a:hover {
 	display: none;
 }
 
-/*-------RP Dialog -------*/
+/*-------Innovationsslussen Dialog -------*/
 
-.rp-dialog .aui-dialog-hd {
+.innovationsslussen-dialog .aui-dialog-hd {
 	background: #2C6FA7;
 	color: #fff;
 	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
-	font-size: 26px;
-	font-weight: normal;
 	text-shadow: none;
 }
 
-.rp-dialog .aui-buttonitem-content {
+.innovationsslussen-dialog .aui-dialog-hd .aui-panel-hd-text {
+	display: inline-block;
+	font-size: 1.7em;
+	font-weight: normal;
+	line-height: 32px;
+}
+
+.innovationsslussen-dialog .aui-dialog-bd {
+	padding: 20px;
+}
+
+.innovationsslussen-dialog .aui-buttonitem-content {
 	background: none;
 	border: none;
 	height: 35px;
@@ -1697,17 +1706,17 @@ li.vgr-list-view-item .hd h3 a:hover {
 	padding: 0px;
 }
 
-.rp-dialog .aui-icon-closethick {
-	background: transparent url(../images/user-wizard/wizard-close-button-sprite.png) 0 0 no-repeat;
+.innovationsslussen-dialog .aui-icon-closethick {
+	background: transparent url(../images/dialog/dialog-close-button-sprite.png) 0 0 no-repeat;
 	height: 32px;
 	width: 32px;
 }
 
-.rp-dialog .aui-state-hover .aui-icon-closethick {
+.innovationsslussen-dialog .aui-state-hover .aui-icon-closethick {
 	background-position: 0 -50px;
 }
 
-.rp-dialog .aui-panel-hd-text {
+.innovationsslussen-dialog .aui-panel-hd-text {
 	line-height: 1.4;
 }
 
@@ -1896,7 +1905,7 @@ li.vgr-list-view-item .hd h3 a:hover {
 }
 
 .rp-iframe-dialog .aui-icon-closethick {
-	background: transparent url(../images/user-wizard/wizard-close-button-sprite.png) 0 0 no-repeat;
+	background: transparent url(../images/dialog/dialog-close-button-sprite.png) 0 0 no-repeat;
 	height: 32px;
 	width: 32px;
 }
