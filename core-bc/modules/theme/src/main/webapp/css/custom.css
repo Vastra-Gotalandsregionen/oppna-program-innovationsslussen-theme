@@ -1934,8 +1934,9 @@ ul.rp-toolbar {
 	-webkit-box-shadow: 0px 1px 4px 0px #cccccc;
 	box-shadow: 0px 1px 4px 0px #cccccc;	
 	border: 1px solid #d5e0ea;
+	float: left;
 	list-style: none;
-	margin: 0;
+	margin: 0 10px 0 0;
 	padding: 0 3px;
 	position: relative;
 }
@@ -1950,6 +1951,7 @@ ul.rp-toolbar li {
 	padding: 0;
 }
 
+ul.rp-toolbar li:last-child,
 ul.rp-toolbar li.last {
 	background: none;
 	border-right: none;
@@ -2663,12 +2665,17 @@ ul.idea-list > li {
 
 .idea  .idea-toolbar-wrap {
 	float: left;
+	max-width: 820px;
 	position: relative;
 }
 
 .idea  .idea-flow-wrap {
 	float: right;
 	position: relative;
+}
+
+.idea-toolbar-wrap ul {
+	margin-bottom: 10px;
 }
 
 .idea-toolbar-wrap li.icon a {
@@ -2694,6 +2701,14 @@ ul.idea-list > li {
 
 .idea-toolbar-wrap li.closed a {
 	background-position: 4px  -396px;
+}
+
+.idea-toolbar-wrap li.barium a {
+	background-position: 4px  -494px;
+}
+
+.idea-toolbar-wrap li.reload a {
+	background-position: 4px  -596px;
 }
 
 .idea h1 {
@@ -2820,8 +2835,8 @@ ul.idea-list > li {
 }
 
 .idea-comments .comment {
-	background: #eef5fa;
-	border: 1px solid #c4ced5;
+	background: #fff;
+	border: 1px solid #d5e3ee;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
@@ -2829,9 +2844,9 @@ ul.idea-list > li {
 	padding: 15px;	
 }
 
-.idea-comments .comment-alt {
-	background: #fff;
-	border-color: #d5e3ee;
+.idea-comments .comment-innovationsslussen {
+	background: #eef5fa;
+	border-color: #c4ced5;
 }
 
 .idea-comments .comment .comment-author {
@@ -2940,6 +2955,10 @@ ul.idea-list > li {
 	color: #b08700;
 }
 
+.idea-outer-private .idea-toolbar-wrap li.icon a:hover {
+	background-color: #fef6db;
+}
+
 /* Comments */
 
 .idea-outer-private .add-comment-form .field-wrap label {
@@ -2947,13 +2966,13 @@ ul.idea-list > li {
 }
 
 .idea-outer-private .idea-comments .comment {
-	background: #fef9e9;
-	border-color: #f1e9cf;
-}
-
-.idea-outer-private .idea-comments .comment-alt {
 	background: #fff;
 	border-color: #d5e3ee;
+}
+
+.idea-outer-private .idea-comments .comment-innovationsslussen {
+	background: #fef9e9;
+	border-color: #f1e9cf;
 }
 
 .idea-outer-private .idea-comments .comment .comment-author-name {
