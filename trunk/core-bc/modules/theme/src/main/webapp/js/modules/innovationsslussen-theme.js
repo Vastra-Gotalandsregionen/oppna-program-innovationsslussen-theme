@@ -47,6 +47,7 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._initExpandingTextareas();
                         instance._initTyckTill();
                         instance._initFaq();
+                        instance._fixToolbar();
                     },
     
                     bindUI: function() {
@@ -72,6 +73,13 @@ AUI().add('innovationsslussen-theme',function(A) {
                         		currentTarget.removeClass('hover');
                         	});
                     	}
+                    },
+                    
+                    _fixToolbar: function() {
+                    	var instance = this;
+                    	
+                    	var lastItems = A.all('ul.rp-toolbar li:last-child');
+                    	lastItems.addClass('last');
                     },
                     
                     _initSigninPrompt: function() {
