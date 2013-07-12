@@ -1817,6 +1817,11 @@ li.vgr-list-view-item .hd h3 a:hover {
 	width: 30px;
 }
 
+.paginator-wrap .search-info {
+	text-align: center;
+}
+
+
 /*------- RP Box -------*/
 
 .rp-box {
