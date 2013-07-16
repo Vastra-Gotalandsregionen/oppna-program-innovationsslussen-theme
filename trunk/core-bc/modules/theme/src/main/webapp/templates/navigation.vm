@@ -36,7 +36,7 @@
 					#set($add_idea_link_css_class = "")
 				#end
 				
-                <a class="$add_idea_link_css_class" href="${urlPrefix}${add_idea_layout.getFriendlyURL()}">
+                <a class="$add_idea_link_css_class" href="${urlPrefix}${add_idea_layout.getFriendlyURL()}" data-promptmsg="Du m&aring;ste vara inloggad f&ouml;r att f&aring; skicka in en id&eacute;">
                     <span>Skicka in din id&eacute;</span>
     			</a>
     		</li>
