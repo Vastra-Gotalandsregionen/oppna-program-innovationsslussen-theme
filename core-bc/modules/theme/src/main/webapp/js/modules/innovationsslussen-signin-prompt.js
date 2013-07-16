@@ -6,6 +6,8 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
         NS = 'innovationsslussen-signin-prompt',
         
 		// Custom Attributes
+        PROMPT_MSG = 'promptMsg',
+        PROMPT_MSG_DEFAULT = 'Du m&aring;ste vara inloggad f&ouml;r att f&aring; g&ouml;ra detta.',
 		SIGNIN_URL = 'signinUrl',
         
         CSS_HIDDEN = 'aui-helper-hidden'
@@ -14,6 +16,10 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
     var InnovationsslussenSigninPrompt = A.Component.create(
             {
                 ATTRS: {
+                	
+                	promptMsg: {
+                		value: ''
+                	},
                 	
         			signinUrl: {
         				value: ''
@@ -35,6 +41,13 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
                     initializer: function(config) {
                         var instance = this;
                         
+                        var promptMsg = instance.get(PROMPT_MSG);
+                        
+                        if(promptMsg == '') {
+                        	promptMsg = PROMPT_MSG_DEFAULT;
+                        	instance.set(PROMPT_MSG, promptMsg);
+                        }
+                        
                     },
                     
                     renderUI: function() {
@@ -47,7 +60,9 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
         				
         				var title = 'Logga in f&ouml;rst';
         				var bodyContent = '';
-        				bodyContent += '<p>Du m&aring;ste vara inloggad f&ouml;r att f&aring; g&ouml;ra detta.</p>';
+        				bodyContent += '<p>';
+        				bodyContent += instance.get(PROMPT_MSG);
+        				bodyContent += '</p>';
         				bodyContent += '<p><a href="'+  signinUrl + '">Logga in h&auml;r &raquo; </a></p>';
         				
         				var dialog = new A.Dialog({

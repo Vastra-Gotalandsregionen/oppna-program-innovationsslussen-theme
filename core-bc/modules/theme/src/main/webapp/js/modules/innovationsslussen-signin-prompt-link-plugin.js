@@ -6,6 +6,7 @@ AUI.add('innovationsslussen-signin-prompt-link-plugin', function(A) {
 		NS = 'innovationsslussen-signin-prompt-link-plugin',
 	
 		// Custom Attributes
+		DATA_PROMPT_MSG = 'data-promptmsg',
 		SIGNIN_URL = 'signinUrl',
 	
 		// Property keys
@@ -14,8 +15,6 @@ AUI.add('innovationsslussen-signin-prompt-link-plugin', function(A) {
 		CSS_SIGNIN_LINK = 'signin-link'
 	;
 	
-	var TPL_IFRAME = '<iframe class="content-iframe" title="" frameborder="0" allowfullscreen src="{url}" width="100%" height="100%" scrolling="yes"></iframe>';
-
 	var InnovationsslussenSigninPromptLink = A.Component.create({
 		
 		ATTRS: {
@@ -63,12 +62,16 @@ AUI.add('innovationsslussen-signin-prompt-link-plugin', function(A) {
 			_onHostClick: function(e) {
 				var instance = this;
 				e.halt();
-
+				
+				var host = instance.get(HOST);
+				var promptMsg = host.getAttribute(DATA_PROMPT_MSG);
+				
 				var linkNode = e.currentTarget;
 				
 				var signinUrl = instance.get(SIGNIN_URL);
 
 				var signinPromt = new A.InnovationsslussenSigninPrompt({
+					promptMsg: promptMsg,
 					signinUrl: signinUrl
 				});
 				
