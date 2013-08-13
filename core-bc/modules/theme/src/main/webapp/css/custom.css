@@ -2578,8 +2578,7 @@ ul.idea-list > li {
 	border: 1px solid #a9bdcf;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	min-height: 80px;	
+	border-radius: 3px;	
 	padding: 10px;
 }
 
@@ -2618,6 +2617,8 @@ ul.idea-list > li {
 }
 
 .idea-list .idea .description {
+	height: 140px;
+	overflow: hidden;
 	margin: 5px 0;
 }
 
