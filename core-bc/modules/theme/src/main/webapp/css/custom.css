@@ -1755,14 +1755,19 @@ li.vgr-list-view-item .hd h3 a:hover {
 }
 
 .rp-paging ul {
-	display:table;
-	list-style-type:none;
-	margin:0 auto;
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 auto;
+}
+
+.ie7 .rp-paging ul {
+	display: inline;
 }
 
 .rp-paging li {
 	float:left;
 	margin: 5px 5px;
+	position: relative;
 }
 
 .rp-paging li a,
