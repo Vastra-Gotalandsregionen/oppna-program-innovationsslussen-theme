@@ -81,6 +81,7 @@ AUI().add('innovationsslussen-theme',function(A) {
                     
                     // Show loading mask on form submit
                     _bindIdeaSubmitButton: function () {
+                    	var instance = this;
 
                         var submitButton = A.one('.create-idea-form input.aui-button-input-submit');
                         
