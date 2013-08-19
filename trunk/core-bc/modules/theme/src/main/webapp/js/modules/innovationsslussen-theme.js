@@ -55,6 +55,9 @@ AUI().add('innovationsslussen-theme',function(A) {
                         var instance = this;
                         
                         instance._bindFaq();
+                        
+                        instance._bindIdeaSubmitButton();
+                        
                     },
                     
                     _bindFaq: function () {
@@ -74,6 +77,30 @@ AUI().add('innovationsslussen-theme',function(A) {
                         		currentTarget.removeClass('hover');
                         	});
                     	}
+                    },
+                    
+                    // Show loading mask on form submit
+                    _bindIdeaSubmitButton: function () {
+
+                        var submitButton = A.one('.create-idea-form input.aui-button-input-submit');
+                        
+                        if(!isNull(submitButton)) {
+                        	
+                        	submitButton.on('click', function(e) {
+                        		
+                        		var bodyNode = A.one('body');
+                        		
+                        		bodyNode.plug(A.LoadingMask, {
+                					background: '#000',
+                					strings: {
+                						loading: 'Sparar din id&eacute;...'
+                					}
+                    			});
+                        		
+                        		bodyNode.loadingmask.show();
+                        		
+                        	}, instance);
+                        }
                     },
                     
                     _fixToolbar: function() {
@@ -356,6 +383,7 @@ AUI().add('innovationsslussen-theme',function(A) {
         requires: [
 	       	'aui-base',
 	       	'aui-carousel',
+	       	'aui-loading-mask',
 	    	'event',
 	    	'event-resize',
 	    	'innovationsslussen-signin-prompt-link-plugin',
