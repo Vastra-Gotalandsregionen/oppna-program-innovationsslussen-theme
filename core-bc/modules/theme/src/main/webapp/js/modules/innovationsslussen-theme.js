@@ -37,7 +37,8 @@ AUI().add('innovationsslussen-theme',function(A) {
                     
                     renderUI: function() {
                         var instance = this;
-                        
+
+                        instance._initActionConfirmation();
                         instance._initSigninPrompt();
                         instance._initBannerCarousel();
                         instance._initBreadcrumbs();
@@ -80,6 +81,13 @@ AUI().add('innovationsslussen-theme',function(A) {
                     	
                     	var lastItems = A.all('ul.rp-toolbar li:last-child');
                     	lastItems.addClass('last');
+                    },
+                    
+                    _initActionConfirmation: function() {
+                    	var instance = this;
+                    	
+            			var requiresConfirmationLinks = A.all('a.requires-confirmation');
+            			requiresConfirmationLinks.plug(A.Plugin.RpActionConfirmation);
                     },
                     
                     _initSigninPrompt: function() {
@@ -351,6 +359,7 @@ AUI().add('innovationsslussen-theme',function(A) {
 	    	'event',
 	    	'event-resize',
 	    	'innovationsslussen-signin-prompt-link-plugin',
+	    	'rp-action-confirmation-plugin',
 	    	'rp-iframe-link-plugin',
 	    	'rp-navigation-button',
 	    	'rp-expanding-textarea-plugin',

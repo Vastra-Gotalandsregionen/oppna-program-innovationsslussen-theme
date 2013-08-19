@@ -1932,6 +1932,63 @@ li.vgr-list-view-item .hd h3 a:hover {
 	overflow: hidden;
 }
 
+/*------- RP Confirmation Plugin -------*/
+
+.js .requires-confirmation {
+	visibility: hidden;
+}
+
+.js .requires-confirmation-active {
+}
+
+/*-- RP Confirmation Plugin --*/
+
+.rp-confirm-dialog .aui-dialog-hd {
+	background: transparent;
+	border: 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	
+}
+
+.rp-confirm-dialog .aui-panel-hd-text {
+	display: none;
+}
+
+.rp-confirm-dialog .aui-dialog-bd {
+	padding: 10px;
+}
+
+.rp-confirm-dialog .aui-dialog-ft {
+	background: #eef5fa;
+	border-top: 1px solid #c4ced5;
+	text-align: center;
+}
+
+.rp-confirm-dialog .aui-dialog-button {
+	background: #2865ad url(../images/buttons/button-bg-normal.png) 0 0 repeat-x;
+	border: 1px solid #2f71a8;
+	border-color: #2f71a8 #052a73 #052a73 #2f71a8;
+	color: #fff;
+	margin: 0 10px;
+	padding: 7px 15px;
+	text-shadow: none;	
+}
+
+.rp-confirm-dialog .aui-state-default {
+	background: transparent;
+	border: 0;
+	height: 24px;
+	padding: 0;
+	width: 24px;
+}
+
+.rp-confirm-dialog .aui-icon-closethick {
+	background: transparent url(../images/icons/icon-rp-close.png) 0 0 no-repeat;
+	height: 24px;
+	width: 24px;
+}
 
 /*------- RP toolbar -------*/
 
@@ -2883,10 +2940,36 @@ ul.idea-list > li {
 	color: #424242;
 	float: left;
 	padding-left: 20px;
+	padding-right: 20px;
 	max-width: 500px;
 	position: relative;
 }
 
+.idea-comments .comment .comment-controls {
+	float: right;
+	position: relative;
+}
+
+.idea-comments .comment .comment-control {
+	background: transparent url(../images/common/tool.png) 0 0 no-repeat;
+	display: inline-block;
+	font-size: 0;
+	height: 16px;
+	text-indent: -9999em;
+	width: 16px;
+}
+
+.js .idea-comments .comment .requires-confirmation {
+	visibility: hidden;
+}
+
+.js .idea-comments .comment .requires-confirmation-active {
+	display: inline-block;
+}
+
+.idea-comments .comment .comment-control-delete {
+	background: transparent url(../images/common/close.png) 0 0 no-repeat;
+}
 
 .idea-comments .comment .comment-entry-date {
 	margin-bottom: 0.4em;
