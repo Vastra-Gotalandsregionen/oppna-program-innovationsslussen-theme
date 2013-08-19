@@ -89,16 +89,22 @@ AUI().add('innovationsslussen-theme',function(A) {
                         	
                         	submitButton.on('click', function(e) {
                         		
-                        		var bodyNode = A.one('body');
+                        		e.halt();
                         		
-                        		bodyNode.plug(A.LoadingMask, {
-                					background: '#000',
-                					strings: {
-                						loading: 'Sparar din id&eacute;...'
-                					}
-                    			});
+                        		var formNode = e.currentTarget.ancestor('form');
                         		
-                        		bodyNode.loadingmask.show();
+                        		if(!isNull(formNode)) {
+                        			formNode.plug(A.LoadingMask, {
+                    					background: '#bcd3e6',
+                    					strings: {
+                    						loading: 'Sparar din id&eacute;...'
+                    					}
+                        			});
+                            		
+                        			formNode.loadingmask.show();
+                            		
+                        			formNode.loadingmask.centerMessage();
+                        		}
                         		
                         	}, instance);
                         }
