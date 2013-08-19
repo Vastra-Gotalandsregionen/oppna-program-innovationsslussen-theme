@@ -121,6 +121,7 @@
 
 #set($theme_js_scripts = [
     "fixes/ios-orientationchange-fix.js",
+	"modules/rp-action-confirmation-plugin.js",
 	"modules/rp-footer-plugin.js",
     "modules/rp-tyck-till.js",
     "modules/rp-navigation-button.js",
