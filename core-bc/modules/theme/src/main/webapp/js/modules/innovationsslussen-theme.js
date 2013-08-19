@@ -89,8 +89,6 @@ AUI().add('innovationsslussen-theme',function(A) {
                         	
                         	submitButton.on('click', function(e) {
                         		
-                        		e.halt();
-                        		
                         		var formNode = e.currentTarget.ancestor('form');
                         		
                         		if(!isNull(formNode)) {
