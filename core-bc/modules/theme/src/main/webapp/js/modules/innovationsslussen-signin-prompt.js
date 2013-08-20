@@ -26,7 +26,7 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
         			},
                 	
                 	someAttr: {
-                		value: null,
+                		value: null
                 	}
                 	
                 },
