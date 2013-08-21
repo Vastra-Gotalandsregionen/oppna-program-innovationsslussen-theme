@@ -68,11 +68,13 @@
 				#end
 			
 				$theme.include($content_include)
+				#*
 				<div id="toolsSidebar" class="tools-sidebar">
 					#if($is_signed_in)
 						#parse ("$full_templates_path/tyck-till-content.vm")
 					#end
 				</div>
+				*#
 			#else
 				$portletDisplay.recycle()
 	
