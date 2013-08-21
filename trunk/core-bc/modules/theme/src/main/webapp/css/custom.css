@@ -72,7 +72,7 @@ body {
 .content-inner,
 .footer-inner {
 	margin: 0;
-	padding: 0 40px;
+	padding: 0;
 	margin: 0 auto;
 	max-width: 1100px;
 }
@@ -143,8 +143,12 @@ body > .portlet-msg-info {
 
 #main-content {
 	margin: 15px 0;
-	margin-right: 50px;
 }
+
+#main-content.innovationsslussen-startpage {
+	margin-top: 0;
+}
+
 
 .has-breadcrumbs #main-content {
 	margin-top: 5px;
@@ -3619,6 +3623,64 @@ ul.news-box-menu li.aui-carousel-menu-active {
 .puff-box-alt3 .puff-box-link-wrap a:hover {
 	background-color: #e2b002;
 	background-position: 0 -500px;
+}
+
+
+
+/*------- Banner Wide -------*/
+/* Should be renamed */
+
+.banner-wide {
+	background: #2e6d9f url(../images/bg/banner-wide-bg.png) bottom left repeat-x;
+	padding: 20px;
+}
+
+.banner-wide-inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.banner-wide-content {
+	color: #fff;
+	margin: 0;
+	padding: 0 50px;
+	text-align: left;
+}
+
+.banner-wide-content h1 {
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+.banner-wide-content h1 span {
+	border-bottom: 1px solid #5696c6;	
+	display: inline-block;
+	padding: 0 0 10px 0;
+}
+
+.banner-wide-content .info {
+	float: left;
+	padding-right: 10%;
+	width: 56.5%;
+}
+
+.banner-wide-content .buttons {
+	float: right;
+	width: 33.2%;
+}
+
+.banner-wide-content p.intro {
+	color: #fff;
+	font-weight: normal;
+	font-size: 1.8em;
+}
+
+.banner-wide-content p {
+	color: #fff;
+	font-size: 1.2em;
 }
 
 

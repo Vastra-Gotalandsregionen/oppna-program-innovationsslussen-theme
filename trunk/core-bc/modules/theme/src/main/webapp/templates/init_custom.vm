@@ -14,6 +14,7 @@
 	#set($show_breadcrumbs = true)
 #end
 
+
 #if($show_breadcrumbs)
 	#set($css_class = $css_class + " has-breadcrumbs")
 #end
