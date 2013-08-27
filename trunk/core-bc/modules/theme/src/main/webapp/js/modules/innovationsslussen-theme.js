@@ -58,6 +58,7 @@ AUI().add('innovationsslussen-theme',function(A) {
                         
                         instance._bindIdeaSubmitButton();
                         
+                        instance._bindIdeaList();
                     },
                     
                     _bindFaq: function () {
@@ -77,6 +78,18 @@ AUI().add('innovationsslussen-theme',function(A) {
                         		currentTarget.removeClass('hover');
                         	});
                     	}
+                    },
+                    
+                    _bindIdeaList: function() {
+                    	var instance = this;
+                    	
+                        var ideaList = A.one('.idea-list-new');
+                        
+                        if(ideaList) {
+                        	ideaList.delegate('mouseenter', instance._handleIdeaListItemMouseEnter, 'a', instance);
+                        	ideaList.delegate('mouseleave', instance._handleIdeaListItemMouseLeave, 'a', instance);
+                        }
+                        
                     },
                     
                     // Show loading mask on form submit
@@ -114,6 +127,32 @@ AUI().add('innovationsslussen-theme',function(A) {
                     	var lastItems = A.all('ul.rp-toolbar li:last-child');
                     	lastItems.addClass('last');
                     },
+                    
+                	_handleIdeaListItemMouseEnter: function(e) {
+                		var instance = this;
+                		
+						var listItem = e.currentTarget;
+						
+					    var content2 = listItem.one('.idea-content-2');
+					    
+					    var anim = new A.Anim({
+					        node: content2,
+							duration: 0.3,
+							easing: A.Easing.easeOut,
+					        from: {
+					            opacity: 0.0
+					        },
+					        to: {
+					        	opacity: 1.0
+					        }
+					    });
+					    
+					    anim.run();
+                	},
+                	
+                	_handleIdeaListItemMouseLeave: function(e) {
+                		var instance = this;
+                	},
                     
                     _initActionConfirmation: function() {
                     	var instance = this;
@@ -386,10 +425,13 @@ AUI().add('innovationsslussen-theme',function(A) {
         
     },1, {
         requires: [
+            'anim',
 	       	'aui-base',
 	       	'aui-carousel',
 	       	'aui-loading-mask',
 	    	'event',
+	    	'event-mouseenter',
+	    	'event-mouseleave',
 	    	'event-resize',
 	    	'innovationsslussen-signin-prompt-link-plugin',
 	    	'rp-action-confirmation-plugin',
