@@ -2709,6 +2709,82 @@ ul.idea-list > li {
 }
 
 
+
+
+
+
+
+/* New */
+
+ul.idea-list-new {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.idea-list-new > li {
+	display: -moz-inline-stack;
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	min-width: 230px;
+	padding: 0;
+	vertical-align: top;
+	width: 32.55%;
+}
+
+.ie7 ul.idea-list-new > li {
+	display: inline;
+	zoom: 1;
+}
+
+
+.idea-list-new a {
+	background: #d5e3ee;
+	border: 1px solid #aac9e2;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: block;
+	margin: 0 15px 15px 0;
+	padding: 8px;
+	position: relative;
+	text-decoration: none;
+}
+
+.idea-list-new .idea-content {
+	background: #fff;
+	border: 1px solid #a9bdcf;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+	height: 100px;
+	overflow: hidden;
+	padding: 10px;
+	position: relative;
+}
+
+.idea-list-new .idea-content .idea-content-1 {}
+
+.idea-list-new .idea-content .idea-content-2 {
+	left: 0;
+	position: absolute;
+	top: 140px;
+}
+
+.idea-list-new .idea-content h3 {
+	color: #006aad;
+	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+	font-size: 1.2em;
+	margin: 0 0 10px 0;
+}
+
+.idea-list-new .idea-label {
+	color: #327cb4;
+	font-weight: bold;
+	margin-top: 6px;
+}
+
 /*------- Idea portlet -------*/
 
 .idea-outer {
