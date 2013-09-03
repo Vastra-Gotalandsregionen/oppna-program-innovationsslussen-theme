@@ -3800,60 +3800,122 @@ ul.news-box-menu li.aui-carousel-menu-active {
 
 
 
-/*------- Banner Wide -------*/
+/*------- Banner -------*/
 /* Should be renamed */
 
-.banner-wide {
-	background: #2e6d9f url(../images/bg/banner-wide-bg.png) bottom left repeat-x;
-	padding: 20px;
-}
-
-.banner-wide-inner {
-	max-width: 1100px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.banner-wide-content {
+.banner-communicate {
+	background: #3073a7 url(../images/bg/banner-communicate-bg.png) top left repeat-x;
+	border: 1px solid #265a84;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;	
 	color: #fff;
-	margin: 0;
-	padding: 0 50px;
-	text-align: left;
+	padding: 40px;
 }
 
-.banner-wide-content h1 {
-	color: #fff;
-	font-size: 2.5em;
-	font-weight: normal;
-	margin: 0 0 10px 0;
+.banner-communicate-layout {}
+
+/* Clearfix style clearing */
+.banner-communicate-layout:after{clear:both;content:'.';display:block;visibility:hidden;height:0}
+.banner-communicate-layout{display:inline-block}
+* html .banner-communicate-layout{height:1%}
+.banner-communicate-layout{display:block}
+
+.banner-communicate-column {
 }
 
-.banner-wide-content h1 span {
-	border-bottom: 1px solid #5696c6;	
-	display: inline-block;
-	padding: 0 0 10px 0;
-}
-
-.banner-wide-content .info {
+.banner-communicate-column-1 {
 	float: left;
-	padding-right: 10%;
-	width: 56.5%;
+	width: 59.9%;
 }
 
-.banner-wide-content .buttons {
+.banner-communicate-column-2 {
 	float: right;
-	width: 33.2%;
+	width: 39.9%;
 }
 
-.banner-wide-content p.intro {
+.banner-communicate-column-content {
+	padding: 0 30px;
+}
+
+.banner-communicate-column-1 .banner-communicate-column-content {
+	padding-left: 0;
+}
+
+.banner-communicate-column-2 .banner-communicate-column-content {
+	padding-right: 0;
+}
+
+.banner-communicate h1 {
+	border-bottom: 1px solid #3072a7;
+	font-size: 2.5em;
+	padding: 0;
+	margin: 0 0 10px 0;
+	
+}
+
+.banner-communicate h1 span {
+	border-bottom: 1px solid #5696c6;
+	
 	color: #fff;
+	display: block;
+	
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-weight: normal;
+	
+	margin: 0;
+	padding: 0 10px 10px 10px;
+}
+
+.banner-communicate h1 span,
+.banner-communicate .intro,
+.banner-communicate p {
+	text-shadow: 1px 1px 1px #1a3e5c;
+}
+
+.ie .banner-communicate h1 span,
+.ie .banner-communicate .intro,
+.ie .banner-communicate p {
+	filter: dropshadow(color=#1a3e5c, offx=1, offy=1);
+}
+
+.banner-communicate .intro {
+	color: #fff;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
 	font-weight: normal;
 	font-size: 1.8em;
 }
 
-.banner-wide-content p {
+.banner-communicate p {
 	color: #fff;
 	font-size: 1.2em;
+}
+
+.banner-communicate .action-link {
+	background: #2f6ea1 url(../images/buttons/banner-communicate-button.png) top left repeat-x;
+	border: 1px solid #29699e;
+	border-bottom-color: #245780;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+	color: #fff;
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.banner-communicate .action-link span {
+	background: transparent url(../images/icons/icon-play.png) left center no-repeat;
+	display: block;
+	font-size: 1.4em;
+	line-height: 25px;
+	min-height: 25px;
+	padding: 5px 0 5px 32px;
+}
+
+.banner-communicate .action-link:hover {
+	text-decoration: none;
 }
 
 
