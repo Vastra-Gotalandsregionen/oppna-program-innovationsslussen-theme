@@ -2914,6 +2914,7 @@ ul.idea-list-new > li {
 
 .idea-toolbar-wrap li.icon a {
 	background: url(../images/toolbar/idea-toolbar-icon-sprite-24.png) 4px  1000px no-repeat;
+	color: #3583bf;
 	padding-left: 26px;
 }
 
@@ -2950,6 +2951,7 @@ ul.idea-list-new > li {
 }
 
 .idea h1 {
+	color: #3583bf;
 	margin: 0.6em 0 0.2em 0;
 }
 
@@ -2964,11 +2966,11 @@ ul.idea-list-new > li {
 }
 
 .idea .idea-creator-name {
-	color: #327cb4;
+	color: #555;
 }
 
 .idea-outer-private .idea .idea-creator-name {
-	color: #5e4d03;
+	color: #555;
 }
 
 .idea .idea-content-item {
@@ -2980,7 +2982,7 @@ ul.idea-list-new > li {
 }
 
 .idea .intro {
-	color: #333;
+	color: #555;
 	font-size: 1.2em;
 	font-weight: bold;
 }
@@ -2991,10 +2993,11 @@ ul.idea-list-new > li {
 
 .idea-meta h2 {
 	border-bottom: 1px solid #d5e3ee;
-	color: #555;
-	font-size: 1.4em;
+	color: #999;
+	font-size: 1.6em;
 	margin: 0 0 5px 0;
 	padding: 0 0 5px 0;
+	text-transform: uppercase;
 }
 
 .idea-meta h2 span {
@@ -3055,7 +3058,7 @@ ul.idea-list-new > li {
 }
 
 .add-comment-form .field-wrap label {
-	color: #327cb4;
+	color: #555;
 	float: left;
 	font-weight: bold;
 	position: relative;
@@ -3087,7 +3090,21 @@ ul.idea-list-new > li {
 }
 
 .idea-comments {
+	/*
+	border-top: 1px solid #d5e3ee;
+	padding-top: 20px;
+	margin: 20px 0 10px 0;
+	*/
 	margin: 10px 0;
+}
+
+.idea-comments > h2 {
+	border-bottom: 1px solid #d5e3ee;
+	color: #999;
+	font-size: 1.6em;
+	margin: 0 0 15px 0;
+	padding: 0 0 2px 0;
+	text-transform: uppercase;
 }
 
 .idea-comments .comment {
@@ -3113,7 +3130,7 @@ ul.idea-list-new > li {
 }
 
 .idea-comments .comment .comment-author-name {
-	color: #327cb4;
+	color: #555;
 	margin-bottom: 0.2em;
 	font-weight: bold;
 }
@@ -3237,10 +3254,6 @@ ul.idea-list-new > li {
 
 /* Comments */
 
-.idea-outer-private .add-comment-form .field-wrap label {
-	color: #bf3434;
-}
-
 .idea-outer-private .idea-comments .comment {
 	background: #fff;
 	border-color: #d5e3ee;
@@ -3252,7 +3265,7 @@ ul.idea-list-new > li {
 }
 
 .idea-outer-private .idea-comments .comment .comment-author-name {
-	color: #bf3434;
+	color: #555;
 }
 
 .idea-outer-private .rp-button input[type="submit"] {}
