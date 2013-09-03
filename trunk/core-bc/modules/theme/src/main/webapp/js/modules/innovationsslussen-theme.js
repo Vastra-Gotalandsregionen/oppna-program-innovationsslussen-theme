@@ -431,7 +431,6 @@ AUI().add('innovationsslussen-theme',function(A) {
 	       	'aui-loading-mask',
 	    	'event',
 	    	'event-mouseenter',
-	    	'event-mouseleave',
 	    	'event-resize',
 	    	'innovationsslussen-signin-prompt-link-plugin',
 	    	'rp-action-confirmation-plugin',

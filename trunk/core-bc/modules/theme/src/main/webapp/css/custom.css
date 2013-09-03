@@ -2558,8 +2558,8 @@ ul.idea-flow-list span {
 	-moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
 	border-radius: 12px;	
-	color: #327ab2;
-	border: 1px solid #327ab2;
+	color: #bf3434;
+	border: 1px solid #bf3434;
 	display: block;
 	font-size: 13px;
 	font-weight: bold;
@@ -2570,7 +2570,7 @@ ul.idea-flow-list span {
 }
 
 ul.idea-flow-list li.done span {
-	background: #327ab2;
+	background: #bf3434;
 	color: #fff;
 }
 
@@ -2580,12 +2580,12 @@ ul.idea-flow-list li.done span {
 
 .idea-outer-private ul.idea-flow-list span {
 	background: #fff;
-	color: #b08700;
-	border: 1px solid #b08700;
+	color: #bf3434;
+	border: 1px solid #bf3434;
 }
 
 .idea-outer-private ul.idea-flow-list li.done span {
-	background: #b08700;
+	background: #bf3434;
 	color: #fff;
 }
 
@@ -2879,12 +2879,12 @@ ul.idea-list-new > li {
 }
 
 .idea-outer .idea {
-	background: #bcd3e6;
-	border: 1px solid #aac9e2;
+	background: #3583bf;
+	border: 0;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;	
-	padding: 10px;
+	padding: 5px;
 	position: relative;
 }
 
@@ -2915,6 +2915,10 @@ ul.idea-list-new > li {
 .idea-toolbar-wrap li.icon a {
 	background: url(../images/toolbar/idea-toolbar-icon-sprite-24.png) 4px  1000px no-repeat;
 	padding-left: 26px;
+}
+
+.idea-toolbar-wrap li.icon a:hover {
+	background-color: #f7f7f7;
 }
 
 .idea-toolbar-wrap li.comment a {
@@ -3211,16 +3215,14 @@ ul.idea-list-new > li {
 /* -- Private view -- */
 
 .idea-outer-private .idea {
-	background: #fef6da;
-	border-color: #f1e9cf;
+	background: #bf3434;
 }
 
 .idea-outer-private .idea-inner {
-	border-color: #e1dac1;
 }
 
 .idea-outer-private h1 {
-	color: #b08700;
+	color: #bf3434;
 }
 
 .idea-outer-private h1 span {
@@ -3229,18 +3231,14 @@ ul.idea-list-new > li {
 }
 
 .idea-outer-private .idea-toolbar-wrap li.icon a {
-	background-image: url(../images/toolbar/idea-toolbar-private-icon-sprite-24.png);
-	color: #b08700;
-}
-
-.idea-outer-private .idea-toolbar-wrap li.icon a:hover {
-	background-color: #fef6db;
+	background-image: url(../images/toolbar/idea-toolbar-private-icon-sprite.png);
+	color: #bf3434;
 }
 
 /* Comments */
 
 .idea-outer-private .add-comment-form .field-wrap label {
-	color: #5e4d03;
+	color: #bf3434;
 }
 
 .idea-outer-private .idea-comments .comment {
@@ -3249,12 +3247,12 @@ ul.idea-list-new > li {
 }
 
 .idea-outer-private .idea-comments .comment-innovationsslussen {
-	background: #fef9e9;
-	border-color: #f1e9cf;
+	background: #fcf7f7;
+	border-color: #bf3434;
 }
 
 .idea-outer-private .idea-comments .comment .comment-author-name {
-	color: #5e4d03;
+	color: #bf3434;
 }
 
 .idea-outer-private .rp-button input[type="submit"] {}
