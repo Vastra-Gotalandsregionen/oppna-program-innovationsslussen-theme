@@ -130,6 +130,7 @@
 	"modules/rp-expanding-textarea-plugin.js",
 	"modules/innovationsslussen-signin-prompt.js",
 	"modules/innovationsslussen-signin-prompt-link-plugin.js",
+	"modules/innovationsslussen-banner-communicate-plugin.js",
     "modules/innovationsslussen-theme.js",
     "theme-main.js"
 ])

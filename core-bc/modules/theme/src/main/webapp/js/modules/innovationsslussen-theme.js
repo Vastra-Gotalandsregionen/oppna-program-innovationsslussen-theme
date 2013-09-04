@@ -40,6 +40,7 @@ AUI().add('innovationsslussen-theme',function(A) {
 
                         instance._initActionConfirmation();
                         instance._initSigninPrompt();
+                        instance._initBannerCommunicate();
                         instance._initBannerCarousel();
                         instance._initBreadcrumbs();
                         instance._initNavigationButton();
@@ -283,6 +284,17 @@ AUI().add('innovationsslussen-theme',function(A) {
 						
 						return width;
 					},
+					
+					_initBannerCommunicate: function() {
+						var instance = this;
+						
+						var bannerCommunicateNode = A.one('.banner-communicate');
+						
+						if(!isNull(bannerCommunicateNode)) {
+							
+							bannerCommunicateNode.plug(A.Plugin.InnovationsslussenBannerCommunicatePlugin);
+						}
+					},
                     
                     _initBreadcrumbs: function() {
                     	var instance = this;
@@ -432,6 +444,7 @@ AUI().add('innovationsslussen-theme',function(A) {
 	    	'event',
 	    	'event-mouseenter',
 	    	'event-resize',
+	    	'innovationsslussen-banner-communicate-plugin',
 	    	'innovationsslussen-signin-prompt-link-plugin',
 	    	'rp-action-confirmation-plugin',
 	    	'rp-iframe-link-plugin',

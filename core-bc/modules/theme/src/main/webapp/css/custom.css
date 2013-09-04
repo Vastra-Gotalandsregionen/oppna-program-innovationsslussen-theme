@@ -3813,6 +3813,10 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	padding: 40px;
 }
 
+.banner-communicate-anim .banner-communicate-view {
+	display: none;
+}
+
 .banner-communicate-layout {}
 
 /* Clearfix style clearing */
@@ -3892,6 +3896,15 @@ ul.news-box-menu li.aui-carousel-menu-active {
 }
 
 .banner-communicate .action-link {
+	color: #fff;
+	text-decoration: none;
+}
+
+.banner-communicate .action-link:hover {
+	text-decoration: underline;
+}
+
+.banner-communicate .action-link-button {
 	background: #2f6ea1 url(../images/buttons/banner-communicate-button.png) top left repeat-x;
 	border: 1px solid #29699e;
 	border-bottom-color: #245780;
@@ -3905,7 +3918,7 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	text-decoration: none;
 }
 
-.banner-communicate .action-link span {
+.banner-communicate .action-link-button span {
 	background: transparent url(../images/icons/icon-play.png) left center no-repeat;
 	display: block;
 	font-size: 1.4em;
@@ -3914,10 +3927,15 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	padding: 5px 0 5px 32px;
 }
 
-.banner-communicate .action-link:hover {
+.banner-communicate .action-link-button:hover {
+	border: 1px solid #245780;
 	text-decoration: none;
 }
 
+.banner-communicate .back-link-wrap {
+	margin: 0 0 10px 0;
+	text-align: left;
+}
 
 /*----------------------------------------------------------------------
 =Debugging
