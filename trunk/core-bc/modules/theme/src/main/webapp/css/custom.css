@@ -2892,10 +2892,17 @@ ul.idea-list > li {
 
 .idea-meta ul.documents-list li a {
 	background: url(../images/file_system/small/txt.png) left center no-repeat;
+	color: #777;
 	display: block;
 	line-height: 16px;
 	min-height: 16px;
 	padding-left: 22px;
+	text-decoration: underline;
+}
+
+.idea-meta ul.documents-list li a:hover {
+	color: #222;
+	text-decoration: none;
 }
 
 .idea-meta ul.documents-list li.pdf a {
@@ -2961,16 +2968,14 @@ ul.idea-list > li {
 }
 
 .add-comment-form .rp-button input[type="submit"] {
-	margin: 10px 10px 10px 20px;
+	background: #778289;
+	border: 0;
+	
+	margin: 0 10px 10px 10px;
 	padding: 10px 20px;
 }
 
 .idea-comments {
-	/*
-	border-top: 1px solid #d5e3ee;
-	padding-top: 20px;
-	margin: 20px 0 10px 0;
-	*/
 	margin: 10px 0;
 }
 
