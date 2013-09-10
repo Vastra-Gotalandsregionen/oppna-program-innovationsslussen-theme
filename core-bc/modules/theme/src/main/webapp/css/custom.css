@@ -2591,14 +2591,6 @@ ul.idea-flow-list li.done span {
 
 /*------- Idea List portlet -------*/
 
-.idea-list-wrap > h2 {
-	border-bottom: 1px solid #d5e3ee;
-	color: #555;
-	font-size: 1.6em;
-	margin: 0 0 15px 0;
-	padding: 0 0 10px 0;
-}
-
 ul.idea-list {
 	list-style: none;
 	margin: 0;
@@ -2610,7 +2602,6 @@ ul.idea-list > li {
 	display: inline-block;
 	list-style: none;
 	margin: 0;
-	min-height: 150px;
 	min-width: 230px;
 	padding: 0;
 	vertical-align: top;
@@ -2622,134 +2613,19 @@ ul.idea-list > li {
 	zoom: 1;
 }
 
-
-.idea-list .idea {
-	background: #bcd3e6;
-	border: 1px solid #aac9e2;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	margin: 0 15px 15px 0;
-	padding: 10px;
-	position: relative;
-}
-
-.idea-list .idea .idea-content {
-	background: #fff;
-	border: 1px solid #a9bdcf;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;	
-	padding: 10px;
-}
-
-.idea-list .idea-info {
-	margin-right: 50px;
-}
-
-.idea-list ul.idea-stats {
-	float: right;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	width: 40px;
-}
-
-.idea-list ul.idea-stats li {
-	display: block;
-	font-size: 12px;
-	height: 20px;
-	line-height: 20px;
-	margin: 0 0 5px 0;
-	padding-left: 20px;
-	text-align: center;
-}
-
-.idea-list ul.idea-stats li.likes {
-	background: url(../images/toolbar/idea-toolbar-icon-sprite.png) 0  -100px no-repeat;
-}
-
-.idea-list .idea h2 {
-	color: #006aad;
-	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
-	font-size: 1.4em;
-	margin: 0 0 10px 0;
-}
-
-.idea-list .idea .description {
-	height: 140px;
-	overflow: hidden;
-	margin: 5px 0;
-}
-
-.idea-list .idea h2 a,
-.idea-list .idea .description a {
-	color: #006aad;
-	text-decoration: none;
-}
-
-.idea-list .idea .description a {
-	color: #333;
-}
-
-.idea-list .idea h2 a:hover,
-.idea-list .idea .description a:hover {
-	text-decoration: underline;
-}
-
-.idea-list ul.idea-flow-list span {
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;	
-	font-size: 9px;
-	line-height: 16px;
-	height: 16px;
-	width: 16px;
-}
-
-
-
-
-
-
-
-/* New */
-
-ul.idea-list-new {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-ul.idea-list-new > li {
-	display: -moz-inline-stack;
-	display: inline-block;
-	list-style: none;
-	margin: 0;
-	min-width: 230px;
-	padding: 0;
-	vertical-align: top;
-	width: 32.55%;
-}
-
-.ie7 ul.idea-list-new > li {
-	display: inline;
-	zoom: 1;
-}
-
-.idea-list-new .idea-item {
+.idea-list .idea-item {
 	margin: 0 15px 0 0;
 	background: url(../images/articles/box-shadow-24.png) bottom center no-repeat;
 	padding-bottom: 15px;
 }
 
-.idea-list-new > li a {
+.idea-list > li a {
 	background: #3583bf;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border: 0;
 	border-radius: 3px;
+	color: #555;
 	display: block;
 	margin: 0;
 	padding: 3px;
@@ -2757,11 +2633,13 @@ ul.idea-list-new > li {
 	text-decoration: none;
 }
 
-.idea-list-new .idea-content {
+.idea-list > li a:hover {
+	color: #555;
+	text-decoration: none;
+}
+
+.idea-list .idea-content {
 	background: #fff;
-	/*
-	border: 1px solid #a9bdcf;
-	*/
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;	
@@ -2770,13 +2648,13 @@ ul.idea-list-new > li {
 	position: relative;
 }
 
-.idea-list-new .idea-content,
-.idea-list-new .idea-content .idea-content-1,
-.idea-list-new .idea-content .idea-content-2 {
+.idea-list .idea-content,
+.idea-list .idea-content .idea-content-1,
+.idea-list .idea-content .idea-content-2 {
 }
 
-.idea-list-new .idea-content .idea-content-1,
-.idea-list-new .idea-content .idea-content-2 {
+.idea-list .idea-content .idea-content-1,
+.idea-list .idea-content .idea-content-2 {
 	background: #fff;
 	height: 100px;
 	left: 0;
@@ -2787,32 +2665,30 @@ ul.idea-list-new > li {
 	width: 88%;
 }
 
-.idea-list-new .idea-content .idea-content-1 {}
+.idea-list .idea-content .idea-content-1 {}
 
-.idea-list-new .idea-content .idea-content-2 {
+.idea-list .idea-content .idea-content-2 {
 	background: #fcfcfc;
 	top: 140px;
 }
 
-.idea-list-new a:hover .idea-content .idea-content-1 {
+.idea-list a:hover .idea-content .idea-content-1 {
 	top: 140px;
 }
 
 
-.idea-list-new a:hover .idea-content .idea-content-2 {
+.idea-list a:hover .idea-content .idea-content-2 {
 	top: 0;
 }
 
-.idea-list-new .idea-content h3 {
-	color: #006aad;
+.idea-list .idea-content h3 {
+	color: #555;
 	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
 	font-size: 1.2em;
 	margin: 0 0 10px 0;
-	
-	color: #555;
 }
 
-.idea-list-new ul.idea-stats {
+.idea-list ul.idea-stats {
 	bottom: 10px;
 	list-style: none;
 	margin: 0;
@@ -2821,7 +2697,7 @@ ul.idea-list-new > li {
 	right: 10px;
 }
 
-.idea-list-new ul.idea-stats li {
+.idea-list ul.idea-stats li {
 	color: #777;
 	display: block;
 	float: left;
@@ -2835,15 +2711,15 @@ ul.idea-list-new > li {
 	text-align: center;
 }
 
-.idea-list-new ul.idea-stats li.likes {
+.idea-list ul.idea-stats li.likes {
 	background: url(../images/toolbar/idea-toolbar-icon-sprite-default.png) 0  -100px no-repeat;
 }
 
-.idea-list-new ul.idea-stats li.comments {
+.idea-list ul.idea-stats li.comments {
 	background: url(../images/toolbar/idea-toolbar-icon-sprite-default.png) 0  3px no-repeat;
 }
 
-.idea-list-new .idea-label {
+.idea-list .idea-label {
 	color: #fff;
 	font-size: 0.9em;
 	font-weight: bold;
@@ -2852,21 +2728,21 @@ ul.idea-list-new > li {
 
 /* Types */
 
-.idea-list-new > li.done a {
+.idea-list > li.done a {
 	background: #5e9237;
 	border-color: #426627;
 }
 
-.idea-list-new > li.active-innovationsslussen a {
+.idea-list > li.active-innovationsslussen a {
 	background: #bfb331;
 	border-color: #948b2a;
 }
 
-.idea-list-new li.active-innovationsslussen .idea-label {
+.idea-list li.active-innovationsslussen .idea-label {
 	color: #444011;
 }
 
-.idea-list-new > li.private a {
+.idea-list > li.private a {
 	background: #bf3434;
 	border-color: #8b2626;
 }
