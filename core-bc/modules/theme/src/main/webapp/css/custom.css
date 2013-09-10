@@ -2667,7 +2667,7 @@ ul.idea-list > li {
 }
 
 .idea-list ul.idea-stats li.likes {
-	background: url(../images/toolbar/idea-toolbar-icon-sprite-24.png) 0  -100px no-repeat;
+	background: url(../images/toolbar/idea-toolbar-icon-sprite.png) 0  -100px no-repeat;
 }
 
 .idea-list .idea h2 {
@@ -2913,7 +2913,7 @@ ul.idea-list-new > li {
 }
 
 .idea-toolbar-wrap li.icon a {
-	background: url(../images/toolbar/idea-toolbar-icon-sprite-24.png) 4px  1000px no-repeat;
+	background: url(../images/toolbar/idea-toolbar-icon-sprite.png) 4px  1000px no-repeat;
 	color: #3583bf;
 	padding-left: 26px;
 }
@@ -3248,8 +3248,47 @@ ul.idea-list-new > li {
 }
 
 .idea-outer-private .idea-toolbar-wrap li.icon a {
-	background-image: url(../images/toolbar/idea-toolbar-private-icon-sprite.png);
+	background-image: url(../images/toolbar/idea-toolbar-icon-sprite-private.png);
 	color: #bf3434;
+}
+
+/* -- Public - Active at Innovationsslussen -- */
+
+.active-innovationsslussen .idea {
+	background: #bfb331;
+}
+
+.active-innovationsslussen .idea-inner {
+	border-color: #948b2a;
+}
+
+.active-innovationsslussen h1 {
+	color: #b08700;
+}
+
+.active-innovationsslussen .idea-toolbar-wrap li.icon a {
+	background-image: url(../images/toolbar/idea-toolbar-icon-sprite-active.png);
+	color: #b08700;
+}
+
+
+/* -- Public - Done -- */
+
+.done .idea {
+	background: #5e9237;
+}
+
+.done .idea-inner {
+	border-color: #426627;
+}
+
+.done h1 {
+	color: #5e9237;
+}
+
+.done .idea-toolbar-wrap li.icon a {
+	background-image: url(../images/toolbar/idea-toolbar-icon-sprite-done.png);
+	color: #5e9237;
 }
 
 /* Comments */
