@@ -3852,6 +3852,11 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	text-decoration: none;
 }
 
+.banner-communicate .action-link-button:hover,
+.banner-communicate .action-link-button:hover span {
+	cursor: pointer;
+}
+
 .banner-communicate .back-link-wrap {
 	height: 30px;
 	margin: 0;
