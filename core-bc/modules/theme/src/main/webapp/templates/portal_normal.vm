@@ -103,9 +103,6 @@
 
 $theme.include($bottom_include)
 
-##<script src="//www.youtube.com/player_api?enablejsapi=1&version=3"></script>
-##<script src="//www.youtube.com/player_api?enablejsapi=1&version=2"></script>
-##<script src="//www.youtube.com/player_api?enablejsapi=0&version=2"></script>
 <script src="//www.youtube.com/player_api"></script>
 
 #parse ("$full_templates_path/theme_js_bottom.vm")
