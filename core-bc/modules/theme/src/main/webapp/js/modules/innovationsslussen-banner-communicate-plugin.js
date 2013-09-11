@@ -9,6 +9,9 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
         HEIGHT_BACKLINK_WRAP = 'heightBackLinkWrap',
         HOST = 'host',
         
+        URL_PREFIX = 'urlPrefix',
+        URL_SUFFIX = 'urlSuffix',
+        
 		// Custom Attributes
         CSS_ANIM_RUNNING = 'banner-communicate-anim',
         
@@ -16,6 +19,8 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
         
         CSS_HIDDEN = 'aui-helper-hidden'
     ;
+    
+    var TPL_MOVIE_IFRAME = '<iframe class="movie-iframe" title="" frameborder="0" src="{src}" width="{width}" height="{height}"></iframe>'
 
     var InnovationsslussenBannerCommunicatePlugin = A.Component.create(
             {
@@ -27,6 +32,14 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                 	
                 	heightBackLinkWrap: {
                 		value: 30
+                	},
+                	
+                	urlPrefix: {
+                		value: '//www.youtube.com/embed/'
+                	},
+                	
+                	urlSuffix: {
+                		value: '?autoplay=1&rel=0&modestbranding=1&wmode=opaque'
                 	},
                 	
                 	someAttr: {
@@ -59,7 +72,6 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                         var host = instance.get(HOST);
                         
                         instance._initView();
-                        instance._initPlayer();
                         instance._initAnim();
                     	
                         instance._bindActionLinks();
@@ -130,30 +142,6 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	}, instance);
 					},
 					
-					_initPlayer: function() {
-						var instance = this;
-						
-						var host = instance.get(HOST);
-						
-                        var movieCtnId = instance.movieCtn.getAttribute('id');
-
-                        var movieHeight = instance.movieHeight;
-                        var movieWidth = instance.movieWidth;
-
-                        if(YT != null) {
-                            instance.player = new YT.Player(movieCtnId, {
-                        		height: movieHeight,
-                        		width: movieWidth,
-                        		playerVars: {
-                        			autoplay: 0,
-                        			rel: 0,
-                        			modestbranding: 1,
-                        			wmode: 'opaque'
-                        		}					              
-                            });
-                        }
-					},
-                    
                     _initView: function() {
                     	var instance = this;
                     	
@@ -204,19 +192,23 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	
                     	var viewToShow = instance.startView;
                     	
-                		if(!isNull(instance.player)) {
-                			instance.player.stopVideo();
-                			instance.player.clearVideo();
-                		}
+                    	instance._clearVideo();
                     	
                     	if(isCurrentViewStart) {
                     		viewToShow = instance.movieView;
-
+                    		
                     		var videoId = currentTarget.getAttribute('data-videoId'); 
                     		
-                    		if(!isNull(instance.player)) {
-                    			instance.player.loadVideoById(videoId);
-                    		}
+                    		var url = instance.get(URL_PREFIX) + videoId + instance.get(URL_SUFFIX);
+                    		
+                    		var iframeNodeContent = A.substitute(TPL_MOVIE_IFRAME, {
+    							src: url,
+    							height: instance.movieHeight,
+    							width: instance.movieWidth
+    						});
+
+                    		
+                    		instance.movieCtn.append(iframeNodeContent);
                     		
                     		instance.anim.set('to', {height: instance.get(HEIGHT_ACTION_VIEW)});
                     		
@@ -230,6 +222,12 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	viewToShow.show();
                     	
                     	instance.currentView = viewToShow;
+                    },
+                    
+                    _clearVideo: function() {
+                    	var instance = this;
+                    	
+                    	instance.movieCtn.get('childNodes').remove();
                     },
                     
                     _someFunction: function() {
@@ -249,6 +247,7 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
 	       'aui-base',
 	       'aui-component',
 	       'aui-simple-anim',
+	       'substitute',
 	       'plugin'
       ]
     }
