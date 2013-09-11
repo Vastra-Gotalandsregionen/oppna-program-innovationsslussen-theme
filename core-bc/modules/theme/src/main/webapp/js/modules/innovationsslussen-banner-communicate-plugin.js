@@ -204,21 +204,21 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	
                     	var viewToShow = instance.startView;
                     	
+                		if(!isNull(instance.player)) {
+                			instance.player.stopVideo();
+                			instance.player.clearVideo();
+                		}
+                    	
                     	if(isCurrentViewStart) {
                     		viewToShow = instance.movieView;
 
                     		var videoId = currentTarget.getAttribute('data-videoId'); 
                     		
                     		if(!isNull(instance.player)) {
-                    			instance.player.stopVideo();
-                    			instance.player.clearVideo();
-                    			
                     			instance.player.loadVideoById(videoId);
                     		}
                     		
-                    		
                     		instance.anim.set('to', {height: instance.get(HEIGHT_ACTION_VIEW)});
-                    		
                     		
                     	} else {
                     		instance.anim.set('to', {height: instance.startHeight});
