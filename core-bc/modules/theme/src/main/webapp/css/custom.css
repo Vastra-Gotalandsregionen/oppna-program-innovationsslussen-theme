@@ -3853,7 +3853,9 @@ ul.news-box-menu li.aui-carousel-menu-active {
 }
 
 .banner-communicate .back-link-wrap {
-	margin: 0 0 10px 0;
+	height: 30px;
+	margin: 0;
+	padding: 0;
 	text-align: left;
 }
 

@@ -103,6 +103,8 @@
 
 $theme.include($bottom_include)
 
+<script src="//www.youtube.com/player_api"></script>
+
 #parse ("$full_templates_path/theme_js_bottom.vm")
 
 </html>
