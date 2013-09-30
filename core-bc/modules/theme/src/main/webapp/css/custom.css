@@ -1,3 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+/*
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+*/
+
 /*
 @author:	Erik Andersson
 @date:		2013-04-23
@@ -1172,6 +1177,43 @@ input.password,
 a.link-button,
 a:link.link-button {
 	text-decoration: none;
+}
+
+/*------- Link button mod -------*/
+
+.link-button-mod:visited,
+.link-button-mod {
+	background: #2f6ea1 url(../images/buttons/banner-communicate-button.png) top left repeat-x;
+	border: 1px solid #29699e;
+	border-bottom-color: #245780;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+	color: #fff;
+	display: block;
+	float: left;
+	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	line-height: 1.1em;
+	margin: 0 10px 10px 0;
+	padding: 10px 15px;
+	position: relative;
+	text-decoration: none;
+}
+
+.link-button-mod span {
+	
+}
+
+.link-button-mod:hover {
+	border: 1px solid #245780;
+	text-decoration: none;
+}
+
+.link-button-mod:hover,
+.link-button-mod:hover span {
+	cursor: pointer;
 }
 
 
@@ -2527,6 +2569,94 @@ portlet-blogs .taglib-flags span a:hover {
 	display: none;
 }
 
+
+/*------- Navigation Portlet -------*/
+
+.nav-menu {
+	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+	background: url(../images/articles/box-shadow-24.png) bottom center no-repeat;
+	padding: 0 0 10px 0;
+	margin: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+.nav-menu h2 {
+  font-size: 1.0em;
+  margin: 0;
+  padding: 0; 
+}
+
+.nav-menu h2 a {
+	background: #2f6ea1 url(../images/navigation/navigation-bg-normal.png) top left repeat-x; 
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;	
+	color: #fff;
+	display: block;
+	font-size: 1.0em;
+	margin: 0;
+	padding: 15px;
+	text-decoration: none;
+}
+
+.nav-menu ul {
+	list-style: none;
+	background: #fff;
+	border: 1px solid #e5e2db;
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;	
+	margin: 0;
+	padding: 0;
+}
+
+.nav-menu ul ul {
+  border-width: 1px 0 0 0;
+}
+
+.nav-menu ul li {
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li:last-child {
+  border: none;
+}
+
+.nav-menu ul li a {
+  display: block;
+  margin: 0;
+  padding: 15px;
+}
+
+.rtl .nav-menu ul li a {
+  text-align: right;
+}
+
+.nav-menu ul.level-1  > li > a {
+  padding-left: 15px; 
+}
+
+.nav-menu ul.level-2  > li > a {
+  padding-left: 30px; 
+}
+
+.nav-menu ul.level-3  > li > a {
+  padding-left: 45px; 
+}
+
+.nav-menu ul.level-4  > li > a {
+  padding-left: 60px; 
+}
+
+.nav-menu ul li a:hover {
+  background: #cde5ff;
+}
+
 /*----------------------------------------------------------------------
 =Custom Portlets
 ----------------------------------------------------------------------*/
@@ -3228,28 +3358,20 @@ ul.idea-list > li {
 	font-size: 1.3em;
 }
 
-.create-confirmation .intro {
-	background-image: url(../images/ideas/idea-created.png);
+.create-confirmation .content {
+	background: transparent url(../images/ideas/idea-created.png) top right no-repeat;
+	color: #333;
+	font-size: 1.1em;
 	min-height: 92px;
-	padding: 40px 360px 0 0;
+	padding: 10px 360px 0 0;
 }
 
-.create-idea .info-section {
-	margin: 10px 0;
+.create-confirmation .intro-text {
+	font-weight: bold;
 }
 
-.create-idea .info-section-hd {
-	border-bottom: 1px solid #d5e3ee;
-	color: #666;
-	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
-	font-size: 1.4em;
-	font-weight: normal;
-	margin: 0 0 5px 0;
-	padding: 0 0 5px 0;
-}
-
-.create-idea .info-section-bd {
-	padding: 10px;
+.create-confirmation .link-buttons-wrap {
+	margin: 5px 0;
 }
 
 .create-idea-form {}
