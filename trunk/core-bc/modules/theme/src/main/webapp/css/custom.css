@@ -3986,6 +3986,76 @@ ul.news-box-menu li.aui-carousel-menu-active {
 	text-align: left;
 }
 
+/*------- Person Cards -------*/
+
+ul.persons-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.persons-list li {
+	display: -moz-inline-stack;
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	min-width: 230px;
+	padding: 0;
+	vertical-align: top;
+	width: 75.0%;
+}
+
+.ie7 ul.persons-list li {
+	display: inline;
+	zoom: 1;
+}
+
+ul.persons-list .person {
+	margin: 0 10px 0 0;
+	padding-bottom: 15px;
+}
+
+.person .person-inner {
+	border: 1px solid #ddd;
+}
+
+.person-image-ctn {
+	float: left;
+	width: 120px;
+}
+
+.person-image {
+	background: #eee;
+	overflow: hidden;
+}
+
+.person-image img {
+	border: 0;
+	vertical-align: top;
+	width: 100%;
+}
+
+.person .person-info-ctn {
+	margin-left: 120px;
+}
+
+.person .person-info {
+	padding: 20px;
+}
+
+.person h3 {
+	color: #222;
+	font-size: 1.2em;
+	margin: 0 0 0.3em 0;
+}
+
+.person p {
+	font-size: 1.0em;
+	line-height: 1.2;
+	margin: 5px 0;
+	padding: 0;
+}
+
 /*----------------------------------------------------------------------
 =Debugging
 ----------------------------------------------------------------------*/
