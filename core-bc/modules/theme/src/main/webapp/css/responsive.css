@@ -4,10 +4,6 @@
 
 @media only
 	screen and (max-width : 740px)
-	/*
-	,
-	screen and (min-device-width : 768px) and (max-device-width : 1024px)
-	*/
 {
 
 /* ----------------- Banner / header ----------------------- */
@@ -109,28 +105,6 @@ ul.section-navigation-list li a .inner {
 
 
 /*----------------------------------------------------------------------
-=All devices with width 800px or less
-----------------------------------------------------------------------*/
-
-@media only screen and (max-width : 800px) {
-	
-	
-/* -----------------  Layout ----------------------- */
-
-/*---- RP Columns ----*/
-
-#content .rp-columns .portlet-column {
-	width: 100.0%;
-}
-
-.rp-columns .portlet-column-content {
-	padding: 5px 0;
-}
-	
-}
-
-
-/*----------------------------------------------------------------------
 =All devices with width 600px or less
 ----------------------------------------------------------------------*/
 
@@ -176,20 +150,19 @@ ul.top-nav-list .top-nav-quick-access {
 
 /* -----------------  Layout ----------------------- */
 
-/*---- RP Columns ----*/
+/*---- Columns ----*/
 
-#content .rp-columns .portlet-column {
+#content .portlet-layout {
+	display: block;
+}
+
+#content .portlet-layout .portlet-column {
+	display: block;
 	width: 100.0%;
 }
 
-.rp-columns .portlet-column-content {
+#content .portlet-layout .portlet-column-content {
 	padding: 5px 0;
-}
-
-/*---- RP Landing Page ----*/
-
-.rp-columns-landing-page #column-sidebar {
-	display: none;
 }
 
 /* -----------------  Navigation ----------------------- */
