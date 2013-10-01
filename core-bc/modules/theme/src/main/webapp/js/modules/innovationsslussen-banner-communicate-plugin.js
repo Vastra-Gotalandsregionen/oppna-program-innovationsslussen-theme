@@ -75,6 +75,7 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                         instance._initAnim();
                     	
                         instance._bindActionLinks();
+                        instance._bindWindowResize();
                     },
                     
                     _bindActionLinks: function() {
@@ -85,6 +86,20 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	var actionLinks = host.all('.action-link');
                     	
                     	actionLinks.on('click', instance._onActionLinkClick, instance);
+                    },
+                    
+                    _bindWindowResize: function() {
+                    	var instance = this;
+                    	
+                        // Bind window size change event
+                        A.after('windowresize', function(e) {
+                        	var instance = this;
+                        	
+                        	instance._updateHeightWidth();
+                        	
+                        }, instance);
+                    	
+                    	
                     },
                     
 					_getNodeHeight: function(node) {
@@ -170,13 +185,7 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	instance.currentView = startView;
                     	instance.viewWrap = viewWrap;
                     	
-                    	var startHeight = instance._getNodeHeight(startView);
-                    	var movieHeight = instance.get(HEIGHT_ACTION_VIEW) - instance.get(HEIGHT_BACKLINK_WRAP);
-                    	var movieWidth = instance._getNodeWidth(startView);
-                    	
-                    	instance.movieHeight = movieHeight;
-                    	instance.movieWidth = movieWidth;
-                    	instance.startHeight = startHeight;
+                    	instance._updateHeightWidth();
                     },
                     
                     _onActionLinkClick: function(e) {
@@ -230,6 +239,20 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	instance.movieCtn.get('childNodes').remove();
                     },
                     
+                    _updateHeightWidth: function() {
+                    	var instance = this;
+                    	
+                    	if(!isNull(instance.startView)) {
+                        	var startHeight = instance._getNodeHeight(instance.startView);
+                        	var movieHeight = instance.get(HEIGHT_ACTION_VIEW) - instance.get(HEIGHT_BACKLINK_WRAP);
+                        	var movieWidth = instance._getNodeWidth(instance.startView);
+                        	
+                        	instance.movieHeight = movieHeight;
+                        	instance.movieWidth = movieWidth;
+                        	instance.startHeight = startHeight;
+                    	}
+                    },
+                    
                     _someFunction: function() {
                         var instance = this;
                     }
@@ -247,6 +270,7 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
 	       'aui-base',
 	       'aui-component',
 	       'aui-simple-anim',
+	       'event-resize',
 	       'substitute',
 	       'plugin'
       ]
