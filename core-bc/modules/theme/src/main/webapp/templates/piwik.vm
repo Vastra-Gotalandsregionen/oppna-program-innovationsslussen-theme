@@ -1,13 +1,15 @@
-<script type="text/javascript" src="${piwik_url}piwik.js"></script>
-
-<script type="text/javascript">
-	try {
-		var piwikTracker = Piwik.getTracker('${piwik_url}' + 'piwik.php', ${piwik_site_id});
-		piwikTracker.trackPageView();
-		piwikTracker.enableLinkTracking();
-	} catch( err ) {}
-</script>
-
-<noscript>
-	<p><img src="${piwik_url}piwik.php?idsite=${piwik_site_id}" style="border:0" alt="" /></p>
-</noscript>
+#if($piwik_code != "")
+	<script type="text/javascript" src="//piwik.vgregion.se/piwik.js"></script>
+	
+	<script type="text/javascript">
+		try {
+			var piwikTracker = Piwik.getTracker('//piwik.vgregion.se/piwik.php', ${piwik_code});
+			piwikTracker.trackPageView();
+			piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+	</script>
+	
+	<noscript>
+		<p><img src="//piwik.vgregion.se/piwik.php?idsite=${piwik_code}" style="border:0" alt="" /></p>
+	</noscript>
+#end
