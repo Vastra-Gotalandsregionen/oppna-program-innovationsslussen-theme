@@ -1208,6 +1208,7 @@ a:link.link-button {
 
 .link-button-mod:hover {
 	border: 1px solid #245780;
+	color: #fff;
 	text-decoration: none;
 }
 
