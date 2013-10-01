@@ -165,6 +165,15 @@ ul.top-nav-list .top-nav-quick-access {
 	padding: 5px 0;
 }
 
+.aui-layout .aui-column {
+	float: none;
+	width: 100%;
+}
+
+.aui-layout .aui-column .aui-column-content {
+	padding: 0;
+}
+
 /* -----------------  Navigation ----------------------- */
 
 #navigationButtonMenu ul {
@@ -172,75 +181,26 @@ ul.top-nav-list .top-nav-quick-access {
 	margin-right: 10px;
 }
 
-ul.site-navigation-list > li {
-	display: block;
-	min-width: auto;
-	width: 100%;
-}
-
 /* ----------------- Liferay Portlets ----------------------- */
 
-/*---- Navigation Portlet ----*/
-
-ul.section-navigation-list li {
-	margin-left: 0;
-	margin-right: 0;
-	width: 100%;
-}
-	
 /* ----------------- Custom Portlets ----------------------- */
 
-/*---- VAP Search Portlet ----*/
+/*------- Idea portlet -------*/
 
-.vap-search-wrap {
-	padding: 0;
+.add-comment-form .field-wrap,
+.add-comment-form .button-holder,
+.add-comment-form .field-wrap label,
+.add-comment-form .field-element-wrap {
+	float: none;
+	width: 100%;
 }
 
-.search-box-left,
-.search-box-right,
-.search-box-center {
-	background: none;
+.add-comment-form .rp-button input[type="submit"] {
+	margin: 10px 0;
 }
 
-.search-box-left,
-.search-box-right {
-	padding: 0;
-}
-
-.search-box-center {
-	padding: 0;
-}
-
-.vap-search-wrap .search-input-wrap {
-	border: 1px solid #cad5de;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius:  4px;	
-	-moz-box-shadow: 0px 1px 4px 0px #cccccc;
-	-webkit-box-shadow: 0px 1px 4px 0px #cccccc;
-	box-shadow: 0px 1px 4px 0px #cccccc;
-}
-
-/*---- VAP Search Results ----*/
-
-.vap-search-results-summary {
-	font-size: 1.6em;
-}
-
-
-/*---- VAP Latest Documents ----*/
-
-.vap-latest-documents > .bd {
-	min-height: 0;
-}
 
 /* ----------------- Articles ----------------------- */
-
-/*---- News box article ----*/
-
-.news-box-wrap {
-	display: none;
-}
 
 /*---- Banner Communicate ----*/
 
@@ -261,72 +221,3 @@ ul.section-navigation-list li {
 
 
 }
-/*----------------------------------------------------------------------
-=Desktops and laptops
-----------------------------------------------------------------------*/
-
-@media only screen and (min-width : 1320px) {
-	
-	
-	#main-content {
-		margin-right: 0;
-	}
-	
-}
-
-/*----------------------------------------------------------------------
-=iPads  - portrait and landscape
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {	}
-
-/*----------------------------------------------------------------------
-=Smartphones - landscape 
-----------------------------------------------------------------------*/
-
-@media only screen and (min-width : 321px) {}
-
-/*----------------------------------------------------------------------
-=Smartphones - portrait 
-----------------------------------------------------------------------*/
-
-@media only screen and (max-width : 320px) {}
-
-
-/*----------------------------------------------------------------------
-=iPads  - portrait and landscape
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
-
-/*----------------------------------------------------------------------
-=iPads  - landscape
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-}
-
-/*----------------------------------------------------------------------
-=iPads  - portrait
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-}
-
-/*----------------------------------------------------------------------
-=Desktops and laptops
-----------------------------------------------------------------------*/
-
-@media only screen and (min-width : 1224px) {}
-
-/*----------------------------------------------------------------------
-=Large screens
-----------------------------------------------------------------------*/
-
-@media only screen and (min-width : 1824px) {}
-
-/*----------------------------------------------------------------------
-=iPhone 4
-----------------------------------------------------------------------*/
-
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {}
