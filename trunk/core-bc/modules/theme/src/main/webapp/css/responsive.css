@@ -242,6 +242,24 @@ ul.section-navigation-list li {
 	display: none;
 }
 
+/*---- Banner Communicate ----*/
+
+.banner-communicate-layout .banner-communicate-column {
+	float: none;
+	width: 100%;
+}
+
+.banner-communicate-column .banner-communicate-column-content {
+	padding: 0;
+}
+
+.banner-communicate-layout-1 .banner-communicate-column-2,
+.banner-communicate-layout-1 .banner-communicate-column-1 {
+	display: none;
+}
+
+
+
 }
 /*----------------------------------------------------------------------
 =Desktops and laptops
