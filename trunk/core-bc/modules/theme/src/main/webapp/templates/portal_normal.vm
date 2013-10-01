@@ -68,13 +68,6 @@
 				#end
 			
 				$theme.include($content_include)
-				#*
-				<div id="toolsSidebar" class="tools-sidebar">
-					#if($is_signed_in)
-						#parse ("$full_templates_path/tyck-till-content.vm")
-					#end
-				</div>
-				*#
 			#else
 				$portletDisplay.recycle()
 	
@@ -82,8 +75,6 @@
 	
 				$theme.wrapPortlet("portlet.vm", $content_include)
 			#end
-			
-			##parse ("$full_templates_path/piwik_portlet.vm")
 		</div>
 	</div>
 	
@@ -105,6 +96,10 @@ $theme.include($bottom_include)
 
 <script src="//www.youtube.com/player_api"></script>
 
+#parse ("$full_templates_path/piwik.vm")
+
 #parse ("$full_templates_path/theme_js_bottom.vm")
+
+#parse ("$full_templates_path/social_addthis.vm")
 
 </html>
