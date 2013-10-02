@@ -110,9 +110,14 @@ ul.section-navigation-list li a .inner {
 @media only screen and (max-width : 700px) {
 	
 	/*------- Idea List portlet -------*/
+	
 	ul.idea-list > li {
-		display: block;
+		/*display: block;*/
 		width: 100%;
+	}
+	
+	.idea-list ul.idea-stats {
+		/*bottom: 30px;*/
 	}
 	
 	

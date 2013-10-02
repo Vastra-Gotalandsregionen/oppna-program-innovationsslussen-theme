@@ -2794,7 +2794,13 @@ ul.idea-list > li {
 	padding: 10px;
 	padding: 6%;
 	width: 88%;
+	
+	height: 100%;
+	width: 100%;
+	padding: 0;
 }
+
+
 
 .idea-list .idea-content .idea-content-1 {}
 
@@ -2812,6 +2818,10 @@ ul.idea-list > li {
 	top: 0;
 }
 
+.idea-list .idea-content .idea-content-inner {
+	padding: 6%;
+}
+
 .idea-list .idea-content h3 {
 	color: #555;
 	font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
@@ -2826,6 +2836,11 @@ ul.idea-list > li {
 	padding: 0;
 	position: absolute;
 	right: 10px;
+}
+
+.idea-list ul.idea-stats {
+	bottom: 6%;
+	right: 6%;
 }
 
 .idea-list ul.idea-stats li {
