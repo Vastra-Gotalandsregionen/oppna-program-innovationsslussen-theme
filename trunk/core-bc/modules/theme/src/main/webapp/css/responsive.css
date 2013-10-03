@@ -49,14 +49,15 @@ ul.top-nav-list {
 
 /*---- VAP Columns ----*/
 
-.rp-columns-vap-start-page #column-2,
-.rp-columns-vap-start-page #column-3 {
-	width: 49.9%;
+.aui-layout .aui-column {
+	float: none;
+	width: 100%;
 }
 
-.rp-columns-vap-start-page #column-4 {
-	width: 100.0%;
+.aui-layout .aui-column .aui-column-content {
+	padding: 0;
 }
+
 
 /* ----------------- Liferay Portlets ----------------------- */
 
@@ -183,15 +184,6 @@ ul.top-nav-list .top-nav-quick-access {
 
 #content .portlet-layout .portlet-column-content {
 	padding: 5px 0;
-}
-
-.aui-layout .aui-column {
-	float: none;
-	width: 100%;
-}
-
-.aui-layout .aui-column .aui-column-content {
-	padding: 0;
 }
 
 /* -----------------  Navigation ----------------------- */
