@@ -1071,6 +1071,10 @@ textarea.focus {
 
 /*------- Buttons and Link buttons -------*/
 
+.link-button-wrap {
+	margin: 10px 0;
+}
+
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
@@ -1217,6 +1221,30 @@ a:link.link-button {
 	cursor: pointer;
 }
 
+/*------- Link button mod 2 -------*/
+
+a.link-button-mod-1,
+a:visited.link-button-mod-1 {
+	background: #778289;
+	background-image: none;
+	border: 1px solid #778289; 
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 4px 10px;
+	position: relative;	
+	text-decoration: none;
+}
+
+a.link-button-mod-1 span {}
+
+a.link-button-mod-1:hover {
+	border-color: #333;
+}
+
+a.link-button-mod-1:hover span {}
 
 /*----------------------------------------------------------------------
 =Modules and Content
