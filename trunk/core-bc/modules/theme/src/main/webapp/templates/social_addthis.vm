@@ -5,6 +5,11 @@
 	<script type="text/javascript" src="$add_this_script_url"></script>
     <script type="text/javascript">
 
+
+		addthis_config = {
+			'ui_language': 'sv' 
+		};
+
 		addthis.layers({
         	'theme' : 'transparent',
         	'share' : {
