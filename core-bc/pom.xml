@@ -11,15 +11,16 @@ Generation time : 2011-11-16 10:19:31 CET
   <parent>
     <groupId>se.vgregion.innovationsslussen-theme</groupId>
     <artifactId>innovationsslussen-theme-system</artifactId>
-    <version>1.6</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
   <groupId>se.vgregion.innovationsslussen-theme</groupId>
   <artifactId>innovationsslussen-theme-core-bc</artifactId>
   <packaging>pom</packaging>
-  <version>1.6</version>
+  <version>1.0-SNAPSHOT</version>
   <name>${project.artifactId}</name>
 
   <modules>
     <module>modules/theme</module>
   </modules>
 </project>
+ 
