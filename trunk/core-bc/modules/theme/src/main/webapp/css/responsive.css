@@ -169,6 +169,27 @@ ul.top-nav-list .top-nav-quick-access {
 	margin: 0;
 }
 
+/* -----------------  Base blocks ----------------------- */
+
+/*---- Common elements ----*/
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.4em;   
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.0em;
+}
+
+
 /* -----------------  Layout ----------------------- */
 
 /*---- Columns ----*/
@@ -211,6 +232,38 @@ ul.top-nav-list .top-nav-quick-access {
 	margin: 10px 0;
 }
 
+.idea-meta h2,
+.idea-comments > h2 {
+    font-size: 1.3em;
+}
+
+.idea-comments .comment .comment-author,
+.idea-comments .comment .comment-entry {
+    float: none;
+}
+
+.idea-comments .comment .comment-author {
+    font-size: 1.0em;
+}
+
+.idea-comments .comment .comment-author-name,
+.idea-comments .comment .comment-author-title {
+    display: inline-block;
+}
+
+.idea-comments .comment .comment-author-title {
+    font-weight: normal;
+}
+
+.idea-comments .comment .comment-entry {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.idea-comments .action-link {
+    font-size: 1.1em;
+}
+
 
 /* ----------------- Articles ----------------------- */
 
@@ -228,6 +281,10 @@ ul.top-nav-list .top-nav-quick-access {
 .banner-communicate-layout-1 .banner-communicate-column-2,
 .banner-communicate-layout-2 .banner-communicate-column-1 {
 	display: none;
+}
+
+.banner-communicate h1 {
+    font-size: 1.6em;
 }
 
 
