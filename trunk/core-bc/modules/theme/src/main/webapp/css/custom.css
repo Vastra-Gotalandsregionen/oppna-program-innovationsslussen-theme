@@ -1027,6 +1027,120 @@ a.link-button-mod-1:hover span {}
 =Modules and Content
 ----------------------------------------------------------------------*/
 
+/*------- VGR boxed content -------*/
+/* Compontent used for Innovationsslussen */
+
+.vgr-boxed-content {
+    margin: 0 0 15px 0;
+}
+
+.vgr-boxed-content > .hd {
+    background: #2f6ea1 url(../images/portlet/portlet-hd-bg-2.png) top left repeat-x;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0; 
+    border: 1px solid #245780;
+    -moz-box-shadow: 0px 1px 4px 0px #cccccc;
+    -webkit-box-shadow: 0px 1px 4px 0px #cccccc;
+    box-shadow: 0px 1px 4px 0px #cccccc;
+    color: #fff;
+    font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 0;
+    padding: 7px 10px;
+    position: relative;      
+}
+
+.vgr-boxed-content > .bd {
+    background: #fff;
+    border: 1px solid #cad5de;
+    border-width: 0 1px 1px 1px;
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-radius: 0 0 6px 6px;
+    border-radius:  0 0 6px 6px;    
+    -moz-box-shadow: 0px 1px 4px 0px #cccccc;
+    -webkit-box-shadow: 0px 1px 4px 0px #cccccc;
+    box-shadow: 0px 1px 4px 0px #cccccc;
+    margin: 0;  
+    padding: 12px;
+    position: relative; 
+}
+
+
+/*------- VGR list view -------*/
+/* Compontent used for Innovationsslussen */
+
+ul.vgr-list-view {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.vgr-list-view-item {
+    background: #eef5fa;
+    border: 1px solid #c4ced5;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 7px 0;
+    padding: 10px;
+    position: relative;
+}
+
+.ie7 li.vgr-list-view-item,
+.ie8 li.vgr-list-view-item {
+    zoom: 1;
+}
+
+li.vgr-list-view-item-odd {
+    background: #fff;
+}
+
+li.vgr-list-view-item-item .hd,
+li.vgr-list-view-item .bd,
+li.vgr-list-view-item .ft {
+    margin: 5px 0;
+}
+
+li.vgr-list-view-item .ft {
+    margin-bottom: 0;
+}
+
+li.vgr-list-view-item .hd h3 {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+li.vgr-list-view-item .hd h3 a {
+    color: #2f72a9;
+    text-decoration: none;
+}
+
+li.vgr-list-view-item .bd a {
+    color: #2f72a9;
+    text-decoration: none;
+}
+
+li.vgr-list-view-item .bd a:hover {
+    color: #2f72a9;
+    text-decoration: underline; 
+}
+
+li.vgr-list-view-item .hd h3 a:hover {
+    color: #2f72a9;
+    text-decoration: underline;
+}
+
+/* Condensed view */
+
+.vgr-list-view-condensed .vgr-list-view-item .hd h3 {
+    font-size: 1.1em;
+}
+
 /*------- Info Box -------*/
 
 .info-box {
@@ -2909,7 +3023,7 @@ ul.idea-list > li {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;	
 	color: #fff;
-	padding: 40px;
+	padding: 30px;
 }
 
 .banner-communicate-anim .banner-communicate-view {
@@ -3041,6 +3155,56 @@ ul.idea-list > li {
 	margin: 0;
 	padding: 0;
 	text-align: left;
+}
+
+/* Minimized view */
+
+.banner-communicate .banner-communicate-minimize,
+.banner-communicate .banner-communicate-normalize {
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.banner-communicate .banner-communicate-minimize a,
+.banner-communicate .banner-communicate-normalize a {
+    background: #3073a7;
+    border: 1px solid #5696c6;
+    border-width: 1px 1px 0 1px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+    width: 100px;
+}
+
+.banner-communicate-minimized {
+    /*background: none;*/
+    border: 0;
+    padding: 0;
+}
+
+.banner-communicate-minimized .banner-communicate-minimize,
+.banner-communicate-minimized .banner-communicate-layout-1,
+.banner-communicate-minimized .banner-communicate-layout-2 {
+    display: none;
+}
+
+.banner-communicate .banner-communicate-normalize {
+    display: none;
+}
+
+.banner-communicate-minimized .banner-communicate-normalize {
+    display: block;
+}
+
+.banner-communicate-minimized .banner-communicate-normalize a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /*------- Person Cards -------*/
