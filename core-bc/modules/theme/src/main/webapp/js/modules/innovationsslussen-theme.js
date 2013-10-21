@@ -41,13 +41,11 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._initActionConfirmation();
                         instance._initSigninPrompt();
                         instance._initBannerCommunicate();
-                        instance._initBannerCarousel();
                         instance._initBreadcrumbs();
                         instance._initNavigationButton();
                         instance._initMainNavigation();
                         instance._initOverlayLinks();
                         instance._initExpandingTextareas();
-                        instance._initTyckTill();
                         instance._initFaq();
                         instance._fixToolbar();
                     },
@@ -170,77 +168,6 @@ AUI().add('innovationsslussen-theme',function(A) {
             			signinPromptNodes.plug(A.Plugin.InnovationsslussenSigninPromptLink);
                     },
                     
-					_initBannerCarousel: function() {
-						var instance = this;
-						
-						var bannerBox = instance.get(BANNER_BOX);
-						
-						if(isNull(bannerBox)) {return;}
-						
-						var bannerBoxContent = bannerBox.one('.banner-box-content');
-						
-						if(isNull(bannerBoxContent)) {return;}
-						
-						var bannerBoxContentWidth = instance._getNodeWidth(bannerBox);
-						var bannerBoxContentHeight = instance._getNodeHeight(bannerBox);
-						
-                        var bannerBoxMenu = bannerBox.one('.banner-box-menu');
-                        bannerBoxMenu.show();
-						
-						instance.bannerCarousel = new A.Carousel({
-							intervalTime: 8,
-							contentBox: bannerBoxContent,
-							activeIndex: 'rand',
-							height: bannerBoxContentHeight,
-							width: bannerBoxContentWidth,
-                            nodeMenu: bannerBoxMenu,
-                            nodeMenuItemSelector: 'li'
-						}).render();
-						
-						bannerBoxContent.all('a.banner-box-link').removeClass('aui-helper-hidden');
-						bannerBox.addClass('banner-box-js');
-						
-						// Move carousel to next item (needed due to bug in ie7 with height and a bug in aui-carousel that prevents carousel.next() to work properly)
-						var currentIndex = instance.bannerCarousel.get('activeIndex');
-						var nodeSelectionSize = instance.bannerCarousel.nodeSelection.size();
-
-						var newIndex = currentIndex + 1;
-
-						if (newIndex > (nodeSelectionSize - 1)) {
-							newIndex = 0;
-						}
-
-						instance.bannerCarousel.item(newIndex);
-						
-                        // Bind window size change event
-                        A.after('windowresize', function(e) {
-                        	var instance = this;
-                        	
-                        	var bannerBox = instance.get(BANNER_BOX);
-                        	
-                            if(isNull(bannerBox)) {return;}
-                            
-                            var carouselNode = bannerBox.one('.aui-carousel');
-                            
-                            if(isNull(carouselNode)) {return;}
-                            
-                            var carouselHeight = instance._getNodeHeight(carouselNode);
-                            var carouselWidth = instance._getNodeWidth(carouselNode);
-                            var carouselRatio = carouselHeight/carouselWidth;
-                            
-                            carouselNode.setStyle('width', 'auto');
-                            
-                            var carouselWidthNew = instance._getNodeWidth(carouselNode);
-                            var carouselHeightNew = carouselRatio * carouselWidthNew;
-
-                            instance.bannerCarousel.set('width', carouselWidthNew);
-                            instance.bannerCarousel.set('height', carouselHeightNew);
-    						
-                            instance.bannerCarousel.render();
-                        }, instance);
-						
-					},
-					
                     _initFaq: function() {
                     	var instance = this;
                     	
@@ -353,21 +280,6 @@ AUI().add('innovationsslussen-theme',function(A) {
             			var rpNavigationButton = new A.RpNavigationButton();
             			
             			rpNavigationButton.render();
-            		},
-            		
-            		_initTyckTill: function() {
-            			var instance = this;
-            			
-            			var trigger = A.one('#tycktillWrap a');
-            			
-            			// Do nothing if there is no tycktill trigger
-            			if(!trigger) { return; }
-            			
-            			var tyckTill = new A.TyckTill({
-            				trigger: trigger
-            			});
-            			
-            			tyckTill.render();
             		},
             		
                     _onFaqQuestionClick: function(e) {
