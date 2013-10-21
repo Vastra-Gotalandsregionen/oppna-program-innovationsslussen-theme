@@ -3182,10 +3182,18 @@ ul.idea-list > li {
     width: 100px;
 }
 
+.banner-communicate .banner-communicate-normalize {
+    bottom: 2px;
+}
+
+.banner-communicate .banner-communicate-normalize a {
+    border-top-widht: 0;
+}
+
 .banner-communicate-minimized {
-    /*background: none;*/
     border: 0;
     padding: 0;
+    padding-top: 1px;
 }
 
 .banner-communicate-minimized .banner-communicate-minimize,
