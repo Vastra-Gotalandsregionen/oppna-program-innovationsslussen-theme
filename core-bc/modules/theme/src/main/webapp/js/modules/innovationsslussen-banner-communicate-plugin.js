@@ -2,10 +2,13 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
     var Lang = A.Lang,
         isNull = Lang.isNull,
         
+        HOST = 'host',
+        
         NAME = 'innovationsslussen-banner-communicate-plugin',
         NS = 'innovationsslussen-banner-communicate-plugin',
         
         HEIGHT_ACTION_VIEW = 'heightActionView',
+        HEIGHT_MINIMIZED = 'heightMinimized',
         HEIGHT_BACKLINK_WRAP = 'heightBackLinkWrap',
         HOST = 'host',
         
@@ -17,10 +20,16 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
         
         CSS_BC_VIEW = 'banner-communicate-view',
         
+        CSS_MINIMIZE = 'banner-communicate-minimize',
+        CSS_MINIMIZED = 'banner-communicate-minimized',
+        CSS_NORMALIZE = 'banner-communicate-normalize',
+        
         CSS_HIDDEN = 'aui-helper-hidden'
     ;
     
-    var TPL_MOVIE_IFRAME = '<iframe class="movie-iframe" title="" frameborder="0" src="{src}" width="{width}" height="{height}"></iframe>'
+    var	TPL_MOVIE_IFRAME = '<iframe class="movie-iframe" title="" frameborder="0" src="{src}" width="{width}" height="{height}"></iframe>',
+    	TPL_MINIMIZE = '<div class="{cssClass}"><a href="#">{label}</a></div>',
+		TPL_NORMALIZE = '<div class="{cssClass}"><a href="#">{label}</a></div>'
 
     var InnovationsslussenBannerCommunicatePlugin = A.Component.create(
             {
@@ -32,6 +41,10 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                 	
                 	heightBackLinkWrap: {
                 		value: 30
+                	},
+                	
+                	heightMinimized: {
+                		value: 100
                 	},
                 	
                 	urlPrefix: {
@@ -53,6 +66,9 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                 
                 anim: null,
 
+                labelMinimize: '',
+                labelNormalize: '',
+                
                 movieHeight: null,
                 movieWidth: null,
                 startHeight: null,
@@ -71,6 +87,9 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                         
                         var host = instance.get(HOST);
                         
+                        instance.labelMinimize = 'Visa mindre';
+                        instance.labelNormalize = 'Visa mer';
+                        
                         instance._initView();
                         instance._initAnim();
                     	
@@ -83,9 +102,18 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	
                     	var host = instance.get(HOST);
                     	
+                    	// Bind action links
                     	var actionLinks = host.all('.action-link');
-                    	
                     	actionLinks.on('click', instance._onActionLinkClick, instance);
+                    	
+                    	// Bind minimize link
+                    	var minimizeLink = host.one('.' + CSS_MINIMIZE + ' a');
+                    	minimizeLink.on('click', instance._onMinimizeClick, instance);
+                    	
+                    	// Bind normalize link
+                    	var normalizeLink = host.one('.' + CSS_NORMALIZE + ' a');
+                    	normalizeLink.on('click', instance._onNormalizeClick, instance);
+                    	
                     },
                     
                     _bindWindowResize: function() {
@@ -98,8 +126,6 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                         	instance._updateHeightWidth();
                         	
                         }, instance);
-                    	
-                    	
                     },
                     
 					_getNodeHeight: function(node) {
@@ -179,6 +205,24 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	var viewWrap = host.one('.' + CSS_BC_VIEW + '-wrap');
                     	var movieCtn = movieView.one('.movie-ctn');
                     	
+                    	// Add minimize
+						var minimizeNodeContent = A.substitute(TPL_MINIMIZE, {
+							cssClass: CSS_MINIMIZE,
+							label: instance.labelMinimize
+						});
+						
+						startView.append(minimizeNodeContent);
+						
+                    	// Add normalize
+						var normalizeNodeContent = A.substitute(TPL_NORMALIZE, {
+							cssClass: CSS_NORMALIZE,
+							label: instance.labelNormalize
+						});
+						
+						startView.append(normalizeNodeContent);
+						
+                    	
+						// Store node references on instance
                     	instance.startView = startView;
                     	instance.movieCtn = movieCtn;
                     	instance.movieView = movieView;
@@ -216,7 +260,6 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
     							width: instance.movieWidth
     						});
 
-                    		
                     		instance.movieCtn.append(iframeNodeContent);
                     		
                     		instance.anim.set('to', {height: instance.get(HEIGHT_ACTION_VIEW)});
@@ -231,6 +274,26 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	viewToShow.show();
                     	
                     	instance.currentView = viewToShow;
+                    },
+                    
+                    _onMinimizeClick: function(e) {
+                    	var instance = this;
+                    	
+                    	e.halt();
+                    	
+                    	var host = instance.get(HOST);
+                    	
+                    	host.addClass(CSS_MINIMIZED);
+                    },
+                    
+                    _onNormalizeClick: function(e) {
+                    	var instance = this;
+                    	
+                    	e.halt();
+                    	
+                    	var host = instance.get(HOST);
+                    	
+                    	host.removeClass(CSS_MINIMIZED);
                     },
                     
                     _clearVideo: function() {
