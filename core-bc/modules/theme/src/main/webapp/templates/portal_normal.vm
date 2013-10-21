@@ -84,12 +84,6 @@
 	#parse ("$full_templates_path/footer.vm")
 </footer>
 
-#*
-#if($piwikActive)
-	#parse ("$full_templates_path/piwik.vm")
-#end
-*#
-
 </body>
 
 $theme.include($bottom_include)
