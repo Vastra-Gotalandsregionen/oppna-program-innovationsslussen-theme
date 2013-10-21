@@ -287,6 +287,59 @@ h4 {
     font-size: 1.6em;
 }
 
+/*----------------------------------------------------------------------
+=All devices with width 400px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 400px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 300px;
+}
+
+
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 360px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 360px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 270px;
+}
+
+
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 350px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 350px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 250px;
+}
+
+
+}
+
+
 
 
 }

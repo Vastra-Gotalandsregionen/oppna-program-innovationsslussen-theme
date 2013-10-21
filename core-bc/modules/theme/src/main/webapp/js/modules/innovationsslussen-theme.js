@@ -37,7 +37,7 @@ AUI().add('innovationsslussen-theme',function(A) {
                     
                     renderUI: function() {
                         var instance = this;
-
+                        
                         instance._initActionConfirmation();
                         instance._initSigninPrompt();
                         instance._initBannerCommunicate();
