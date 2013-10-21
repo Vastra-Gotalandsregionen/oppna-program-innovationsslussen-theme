@@ -361,8 +361,7 @@ AUI().add('innovationsslussen-theme',function(A) {
 	    	'rp-action-confirmation-plugin',
 	    	'rp-iframe-link-plugin',
 	    	'rp-navigation-button',
-	    	'rp-expanding-textarea-plugin',
-	    	'rp-tyck-till'
+	    	'rp-expanding-textarea-plugin'
       ]
     }
 );
