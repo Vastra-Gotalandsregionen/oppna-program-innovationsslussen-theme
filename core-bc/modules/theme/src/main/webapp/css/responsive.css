@@ -39,7 +39,7 @@ ul.top-nav-list {
 
 /* -----------------  Layout ----------------------- */
 
-/*---- VAP Columns ----*/
+/*---- Columns ----*/
 
 .aui-layout .aui-column {
 	float: none;
@@ -67,12 +67,13 @@ ul.section-navigation-list li a .inner {
 	
 /* ----------------- Custom Portlets ----------------------- */
 
-/*---- VAP Search Portlet ----*/
+/*---- Create Idea ----*/
 
-
-.vap-search-wrap {
-	padding: 0 2%;
+.create-idea .intro {
+    background: none;
+    padding-right: 0;
 }
+
 
 /* ----------------- Navigation ----------------------- */
 
@@ -267,6 +268,27 @@ h4 {
 
 .idea-comments .action-link {
     font-size: 1.1em;
+}
+
+/*------- Create Idea portlet -------*/
+
+.create-idea-form .element-field-wrap,
+.create-idea-form .element-field-help,
+.create-idea-form label,
+.create-idea-form .element-field {
+    float: none;
+    width: 100%;
+}
+
+.create-idea-form .aui-field input[type="text"],
+.create-idea-form .aui-field textarea,
+.create-idea-form .aui-field select {
+    margin: 0;
+    width: 100%;
+}
+
+.create-idea-form .element-field-help {
+    margin-top: 5px;
 }
 
 
