@@ -21,7 +21,7 @@
     							#else
     								<li>
     							#end
-    								<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
+    								<a href="$nav_child.getURL()" $nav_child.getTarget()><span>$nav_child.getName()</span></a>
     							</li>
     						#end
     					</ul>
