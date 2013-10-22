@@ -438,14 +438,14 @@ ul.top-nav-list li .login-link-portlet > a {
 	text-decoration: none;
 }
 
-#navigation ul.nav-list li a span {
+#navigation ul.nav-list > li > a > span {
 	display: block;
 	height: 16px;
 	line-height: 16px;
 	padding: 10px 14px;
 }
 
-#navigation ul.nav-list li:first-child a span {
+#navigation ul.nav-list > li:first-child > a > span {
 	background: url(../images/navigation/nav-home-icon.png) 50% 50% no-repeat;
 	padding-left: 30px;
 	font-size: 0;
