@@ -7,6 +7,7 @@ AUI().add('rp-navigation-button',function(A) {
         
         BANNER_NODE = 'bannerNode',
         NAVIGATION_LIST = 'navigationList',
+        TOP_NAVIGATION_LIST = 'topNavigationList',
         TRIGGER = 'trigger',
         
         CSS_HIDDEN = 'aui-helper-hidden',
@@ -31,6 +32,11 @@ AUI().add('rp-navigation-button',function(A) {
                 	
                 	navigationList: {
                 		value: '#navigation ul.nav-list',
+                		setter: A.one
+                	},
+                	
+                	topNavigationList: {
+                		value: '#topNavigation > ul',
                 		setter: A.one
                 	},
                 	
@@ -112,6 +118,36 @@ AUI().add('rp-navigation-button',function(A) {
     						menuList.append(menuItemHtml);
     						
                     	});
+                    	
+                    	// Top navigation
+                    	var topNavigationList = instance.get(TOP_NAVIGATION_LIST);
+                    	var topNavigationLinks = topNavigationList.all('>li>a');
+                    	
+                    	// Iterate top navigation links
+                    	topNavigationLinks.each(function(item, index, list) {
+                    		var linkUrl = item.getAttribute('href');
+                    		var linkText = item.html();
+                    		var cssClass = '';
+                    		
+                    		var listItem = item.ancestor('li');
+                    		
+                    		if(index+1 == list.size()) {
+                    			cssClass = cssClass + ' last';
+                    		}
+                    		
+                    		if(listItem.hasClass(CSS_SELECTED)) {
+                    			cssClass = cssClass + ' ' + CSS_SELECTED;
+                    		}
+                    		
+    						var menuItemHtml = A.substitute(TPL_MENU_ITEM, {
+    							cssClass: cssClass,
+    							label: linkText,
+    							url: linkUrl
+    						});
+                    		
+    						menuList.append(menuItemHtml);
+                    	});
+                    	
                     	
 						var selectedItemMainNav = navigationList.one('li.selected');
 						var selectedSubMenuItem = menuList.one('li.selected');

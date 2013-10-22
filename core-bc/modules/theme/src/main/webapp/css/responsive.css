@@ -16,21 +16,13 @@
 	display: block;
 }
 
-.company-title {
-	float: none;
-	margin: 0 auto;
-	width: 100%;
-}
-
 #banner .company-title .logo {
 	float: none;
 	margin: 0 auto;
 }
 
 .top-navigation {
-	float: none;
-	margin: 0 0 10px 0;
-	position: relative;
+    display: none;
 }
 
 ul.top-nav-list {
@@ -356,3 +348,9 @@ h4 {
 
 
 }
+
+
+/*----------------------------------------------------------------------
+=Sandbox
+----------------------------------------------------------------------*/
+
