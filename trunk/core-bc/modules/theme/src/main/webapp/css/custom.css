@@ -562,7 +562,7 @@ ul.top-nav-list li .login-link-portlet > a {
 }
 
 #navigationButtonMenu {
-	margin-top: -17px;
+	margin-top: -5px;
 	overflow: hidden;
 	position: absolute;
 	z-index: 5000;
