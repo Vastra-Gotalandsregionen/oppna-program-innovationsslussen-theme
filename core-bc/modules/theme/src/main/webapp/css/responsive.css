@@ -134,6 +134,10 @@ ul.section-navigation-list li a .inner {
 	
 /* ----------------- Banner / header ----------------------- */
 
+#heading {
+    padding-bottom: 5px;
+}
+
 .header-inner,
 .content-inner,
 .footer-inner {
