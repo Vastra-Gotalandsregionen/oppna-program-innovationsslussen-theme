@@ -220,6 +220,15 @@ h4 {
 
 /*------- Idea portlet -------*/
 
+.idea-toolbar-wrap li.icon a span.label {
+    font-size: 0;
+    text-indent: -9999em;
+}
+
+.idea .idea-flow-wrap {
+    float: left;
+}
+
 .add-comment-form .field-wrap,
 .add-comment-form .button-holder,
 .add-comment-form .field-wrap label,

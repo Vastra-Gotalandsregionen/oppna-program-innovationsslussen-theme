@@ -2329,6 +2329,10 @@ ul.idea-list > li {
 	background-position: 4px  -596px;
 }
 
+.idea-toolbar-wrap li.icon a span {
+    color: #3583bf;
+}
+
 .idea h1 {
 	color: #3583bf;
 	margin: 0.6em 0 0.2em 0;
@@ -2603,6 +2607,10 @@ ul.idea-list > li {
 	color: #bf3434;
 }
 
+.idea-outer-private .idea-toolbar-wrap li.icon a span {
+    color: #bf3434;
+}
+
 /* -- Public - Active at Innovationsslussen -- */
 
 .active-innovationsslussen .idea {
@@ -2620,6 +2628,10 @@ ul.idea-list > li {
 .active-innovationsslussen .idea-toolbar-wrap li.icon a {
 	background-image: url(../images/toolbar/idea-toolbar-icon-sprite-active.png);
 	color: #b08700;
+}
+
+.active-innovationsslussen .idea-toolbar-wrap li.icon a span {
+    color: #b08700;
 }
 
 
@@ -2640,6 +2652,10 @@ ul.idea-list > li {
 .done .idea-toolbar-wrap li.icon a {
 	background-image: url(../images/toolbar/idea-toolbar-icon-sprite-done.png);
 	color: #5e9237;
+}
+
+.done .idea-toolbar-wrap li.icon a span {
+    color: #5e9237;
 }
 
 /* Comments */

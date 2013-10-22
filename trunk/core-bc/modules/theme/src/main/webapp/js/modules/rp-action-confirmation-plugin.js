@@ -72,7 +72,7 @@ AUI.add('rp-action-confirmation-plugin', function(A) {
 				
 				e.halt();
 				
-				var width = 300;
+				var width = 250;
 				var height = 150;
 				
 				var dialog = new A.Dialog({
