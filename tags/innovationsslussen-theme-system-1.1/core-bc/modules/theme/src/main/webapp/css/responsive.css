@@ -1,0 +1,378 @@
+/*----------------------------------------------------------------------
+=All devices with width 740px or less and iPad both landscape and portrait
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 740px)
+{
+
+/* ----------------- Banner / header ----------------------- */
+
+.company-title {
+	display: none;
+}
+
+.company-title-responsive {
+	display: block;
+}
+
+#banner .company-title .logo {
+	float: none;
+	margin: 0 auto;
+}
+
+.top-navigation {
+    display: none;
+}
+
+ul.top-nav-list {
+	float: none;
+}
+
+.header-inner,
+.content-inner,
+.footer-inner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/* -----------------  Layout ----------------------- */
+
+/*---- Columns ----*/
+
+.aui-layout .aui-column {
+	float: none;
+	width: 100%;
+}
+
+.aui-layout .aui-column .aui-column-content {
+	padding: 0;
+}
+
+
+/* ----------------- Liferay Portlets ----------------------- */
+
+/*---- Navigation Portlet ----*/
+
+ul.section-navigation-list li {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+ul.section-navigation-list li a .inner {
+	min-height: auto;
+}
+	
+/* ----------------- Custom Portlets ----------------------- */
+
+/*---- Create Idea ----*/
+
+.create-idea .intro {
+    background: none;
+    padding-right: 0;
+}
+
+
+/* ----------------- Navigation ----------------------- */
+
+/* -- Main Navigation -- */
+
+.rp-navigation-portlet,
+#navigation {
+	display: none;
+}
+/* -- Navigation Menu Button -- */
+
+#navigationTrigger,
+#navigationButtonMenu {
+	display: block;
+}
+
+#navigationButtonMenu ul {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+	
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 700px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 700px) {
+	
+	/*------- Idea List portlet -------*/
+	
+	ul.idea-list > li {
+		/*display: block;*/
+		width: 100%;
+	}
+	
+	.idea-list ul.idea-stats {
+		/*bottom: 30px;*/
+	}
+	
+	
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 600px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 600px) {
+	
+	
+/* ----------------- Banner / header ----------------------- */
+
+#heading {
+    padding-bottom: 5px;
+}
+
+.header-inner,
+.content-inner,
+.footer-inner {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+	
+ul.top-nav-list .top-nav-settings,
+ul.top-nav-list .top-nav-quick-access {
+	display: none;
+}
+
+.company-title-responsive,
+#banner .company-title-responsive .logo {
+	width: 205px;
+}
+
+#banner .company-title-responsive .logo {
+	background-position: 0 -50px;
+	height: 22px;
+}
+
+#banner .company-title .server-node-info  {
+	display: none;
+}
+
+#toolsSidebar {
+	display: none;
+}
+
+#main-content {
+	margin-right: 0;
+	margin: 0;
+}
+
+/* -----------------  Base blocks ----------------------- */
+
+/*---- Common elements ----*/
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.4em;   
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.0em;
+}
+
+
+/* -----------------  Layout ----------------------- */
+
+/*---- Columns ----*/
+
+#content .portlet-layout {
+	display: block;
+}
+
+#content .portlet-layout .portlet-column {
+	display: block;
+	width: 100.0%;
+}
+
+#content .portlet-layout .portlet-column-content {
+	padding: 5px 0;
+}
+
+/* -----------------  Navigation ----------------------- */
+
+#navigationButtonMenu ul {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* ----------------- Liferay Portlets ----------------------- */
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.idea-toolbar-wrap li.icon a span.label {
+    font-size: 0;
+    text-indent: -9999em;
+}
+
+.idea .idea-flow-wrap {
+    float: left;
+}
+
+.add-comment-form .field-wrap,
+.add-comment-form .button-holder,
+.add-comment-form .field-wrap label,
+.add-comment-form .field-element-wrap {
+	float: none;
+	width: 100%;
+}
+
+.add-comment-form .rp-button input[type="submit"] {
+	margin: 10px 0;
+}
+
+.idea-meta h2,
+.idea-comments > h2 {
+    font-size: 1.3em;
+}
+
+.idea-comments .comment .comment-author,
+.idea-comments .comment .comment-entry {
+    float: none;
+}
+
+.idea-comments .comment .comment-author {
+    font-size: 1.0em;
+}
+
+.idea-comments .comment .comment-author-name,
+.idea-comments .comment .comment-author-title {
+    display: inline-block;
+}
+
+.idea-comments .comment .comment-author-title {
+    font-weight: normal;
+}
+
+.idea-comments .comment .comment-entry {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.idea-comments .action-link {
+    font-size: 1.1em;
+}
+
+/*------- Create Idea portlet -------*/
+
+.create-idea-form .element-field-wrap,
+.create-idea-form .element-field-help,
+.create-idea-form label,
+.create-idea-form .element-field {
+    float: none;
+    width: 100%;
+}
+
+.create-idea-form .aui-field input[type="text"],
+.create-idea-form .aui-field textarea,
+.create-idea-form .aui-field select {
+    margin: 0;
+    width: 100%;
+}
+
+.create-idea-form .element-field-help {
+    margin-top: 5px;
+}
+
+
+/* ----------------- Articles ----------------------- */
+
+/*---- Banner Communicate ----*/
+
+.banner-communicate-layout .banner-communicate-column {
+	float: none;
+	width: 100%;
+}
+
+.banner-communicate-column .banner-communicate-column-content {
+	padding: 0;
+}
+
+.banner-communicate-layout-1 .banner-communicate-column-2,
+.banner-communicate-layout-2 .banner-communicate-column-1 {
+	display: none;
+}
+
+.banner-communicate h1 {
+    font-size: 1.6em;
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 400px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 400px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 300px;
+}
+
+
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 360px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 360px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 270px;
+}
+
+
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 350px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 350px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 250px;
+}
+
+
+}
+
+
+
+
+}
+
+
+/*----------------------------------------------------------------------
+=Sandbox
+----------------------------------------------------------------------*/
+

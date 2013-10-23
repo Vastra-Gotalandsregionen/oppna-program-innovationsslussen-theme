@@ -1,0 +1,156 @@
+##--------------------------------------------------------------------------
+## NULL
+##--------------------------------------------------------------------------
+
+#set($null = $some-never-used-variable)
+
+##--------------------------------------------------------------------------
+## Classes
+##--------------------------------------------------------------------------
+
+#set($class_name_company = "com.liferay.portal.model.Company")
+#set($class_name_group = "com.liferay.portal.model.Group")
+#set($class_name_layout = "com.liferay.portal.model.Layout")
+
+##--------------------------------------------------------------------------
+## Define some services
+##--------------------------------------------------------------------------
+
+#set($userGroupRoleLocalService = $serviceLocator.findService("com.liferay.portal.service.UserGroupRoleLocalService"))
+
+#set($layoutLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+#set($layoutSetLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutSetLocalService"))
+
+#set($journalArticleLocalService = $serviceLocator.findService("com.liferay.portlet.journal.service.JournalArticleLocalService"))
+
+##--------------------------------------------------------------------------
+## Theme Settings
+##--------------------------------------------------------------------------
+
+#set($show_breadcrumbs = false)
+
+#if ($theme.getSetting("show-breadcrumbs") == "true")
+	#set($show_breadcrumbs = true)
+#end
+
+
+#if($show_breadcrumbs)
+	#set($css_class = $css_class + " has-breadcrumbs")
+#end
+
+##--------------------------------------------------------------------------
+## Expandos
+##--------------------------------------------------------------------------
+
+#set($expando_default_table = "CUSTOM_FIELDS")
+
+## Add this
+#set($exp_col_add_this_code = "addThisCode")
+#set ( $add_this_code = $expandoValueLocalService.getData($company_id, $class_name_group, $expando_default_table, $exp_col_add_this_code, $group_id, "") )
+
+## Create Idea Layout Friendly URL
+#set($exp_col_create_idea_friendly_url = "createIdeaFriendlyURL")
+#set ( $create_idea_friendly_url = $expandoValueLocalService.getData($company_id, $class_name_group, $expando_default_table, $exp_col_create_idea_friendly_url, $group_id, "") )
+
+## Social sharing (if add this is active or not)
+#set($exp_col_show_social_sharing = "innovationsslussen-show-social-sharing")
+#set ( $show_social_sharing = $expandoValueLocalService.getData($company_id, $class_name_layout, $expando_default_table, $exp_col_show_social_sharing, $page.getPlid(), true) )
+
+## Piwik Code
+#set($exp_col_piwik_code = "piwikCode")
+#set ( $piwik_code = $expandoValueLocalService.getData($company_id, $class_name_group, $expando_default_table, $exp_col_piwik_code, $group_id, "") )
+
+##--------------------------------------------------------------------------
+## Virtual host
+##--------------------------------------------------------------------------
+
+#set ($urlPrefix = "")
+
+#set($scopeLayoutSet = $layoutSetLocalService.getLayoutSet($group_id, $layout.isPrivateLayout()))
+
+#set($scopeLayoutSetVirtualHost = $scopeLayoutSet.getVirtualHostname())
+
+#set($hasVirtualHost = false)
+
+#if($scopeLayoutSetVirtualHost != $null && $scopeLayoutSetVirtualHost != "")
+	#set($hasVirtualHost = true)
+#end
+
+#if(!$hasVirtualHost)
+
+	#if($scopeLayout.isPrivateLayout())
+		#set($urlPrefix = "/group")
+	#else
+		#set($urlPrefix = "/web")
+	#end
+	
+	#set($urlPrefix = $urlPrefix + $theme_display.getScopeGroup().getFriendlyURL())
+
+#end
+
+##--------------------------------------------------------------------------
+## Add this
+##--------------------------------------------------------------------------
+
+#set($add_this_script_url = "//s7.addthis.com/js/300/addthis_widget.js" + "#pubid=" + $add_this_code)
+
+
+##--------------------------------------------------------------------------
+## Layouts
+##--------------------------------------------------------------------------
+
+#set($add_idea_layout = $null )
+
+#if($create_idea_friendly_url != "")
+	#set($add_idea_layout = $layoutLocalService.getFriendlyURLLayout($group_id, $layout.isPrivateLayout(), $create_idea_friendly_url) )
+#end
+
+
+##--------------------------------------------------------------------------
+## Dockbar
+##--------------------------------------------------------------------------
+
+#set($showDockbar = 
+	$permissionChecker.isOmniadmin() ||
+	$permissionChecker.isCompanyAdmin($company_id) ||
+	$permissionChecker.isCommunityAdmin($group_id) ||
+	$permissionChecker.isCommunityOwner($group_id)
+)
+
+##--------------------------------------------------------------------------
+## Theme Javascript
+##--------------------------------------------------------------------------
+
+#set($js_full_path = $full_templates_path + "/../js")
+
+## If set to true, theme_js_scripts are loaded inline in page (i.e. directly inside a script tag) which reduces the number of http requests
+#set($theme_js_inline = false)
+
+#set($theme_js_scripts = [
+    "fixes/ios-orientationchange-fix.js",
+	"modules/rp-action-confirmation-plugin.js",
+	"modules/rp-footer-plugin.js",
+    "modules/rp-navigation-button.js",
+	"modules/rp-iframe-link-plugin.js",
+	"modules/rp-expanding-textarea-plugin.js",
+	"modules/innovationsslussen-signin-prompt.js",
+	"modules/innovationsslussen-signin-prompt-link-plugin.js",
+	"modules/innovationsslussen-banner-communicate-plugin.js",
+    "modules/innovationsslussen-theme.js",
+    "theme-main.js"
+])
+
+##--------------------------------------------------------------------------
+## Portal type
+##--------------------------------------------------------------------------
+
+#set ($portalURL = $portalUtil.getPortalURL($themeDisplay))
+
+#set ($url_server_local = "localhost")
+#set ($url_server_test = "portalen-test")
+#set ($url_server_stage = "portalen-stage")
+
+#set ($is_server_local = $stringUtil.contains($portalURL, $url_server_local, ""))
+#set ($is_server_test = $stringUtil.contains($portalURL, $url_server_test, ""))
+#set ($is_server_stage = $stringUtil.contains($portalURL, $url_server_stage, ""))
+

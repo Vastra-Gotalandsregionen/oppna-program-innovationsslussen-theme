@@ -1,0 +1,46 @@
+<nav class="sort-pages modify-pages" id="navigation">
+	<h1>
+		<span>#language("navigation")</span>
+	</h1>
+
+	<ul class="nav-list clearfix">
+		#foreach ($nav_item in $nav_items)
+			#if ($nav_item.isSelected())
+				<li class="selected">
+			#else
+				<li>
+			#end
+				<a href="$nav_item.getURL()" $nav_item.getTarget()><span>$nav_item.icon() $nav_item.getName()</span></a>
+
+				#if ($nav_item.hasChildren())
+					<div class="nav-list-sub-wrap">
+    					<ul class="nav-list-sub nav-list-sub-1">
+    						#foreach ($nav_child in $nav_item.getChildren())
+    							#if ($nav_child.isSelected())
+    								<li class="selected">
+    							#else
+    								<li>
+    							#end
+    								<a href="$nav_child.getURL()" $nav_child.getTarget()><span>$nav_child.getName()</span></a>
+    							</li>
+    						#end
+    					</ul>
+					</div>
+				#end
+			</li>
+		#end
+		#if($add_idea_layout != $null)
+            <li class="add-idea">
+				#set($add_idea_link_css_class = "innovationsslussen-signin-prompt")
+				#if($is_signed_in)
+					#set($add_idea_link_css_class = "")
+				#end
+				
+                <a class="$add_idea_link_css_class" href="${urlPrefix}${add_idea_layout.getFriendlyURL()}" data-promptmsg="Du m&aring;ste vara inloggad f&ouml;r att f&aring; skicka in en id&eacute;">
+                    <span>Skicka in din id&eacute;</span>
+    			</a>
+    		</li>
+		#end
+		
+	</ul>
+</nav>
