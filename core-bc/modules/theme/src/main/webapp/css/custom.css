@@ -2579,8 +2579,7 @@ ul.idea-list > li {
 	width: 16px;
 }
 
-.ie7 .idea-comments .comment .comment-control,
-.ie8 .idea-comments .comment .comment-control {
+.ie7 .idea-comments .comment .comment-control {
     display: block;
     float: left;
 }
@@ -2593,8 +2592,7 @@ ul.idea-list > li {
 	display: inline-block;
 }
 
-.ie7 .js .idea-comments .comment .requires-confirmation-active,
-.ie8 .js .idea-comments .comment .requires-confirmation-active {
+.ie7 .js .idea-comments .comment .requires-confirmation-active {
     display: block;
 }
 
