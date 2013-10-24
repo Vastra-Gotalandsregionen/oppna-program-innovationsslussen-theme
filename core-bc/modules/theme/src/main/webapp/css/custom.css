@@ -2579,12 +2579,21 @@ ul.idea-list > li {
 	width: 16px;
 }
 
+.ie7 .idea-comments .comment .comment-control {
+    display: block;
+    float: left;
+}
+
 .js .idea-comments .comment .requires-confirmation {
 	visibility: hidden;
 }
 
 .js .idea-comments .comment .requires-confirmation-active {
 	display: inline-block;
+}
+
+.ie7 .js .idea-comments .comment .requires-confirmation-active {
+    display: block;
 }
 
 .idea-comments .comment .comment-control-delete {
