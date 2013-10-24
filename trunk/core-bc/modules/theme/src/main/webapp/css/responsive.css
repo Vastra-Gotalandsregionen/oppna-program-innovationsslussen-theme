@@ -386,3 +386,144 @@ h4 {
 =Sandbox
 ----------------------------------------------------------------------*/
 
+
+
+/* -- Main Navigation -- */
+
+/*
+
+.rp-navigation-portlet,
+#navigation {
+    display: block;
+    
+    background: #3a84c1;
+    border: 1px solid #2b699b;
+    padding-bottom: 0;
+}
+
+#navigation > ul {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul.nav-list li {
+    background: none;
+    border-bottom: 1px solid #2f73a9;
+    float: none;
+}
+
+#navigation ul.nav-list li.selected {
+    border-bottom: none;
+}
+
+#navigation ul.nav-list li.selected a {
+    border-bottom: none;
+}
+
+#navigation ul.nav-list li a {
+    background: none;
+    border-bottom: 1px solid #468cc6;
+    color: #fff;
+    font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 10px;
+    text-shadow: 1px 1px #1e4e76;
+}
+
+#navigation ul.nav-list > li > a > span {
+    background: none;
+    display: inline;
+    height: auto;
+    line-height: 1.0;
+    padding: 0;    
+}
+
+#navigation ul.nav-list > li:first-child > a > span {
+    background: none;
+    font-size: inherit;
+    padding: 0;
+    text-indent: 0;
+}
+
+#navigation ul.nav-list li.add-idea {
+    float: none;
+}
+
+#navigation ul.nav-list li.add-idea a {
+    background: none;
+    color: #fff;
+    font-weight: normal;
+}
+
+#navigation ul.nav-list li.add-idea a span {
+    background: none;
+    display: inline;
+    min-height: auto;
+    padding-left: 0;
+}
+
+#navigation .nav-list-sub-wrap {
+    background: #548332;
+    display: none;
+    padding: 0;
+    position: static;
+    width: 100%;
+    z-index: auto;
+}
+
+#navigation .selected .nav-list-sub-wrap {
+    display: block;
+}
+
+#navigation ul.nav-list ul {
+    background: #548332;
+    border: 1px solid #416824;
+    margin: 0 0 0 10px;
+    position: static;
+    z-index: auto;
+}
+
+#navigation ul.nav-list ul li {
+    background: none;
+    border: none;
+    display: block;
+    float: none;
+}
+
+#navigation ul.nav-list li.login,
+#navigation ul.nav-list li.logout {
+    display: block;
+}
+
+#navigation ul.nav-list ul li a {
+    font-size: 1.2em;
+}
+
+#navigation ul.nav-list ul li a,
+#navigation ul.nav-list ul li a:hover,
+#navigation ul.nav-list .selected ul li a {
+    background: #f0f1f5 url(../images/navigation/nav-bg-gray.png) top left repeat-x;
+    border-bottom: 1px solid #c4ced5;
+    color: #2f73a9;
+    font-weight: normal;
+    text-shadow: 1px 1px #fff;
+}
+
+#navigation ul.nav-list ul li a:hover {
+    background: #fff url(../images/navigation/nav-bg-gray-reversed.png) top left repeat-x;
+}
+
+#navigation ul.nav-list ul li.selected a,
+#navigation ul.nav-list ul li.selected a:hover {
+    background: #548332;
+    color: #fff;
+    text-shadow: none;    
+}
+
+*/
