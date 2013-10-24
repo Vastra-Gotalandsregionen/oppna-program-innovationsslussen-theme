@@ -425,6 +425,11 @@ ul.top-nav-list li .login-link-portlet > a {
 	zoom: 1;
 }
 
+#navigation ul.nav-list li.login,
+#navigation ul.nav-list li.logout {
+    display: none;
+}
+
 #navigation ul.nav-list li a {
 	background: transparent;
 	color: #fff;
@@ -1987,6 +1992,10 @@ portlet-blogs .taglib-flags span a:hover {
   padding: 0; 
 }
 
+.ie .nav-menu h2 {
+    font-size: 1.1em;
+} 
+
 .nav-menu h2 a {
 	background: #2f6ea1 url(../images/navigation/navigation-bg-normal.png) top left repeat-x; 
 	-moz-border-radius: 3px 3px 0 0;
@@ -1998,6 +2007,10 @@ portlet-blogs .taglib-flags span a:hover {
 	margin: 0;
 	padding: 15px;
 	text-decoration: none;
+}
+
+.ie .nav-menu h2 a {
+    font-size. 1.1em;
 }
 
 .nav-menu ul {
