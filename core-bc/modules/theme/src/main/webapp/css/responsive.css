@@ -71,9 +71,19 @@ ul.section-navigation-list li a .inner {
 
 .create-idea .intro {
     background: none;
+    margin-right: 0;
     padding-right: 0;
 }
 
+.create-confirmation .content {
+    background: none;
+    padding-right: 0;
+}
+
+.create-confirmation .link-button-mod {
+    font-size: 1.0e;
+    padding: 10px 10px;
+}
 
 /* ----------------- Navigation ----------------------- */
 
