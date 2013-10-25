@@ -31,17 +31,17 @@
 			<hgroup id="heading" class="clearfix">
 				
 				<h1 class="company-title">
-					<span class="logo">
+					<a href="$nav_items.get(0).getURL()" class="logo">
 						<span>$company_name</span>
-					</span>
+					</a>
 				</h1>
 				
 				#parse ("$full_templates_path/top_navigation.vm")
 				
 				<h1 class="company-title company-title-responsive">
-					<span class="logo">
+					<a href="$nav_items.get(0).getURL()" class="logo">
 						<span>$company_name</span>
-					</span>
+					</a>
 				</h1>
 				
 				<a href="#navigationTrigger" id="navigationTrigger">
