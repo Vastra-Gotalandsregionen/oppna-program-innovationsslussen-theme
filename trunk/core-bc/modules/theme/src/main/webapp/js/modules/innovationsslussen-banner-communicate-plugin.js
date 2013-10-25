@@ -77,6 +77,8 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                 movieView: null,
                 startView: null,
                 viewWrap: null,
+                winHeight: null,
+                winWidth: null,
                 
                 prototype: {
                 	
@@ -95,6 +97,9 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                     	
                         instance._bindActionLinks();
                         instance._bindWindowResize();
+                        
+                        instance.winHeight = host.get('winHeight');
+                        instance.winWidth = host.get('winWidth');
                     },
                     
                     _bindActionLinks: function() {
@@ -123,8 +128,22 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                         A.after('windowresize', function(e) {
                         	var instance = this;
                         	
-                        	instance._updateHeightWidth();
+                        	// ie7 and ie8 has a bug in window resize event that causes the event to
+                        	// fire even though the window has not actually been resized but just
+                        	// some components on the size are resized
                         	
+                        	var body = A.one('body');
+                        	
+                        	var winHeightNew = body.get('winHeight');
+                        	var winWidthNew = body.get('winWidth');
+                        	
+                        	// Check whether winHeight or winWidth has actually been changed
+                        	if(winHeightNew != instance.winHeight || winWidthNew != instance.winWidth) {
+                        		instance.winHeight = winHeightNew;
+                        		instance.winWidth = winWidthNew;
+                        	
+                        		instance._updateHeightWidth();
+                        	}
                         }, instance);
                     },
                     
