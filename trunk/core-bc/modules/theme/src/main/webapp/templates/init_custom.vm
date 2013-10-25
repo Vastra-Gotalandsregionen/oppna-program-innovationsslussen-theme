@@ -130,7 +130,6 @@
     "fixes/ios-orientationchange-fix.js",
 	"modules/rp-action-confirmation-plugin.js",
 	"modules/rp-footer-plugin.js",
-    "modules/rp-navigation-button.js",
 	"modules/rp-iframe-link-plugin.js",
 	"modules/rp-expanding-textarea-plugin.js",
 	"modules/innovationsslussen-signin-prompt.js",
