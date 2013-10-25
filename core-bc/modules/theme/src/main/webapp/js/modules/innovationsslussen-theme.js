@@ -42,7 +42,6 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._initSigninPrompt();
                         instance._initBannerCommunicate();
                         instance._initBreadcrumbs();
-                        instance._initNavigationButton();
                         instance._initMainNavigation();
                         instance._initOverlayLinks();
                         instance._initExpandingTextareas();
@@ -58,6 +57,8 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._bindIdeaSubmitButton();
                         
                         instance._bindIdeaList();
+                        
+                        instance._bindNavigationTrigger();
                     },
                     
                     _bindFaq: function () {
@@ -118,6 +119,19 @@ AUI().add('innovationsslussen-theme',function(A) {
                         		
                         	}, instance);
                         }
+                    },
+                    
+                    _bindNavigationTrigger: function() {
+                    	var instance = this;
+                    	
+                    	var navigationTrigger = A.one('#navigationTrigger');
+                    	
+                    	navigationTrigger.on('click', function(e) {
+                    		e.halt();
+                    		A.one('body').toggleClass('show-navigation');
+                    	}, instance)
+                    	
+                    	navigationTrigger.addClass('navigation-trigger-ready');
                     },
                     
                     _fixToolbar: function() {
@@ -274,14 +288,6 @@ AUI().add('innovationsslussen-theme',function(A) {
             			}
             		},
                     
-            		_initNavigationButton: function() {
-            			var instance = this;
-            			
-            			var rpNavigationButton = new A.RpNavigationButton();
-            			
-            			rpNavigationButton.render();
-            		},
-            		
                     _onFaqQuestionClick: function(e) {
                     	var instance = this;
                     	
@@ -360,7 +366,6 @@ AUI().add('innovationsslussen-theme',function(A) {
 	    	'innovationsslussen-signin-prompt-link-plugin',
 	    	'rp-action-confirmation-plugin',
 	    	'rp-iframe-link-plugin',
-	    	'rp-navigation-button',
 	    	'rp-expanding-textarea-plugin'
       ]
     }
