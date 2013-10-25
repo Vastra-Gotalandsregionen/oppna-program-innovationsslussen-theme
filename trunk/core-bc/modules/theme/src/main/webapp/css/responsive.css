@@ -441,6 +441,18 @@ h4 {
 
 /*---- Banner Communicate ----*/
 
+.banner-communicate {
+    background: none;
+    border: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.banner-communicate-view-wrap {
+    padding: 0;
+} 
+
 .banner-communicate-layout .banner-communicate-column {
 	float: none;
 	width: 100%;
@@ -450,6 +462,10 @@ h4 {
 	padding: 0;
 }
 
+.banner-communicate-layout-1 {
+    display: none;
+}
+
 .banner-communicate-layout-1 .banner-communicate-column-2,
 .banner-communicate-layout-2 .banner-communicate-column-1 {
 	display: none;
@@ -457,6 +473,19 @@ h4 {
 
 .banner-communicate h1 {
     font-size: 1.6em;
+}
+
+.banner-communicate .banner-communicate-minimize,
+.banner-communicate .banner-communicate-normalize {
+    display: none;
+}
+
+.banner-communicate .action-link-button {
+    margin: 0;
+}
+
+.banner-communicate .action-link {
+    color: #2f72a9;
 }
 
 /*----------------------------------------------------------------------
