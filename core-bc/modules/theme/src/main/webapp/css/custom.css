@@ -3258,8 +3258,18 @@ ul.persons-list .person {
 	width: 100%;
 }
 
+.person-image .image-placeholder {
+    background: #ccc url(../images/articles/person-default.jpg) top center no-repeat;
+    display: block;
+    min-height: 140px;
+}
+
 .person .person-info-ctn {
 	margin-left: 120px;
+}
+
+.person-no-image .person-info-ctn {
+    margin-left: 0;
 }
 
 .person .person-info {
