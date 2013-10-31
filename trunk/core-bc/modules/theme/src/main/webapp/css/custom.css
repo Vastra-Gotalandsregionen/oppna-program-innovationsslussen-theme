@@ -2896,6 +2896,9 @@ ul.idea-list > li {
 }
 .faq-section > ul > li {
     background: #f2f2f2;
+    
+    background: #f7fafd;
+    
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px; 
@@ -2904,13 +2907,14 @@ ul.idea-list > li {
 }
 
 .faq-question {
-    background: url(../images/arrows/05_right.png) center right no-repeat;
-    padding-right: 20px;  
+    background: url(../images/arrows/05_right.png) center left no-repeat;
+    padding-left: 20px;  
 }
 
 .expanded .faq-question {
-    background: url(../images/arrows/05_down.png) center right no-repeat;
-    font-weight: bold;  
+    background: url(../images/arrows/05_down.png) center left no-repeat;
+    font-weight: bold;
+    margin-bottom: 10px;  
 }
 
 .faq-question:hover,
@@ -2919,15 +2923,9 @@ ul.idea-list > li {
 	text-decoration: underline;
 }
 
-.faq-question .faq-answer {
-	background: #efefef;
-	border: 1px dashed #ddd;
-	margin: 2px 0 0 0;
-	padding: 10px;
-}
-
 .js .faq-answer {
     display: none;
+    padding-left: 20px;
 }
 
 .js .expanded .faq-answer {
