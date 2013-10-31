@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	$theme.include($top_head_include)
+	
+	<link rel="stylesheet" type="text/css" href="$css_folder/responsive.css" />
+</head>
+
+<body class="$css_class">
+
+#if($showDockbar)
+	<div id="dockbarWrap">
+		#dockbar()	
+	</div>
+#end
+
+
+<div id="wrapper">
+	<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
+
+	<header id="banner" role="banner">
+		<div class="header-inner">
+			<hgroup id="heading" class="clearfix">
+				
+				<h1 class="company-title">
+					<a href="$nav_items.get(0).getURL()" class="logo">
+						<span>$company_name</span>
+					</a>
+				</h1>
+				
+				#parse ("$full_templates_path/top_navigation.vm")
+				
+				<h1 class="company-title company-title-responsive">
+					<a href="$nav_items.get(0).getURL()" class="logo">
+						<span>$company_name</span>
+					</a>
+				</h1>
+				
+				<a href="#navigationTrigger" id="navigationTrigger">
+	                <span class="sr-only">Meny</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+			    </a>
+			</hgroup>
+	
+			#if ($update_available_url)
+				<div class="popup-alert-notice">
+					<a class="update-available" href="$update_available_url">#language("updates-are-available-for-liferay")</a>
+				</div>
+			#end
+	
+			#if ($has_navigation)
+				#parse ("$full_templates_path/navigation.vm")
+			#end
+		</div>
+	</header>
+
+	<div id="content">
+		<div class="content-inner">
+			#if ($selectable)
+			
+				#if($show_breadcrumbs)
+					##parse ("$full_templates_path/breadcrumbs.vm")
+				#end
+			
+				$theme.include($content_include)
+			#else
+				$portletDisplay.recycle()
+	
+				$portletDisplay.setTitle($the_title)
+	
+				$theme.wrapPortlet("portlet.vm", $content_include)
+			#end
+		</div>
+	</div>
+	
+</div>
+<div class="ie-footer-fix clearfix"></div>
+<footer id="footer" role="contentinfo">
+	#parse ("$full_templates_path/footer.vm")
+</footer>
+
+</body>
+
+$theme.include($bottom_include)
+
+<script src="//www.youtube.com/player_api"></script>
+
+#parse ("$full_templates_path/piwik.vm")
+
+#parse ("$full_templates_path/theme_js_bottom.vm")
+
+#parse ("$full_templates_path/social_addthis.vm")
+
+</html>

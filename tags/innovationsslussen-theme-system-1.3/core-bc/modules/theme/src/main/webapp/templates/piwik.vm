@@ -1,0 +1,15 @@
+#if($piwik_code != "")
+	<script type="text/javascript" src="//piwik.vgregion.se/piwik.js"></script>
+	
+	<script type="text/javascript">
+		try {
+			var piwikTracker = Piwik.getTracker('//piwik.vgregion.se/piwik.php', ${piwik_code});
+			piwikTracker.trackPageView();
+			piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+	</script>
+	
+	<noscript>
+		<p><img src="//piwik.vgregion.se/piwik.php?idsite=${piwik_code}" style="border:0" alt="" /></p>
+	</noscript>
+#end
