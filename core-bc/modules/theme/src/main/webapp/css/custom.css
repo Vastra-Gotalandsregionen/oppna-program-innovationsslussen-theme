@@ -3152,6 +3152,14 @@ ul.idea-list > li {
 	text-decoration: underline;
 }
 
+.js .banner-communicate .action-link {
+    visibility: hidden;
+}
+
+.js .banner-communicate-ready .action-link {
+    visibility: visible;
+}
+
 .banner-communicate .action-link-button {
 	background: #2f6ea1 url(../images/buttons/banner-communicate-button.png) top left repeat-x;
 	border: 1px solid #29699e;
