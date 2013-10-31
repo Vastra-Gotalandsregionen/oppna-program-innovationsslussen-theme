@@ -15,7 +15,7 @@
   <groupId>se.vgregion.innovationsslussen-theme</groupId>
   <artifactId>innovationsslussen-theme-system</artifactId>
   <packaging>pom</packaging> 
-  <version>1.3-SNAPSHOT</version>
+  <version>1.3</version>
   <name>${project.artifactId}</name>
 
   <modules>
@@ -32,8 +32,8 @@
      -->
 
   <scm>
-    <developerConnection>scm:svn:https://oppna-program-innovationsslussen-theme.googlecode.com/svn/trunk/</developerConnection>
-    <url>http://oppna-program-innovationsslussen-theme.googlecode.com/svn/trunk/</url>
+    <developerConnection>scm:svn:https://oppna-program-innovationsslussen-theme.googlecode.com/svn/tags/innovationsslussen-theme-system-1.3</developerConnection>
+    <url>http://oppna-program-innovationsslussen-theme.googlecode.com/svn/tags/innovationsslussen-theme-system-1.3</url>
   </scm>
   
 </project>
