@@ -18,6 +18,8 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
 		// Custom Attributes
         CSS_ANIM_RUNNING = 'banner-communicate-anim',
         
+        CSS_BC_READY = 'banner-communicate-ready',
+        
         CSS_BC_VIEW = 'banner-communicate-view',
         
         CSS_MINIMIZE = 'banner-communicate-minimize',
@@ -100,6 +102,8 @@ AUI().add('innovationsslussen-banner-communicate-plugin',function(A) {
                         
                         instance.winHeight = host.get('winHeight');
                         instance.winWidth = host.get('winWidth');
+                        
+                        host.addClass(CSS_BC_READY);
                     },
                     
                     _bindActionLinks: function() {
