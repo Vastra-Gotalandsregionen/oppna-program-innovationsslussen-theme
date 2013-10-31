@@ -84,7 +84,7 @@
 	</div>
 	
 </div>
-
+<div class="ie-footer-fix clearfix"></div>
 <footer id="footer" role="contentinfo">
 	#parse ("$full_templates_path/footer.vm")
 </footer>

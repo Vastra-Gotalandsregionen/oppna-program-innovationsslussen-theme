@@ -49,6 +49,8 @@ AUI.add('rp-footer-plugin', function(A) {
 					instance._initHeights();
 					instance._positionFooter();
 				},
+
+				
 				
 				_initHeights: function() {
 					var instance = this;
@@ -110,6 +112,7 @@ AUI.add('rp-footer-plugin', function(A) {
 	}, '1.0.1' ,{
 		requires:[
 		          'aui-component',
+		          'event-resize',
 		          'plugin'
   		]
 	}
