@@ -2889,23 +2889,33 @@ ul.idea-list > li {
 	text-transform: uppercase;
 }
     
-.faq-section ul {
+.faq-section > ul {
 	list-style: none;
-	margin: 10px 0;
-	padding: 0 0 0 10px;
+	margin: 0;
+	padding: 0;
 }
-.faq-section ul li {
-	margin: 5px 0 0 0;
+.faq-section > ul > li {
+    background: #f2f2f2;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; 
+	margin: 7px 0;
+	padding: 10px;
+}
+
+.faq-question {
+    background: url(../images/arrows/05_right.png) center right no-repeat;  
+}
+
+.expanded .faq-question {
+    background: url(../images/arrows/05_down.png) center right no-repeat;
+    font-weight: bold;  
 }
 
 .faq-question:hover,
 .faq-question.hover {
 	cursor: pointer;
 	text-decoration: underline;
-}
-
-.faq-question.active {
-	font-weight: bold;	
 }
 
 .faq-question .faq-answer {
@@ -2915,14 +2925,20 @@ ul.idea-list > li {
 	padding: 10px;
 }
 
+.js .faq-answer {
+    display: none;
+}
+
+.js .expanded .faq-answer {
+    display: block;
+}
+
 .faq-question .faq-answer p:last-child {
 	margin-bottom: 0;
 }
 
-.js .faq-wrap-not-active .faq-answer {
-	display: none;
-}
 
+*/
 /*------- Puff Box -------*/
 
 .puff-box {
