@@ -45,7 +45,6 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._initMainNavigation();
                         instance._initOverlayLinks();
                         instance._initExpandingTextareas();
-                        instance._initFaq();
                         instance._fixToolbar();
                     },
     
@@ -182,22 +181,6 @@ AUI().add('innovationsslussen-theme',function(A) {
             			signinPromptNodes.plug(A.Plugin.InnovationsslussenSigninPromptLink);
                     },
                     
-                    _initFaq: function() {
-                    	var instance = this;
-                    	
-                    	var answerNodes = A.all('.faq-answer');
-                    	if(answerNodes) {
-                    		answerNodes.hide();	
-                    	}
-                    	
-                    	var faqWrap = A.all('.faq-wrap');
-                    	
-                    	if(faqWrap) {
-                    		faqWrap.removeClass('faq-wrap-not-active');	
-                    	}
-                    },
-					
-					
 					_getNodeHeight: function(node) {
 						var instance = this;
 						
@@ -292,24 +275,9 @@ AUI().add('innovationsslussen-theme',function(A) {
                     	var instance = this;
                     	
                     	var questionNode = e.currentTarget;
-                    	var answerNodes = questionNode.siblings('.faq-answer');
-                    	var faqWrap = questionNode.ancestor('.faq-wrap');
+                    	var listNode = questionNode.ancestor('li');
                     	
-                    	var allQuestionNodes = faqWrap.all('.faq-question');
-                    	var allAnswerNodes = faqWrap.all('.faq-answer');
-                    	
-                    	var isTargetActive = questionNode.hasClass('active');
-                    	
-                    	allAnswerNodes.hide();
-                    	allQuestionNodes.removeClass('active');
-                    	
-                    	if(isTargetActive) {
-                    		questionNode.removeClass('active');
-                    	}
-                    	else {
-                    		questionNode.addClass('active');
-                    		answerNodes.show();
-                    	}
+                    	listNode.toggleClass('expanded');
                     },
             		
             		_onMainNavEnter: function(e) {
