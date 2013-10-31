@@ -2904,7 +2904,8 @@ ul.idea-list > li {
 }
 
 .faq-question {
-    background: url(../images/arrows/05_right.png) center right no-repeat;  
+    background: url(../images/arrows/05_right.png) center right no-repeat;
+    padding-right: 20px;  
 }
 
 .expanded .faq-question {
