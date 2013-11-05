@@ -81,9 +81,9 @@ body {
 #wrapper:after {
     content: "";
     display: block;
+    height: 100px; /*  must be the same height as footer */
 }
 #footer,
-#wrapper:after,
 .ie7 .ie-footer-fix {
     height: 100px; /*  must be the same height as footer */
 }
