@@ -2804,7 +2804,8 @@ ul.idea-list > li {
 /* Needs ie7 fix */
 .create-idea-form .aui-field input[type="text"],
 .create-idea-form .aui-field textarea,
-.create-idea-form .aui-field select {
+.create-idea-form .aui-field select,
+.create-idea-form .aui-field .empty {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;	
