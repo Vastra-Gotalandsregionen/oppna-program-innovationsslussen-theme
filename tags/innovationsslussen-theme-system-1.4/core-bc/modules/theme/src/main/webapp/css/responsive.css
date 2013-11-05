@@ -1,0 +1,568 @@
+/*----------------------------------------------------------------------
+=All devices with width 950px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 950px) {
+    
+    /*------- Idea List portlet -------*/
+    
+    ul.idea-list > li {
+        width: 49.5%;
+    }
+    
+    
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 740px or less and iPad both landscape and portrait
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 740px)
+{
+
+/* ----------------- Banner / header ----------------------- */
+
+.company-title {
+	display: none;
+}
+
+.company-title-responsive {
+	display: block;
+}
+
+#banner .company-title .logo {
+	float: none;
+	margin: 0 auto;
+}
+
+.top-navigation {
+    display: none;
+}
+
+ul.top-nav-list {
+	float: none;
+}
+
+.header-inner,
+.content-inner,
+.footer-inner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/* -----------------  Layout ----------------------- */
+
+/*---- Columns ----*/
+
+.aui-layout .aui-column {
+	float: none;
+	width: 100%;
+}
+
+.aui-layout .aui-column .aui-column-content {
+	padding: 0;
+}
+
+
+/* ----------------- Liferay Portlets ----------------------- */
+
+/*---- Navigation Portlet ----*/
+
+ul.section-navigation-list li {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+ul.section-navigation-list li a .inner {
+	min-height: auto;
+}
+	
+/* ----------------- Custom Portlets ----------------------- */
+
+/*---- Create Idea ----*/
+
+.create-idea .intro {
+    background: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.create-confirmation .content {
+    background: none;
+    padding-right: 0;
+}
+
+.create-confirmation .link-button-mod {
+    font-size: 1.0e;
+    padding: 10px 10px;
+}
+
+/* ----------------- Navigation ----------------------- */
+
+/* -- Main Navigation -- */
+
+#navigation {
+	display: none;
+}
+
+#navigation {
+    
+    background: #3a84c1;
+    border: 1px solid #2b699b;
+    padding-bottom: 0;
+}
+
+.show-navigation #navigation {
+    display: block;
+}
+
+#navigation > ul {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul.nav-list li {
+    background: none;
+    border-bottom: 1px solid #2f73a9;
+    float: none;
+}
+
+#navigation ul.nav-list li.selected {
+    border-bottom: none;
+}
+
+#navigation ul.nav-list li.selected a {
+    border-bottom: none;
+}
+
+#navigation ul.nav-list li a {
+    background: none;
+    border-bottom: 1px solid #468cc6;
+    color: #fff;
+    font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 10px;
+    text-shadow: 1px 1px #1e4e76;
+}
+
+#navigation ul.nav-list > li > a > span {
+    background: none;
+    display: inline;
+    height: auto;
+    line-height: 1.0;
+    padding: 0;    
+}
+
+#navigation ul.nav-list > li:first-child > a > span {
+    background: none;
+    font-size: inherit;
+    padding: 0;
+    text-indent: 0;
+}
+
+#navigation ul.nav-list li.add-idea {
+    float: none;
+}
+
+#navigation ul.nav-list li.add-idea a {
+    background: none;
+    color: #fff;
+    font-weight: normal;
+}
+
+#navigation ul.nav-list li.add-idea a span {
+    background: none;
+    display: inline;
+    min-height: auto;
+    padding-left: 0;
+}
+
+#navigation .nav-list-sub-wrap {
+    background: #548332;
+    display: none;
+    padding: 0;
+    position: static;
+    width: 100%;
+    z-index: auto;
+}
+
+#navigation  ul.nav-list > li:hover > .nav-list-sub-wrap {
+    display: none;
+}
+
+#navigation .selected .nav-list-sub-wrap,
+#navigation  ul.nav-list > li.selected:hover > .nav-list-sub-wrap {
+    display: block;
+}
+
+#navigation ul.nav-list ul {
+    background: #548332;
+    border: 1px solid #416824;
+    margin: 0 0 0 10px;
+    position: static;
+    z-index: auto;
+}
+
+#navigation ul.nav-list ul li {
+    background: none;
+    border: none;
+    display: block;
+    float: none;
+}
+
+#navigation ul.nav-list li.login,
+#navigation ul.nav-list li.logout {
+    display: block;
+}
+
+#navigation ul.nav-list ul li a {
+    font-size: 1.2em;
+}
+
+#navigation ul.nav-list ul li a,
+#navigation ul.nav-list ul li a:hover,
+#navigation ul.nav-list .selected ul li a {
+    background: #f0f1f5 url(../images/navigation/nav-bg-gray.png) top left repeat-x;
+    border-bottom: 1px solid #c4ced5;
+    color: #2f73a9;
+    font-weight: normal;
+    text-shadow: 1px 1px #fff;
+}
+
+#navigation ul.nav-list ul li a:hover {
+    background: #fff url(../images/navigation/nav-bg-gray-reversed.png) top left repeat-x;
+}
+
+#navigation ul.nav-list ul li.selected a,
+#navigation ul.nav-list ul li.selected a:hover {
+    background: #548332;
+    color: #fff;
+    text-shadow: none;    
+}
+
+/* -- Navigation Trigger -- */
+
+#navigationTrigger.navigation-trigger-ready {
+    display: block;
+}
+	
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 700px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 700px) {
+	
+	/*------- Idea List portlet -------*/
+	
+	ul.idea-list > li {
+		width: 100%;
+	}
+	
+	
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 600px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 600px) {
+	
+	
+/* ----------------- Banner / header ----------------------- */
+
+#heading {
+    padding-bottom: 5px;
+}
+
+.header-inner,
+.content-inner,
+.footer-inner {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+	
+ul.top-nav-list .top-nav-settings,
+ul.top-nav-list .top-nav-quick-access {
+	display: none;
+}
+
+.company-title-responsive,
+#banner .company-title-responsive .logo {
+	width: 205px;
+}
+
+#banner .company-title-responsive .logo {
+	background-position: 0 -50px;
+	height: 22px;
+}
+
+#banner .company-title .server-node-info  {
+	display: none;
+}
+
+#toolsSidebar {
+	display: none;
+}
+
+#main-content {
+	margin-right: 0;
+	margin: 0;
+}
+
+/* -----------------  Base blocks ----------------------- */
+
+/*---- Common elements ----*/
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.4em;   
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.0em;
+}
+
+
+/* -----------------  Layout ----------------------- */
+
+/*---- Columns ----*/
+
+#content .portlet-layout {
+	display: block;
+}
+
+#content .portlet-layout .portlet-column {
+	display: block;
+	width: 100.0%;
+}
+
+#content .portlet-layout .portlet-column-content {
+	padding: 5px 0;
+}
+
+/* -----------------  Navigation ----------------------- */
+
+#navigationButtonMenu ul {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* ----------------- Liferay Portlets ----------------------- */
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.idea-toolbar-wrap li.icon a span.label {
+    font-size: 0;
+    text-indent: -9999em;
+}
+
+.idea .idea-flow-wrap {
+    float: left;
+}
+
+.add-comment-form .field-wrap,
+.add-comment-form .button-holder,
+.add-comment-form .field-wrap label,
+.add-comment-form .field-element-wrap {
+	float: none;
+	width: 100%;
+}
+
+.add-comment-form .rp-button input[type="submit"] {
+	margin: 10px 0;
+}
+
+.idea-meta h2,
+.idea-comments > h2 {
+    font-size: 1.3em;
+}
+
+.idea-comments .comment .comment-author,
+.idea-comments .comment .comment-entry {
+    float: none;
+}
+
+.idea-comments .comment .comment-author {
+    font-size: 1.0em;
+}
+
+.idea-comments .comment .comment-author-name,
+.idea-comments .comment .comment-author-title {
+    display: inline-block;
+}
+
+.idea-comments .comment .comment-author-title {
+    font-weight: normal;
+}
+
+.idea-comments .comment .comment-entry {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.idea-comments .action-link {
+    font-size: 1.1em;
+}
+
+/*------- Create Idea portlet -------*/
+
+.create-idea-form .element-field-wrap,
+.create-idea-form .element-field-help,
+.create-idea-form label,
+.create-idea-form .element-field {
+    float: none;
+    width: 100%;
+}
+
+.create-idea-form .aui-field input[type="text"],
+.create-idea-form .aui-field textarea,
+.create-idea-form .aui-field select {
+    margin: 0;
+    width: 100%;
+}
+
+.create-idea-form .element-field-help {
+    margin-top: 5px;
+}
+
+
+/* ----------------- Articles ----------------------- */
+
+/*---- Banner Communicate ----*/
+
+.banner-communicate {
+    background: none;
+    border: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.banner-communicate-view-wrap {
+    padding: 0;
+} 
+
+.banner-communicate-layout .banner-communicate-column {
+	float: none;
+	width: 100%;
+}
+
+.banner-communicate-column .banner-communicate-column-content {
+	padding: 0;
+}
+
+.banner-communicate-layout-1 {
+    display: none;
+}
+
+.banner-communicate-layout-1 .banner-communicate-column-2,
+.banner-communicate-layout-2 .banner-communicate-column-1 {
+	display: none;
+}
+
+.banner-communicate h1 {
+    font-size: 1.6em;
+}
+
+.banner-communicate .banner-communicate-minimize,
+.banner-communicate .banner-communicate-normalize {
+    display: none;
+}
+
+.banner-communicate .action-link-button {
+    margin: 0;
+}
+
+.banner-communicate .back-link-wrap .action-link {
+    color: #2f72a9;
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 400px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 400px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 300px;
+}
+
+
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 360px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 360px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 270px;
+}
+
+
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 350px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 350px) {
+
+/* ----------------- Custom Portlets ----------------------- */
+
+/*------- Idea portlet -------*/
+
+.add-comment-form .field-element-wrap textarea {
+    width: 250px;
+}
+
+
+}
+
+
+
+
+}
+
+
+/*----------------------------------------------------------------------
+=Sandbox
+----------------------------------------------------------------------*/
+
+
+
+/* -- Main Navigation -- */
+
+/* */
+
