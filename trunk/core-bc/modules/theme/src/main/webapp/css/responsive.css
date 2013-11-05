@@ -224,6 +224,10 @@ ul.section-navigation-list li a .inner {
     display: block;
 }
 
+.signed-in #navigation ul.nav-list li.login {
+    display: none;
+}
+
 #navigation ul.nav-list ul li a {
     font-size: 1.2em;
 }
