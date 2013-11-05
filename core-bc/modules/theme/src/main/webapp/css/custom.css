@@ -2835,6 +2835,10 @@ ul.idea-list > li {
 	text-indent: -9999em;
 }
 
+.create-idea-form .element-field-help .element-field-help-additional {
+    font-size: 0.9em;
+}
+
 .create-idea-form .aui-button-holder {
 	text-align: center;
 }
