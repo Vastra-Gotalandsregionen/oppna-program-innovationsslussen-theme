@@ -1,16 +1,49 @@
 // Plain javascript that runs before AUI is ready (to prevent content flashing
 
 // Body
-addCssClassName(document.body, 'js');
+addCssClass(document.body, 'js');
+bindNavigationTrigger(document.getElementById('navigationTrigger'));
 
-////Hide footer before positionFooter has been run
-//var plainOldJsfooterNode = document.getElementById('footer');
-//addCssClassName(plainOldJsfooterNode, 'aui-helper-hidden');
+function hasCssClass(elem, className) {
+	if(elem) {
+		return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+	}
+}
 
-function addCssClassName(node, cssClassName) {
-	if(node) {
-		var newClassName = node.className + ' ' + cssClassName;
-		node.className = newClassName;
+function addCssClass(elem, className) {
+	if(elem) {
+	    if (!hasCssClass(elem, className)) {
+	    	elem.className += ' ' + className;
+	    }
+    }
+}
+
+function removeCssClass(elem, className) {
+	
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+	if (hasCssClass(elem, className)) {
+		while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+			newClass = newClass.replace(' ' + className + ' ', ' ');
+		}
+		elem.className = newClass.replace(/^\s+|\s+$/g, '');
+	}
+}
+
+function toggleCssClass(elem, className) {
+	if(hasCssClass(elem, className)) {
+		removeCssClass(elem, className);
+	} else {
+		addCssClass(elem, className);
+	}
+}
+
+function bindNavigationTrigger(navigationTrigger) {
+	if(navigationTrigger) {
+		navigationTrigger.onclick = function(e) {
+			toggleCssClass(document.body, 'show-navigation')
+			return false;
+		}
+		addCssClass(navigationTrigger, 'navigation-trigger-ready');
 	}
 }
 

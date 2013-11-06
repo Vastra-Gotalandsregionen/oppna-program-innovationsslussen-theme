@@ -57,7 +57,7 @@ AUI().add('innovationsslussen-theme',function(A) {
                         
                         instance._bindIdeaList();
                         
-                        instance._bindNavigationTrigger();
+                        //instance._bindNavigationTrigger();
                     },
                     
                     _bindFaq: function () {
