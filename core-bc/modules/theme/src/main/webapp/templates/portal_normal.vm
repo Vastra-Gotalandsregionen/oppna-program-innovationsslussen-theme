@@ -91,6 +91,10 @@
 
 </body>
 
+<script type="text/javascript">
+    #include ("$js_full_path/pojs.js")
+</script>
+
 $theme.include($bottom_include)
 
 <script src="//www.youtube.com/player_api"></script>
