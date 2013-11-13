@@ -1444,6 +1444,24 @@ ul.rp-toolbar li a.active {
 	border: 1px solid #c4ced5;	
 }
 
+
+/*------- Idea Message -------*/
+
+.idea-msg-ifo {}
+
+.idea-msg-ifo h2 {
+    color: #222;
+    font-size: 1.6em;
+    margin: 0 0 0.4em 0;
+}
+
+.idea-msg-ifo h3 {
+    color: #222;
+    font-size: 1.2em;
+    margin: 0 0 0.4em 0;
+}
+
+
 /*----------------------------------------------------------------------
 =Liferay Components
 ----------------------------------------------------------------------*/
