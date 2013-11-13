@@ -36,7 +36,7 @@
 					#set($add_idea_link_css_class = "")
 				#end
 				
-                <a class="$add_idea_link_css_class" href="${urlPrefix}${add_idea_layout.getFriendlyURL()}" data-promptmsg="Du m&aring;ste vara inloggad f&ouml;r att f&aring; skicka in en id&eacute;">
+                <a class="$add_idea_link_css_class" href="${urlPrefix}${add_idea_layout.getFriendlyURL()}" data-promptmsg="Du m&aring;ste vara inloggad f&ouml;r att f&aring; skicka in en id&eacute;. Du m&aring;ste ha en VGR-anv&auml;ndare för att logga in. Mer information om inloggning finns på sidan Fr&aring;gor och Svar.">
                     <span>Skicka in din id&eacute;</span>
     			</a>
     		</li>
