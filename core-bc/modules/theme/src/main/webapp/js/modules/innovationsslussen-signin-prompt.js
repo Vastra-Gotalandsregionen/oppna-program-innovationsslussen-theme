@@ -53,8 +53,8 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
                     renderUI: function() {
                         var instance = this;
                         
-        				var width = 300;
-        				var height = 150;
+        				var width = 350;
+        				var height = 200;
         				
         				var signinUrl = instance.get(SIGNIN_URL);
         				
