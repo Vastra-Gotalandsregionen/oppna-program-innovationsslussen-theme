@@ -519,7 +519,12 @@ ul.top-nav-list li .login-link-portlet > a {
 	position: absolute;
 	top: 100%;
 	width: 200px;
-	z-index: 598;
+	z-index: 1;
+}
+
+#navigation li:hover .nav-list-sub-wrap,
+#navigation li.hover .nav-list-sub-wrap {
+    z-index: 598;
 }
 
 /* Sub List */
@@ -531,7 +536,12 @@ ul.top-nav-list li .login-link-portlet > a {
 	margin: 0;
 	padding: 0;
 	position: relative;
-	z-index: 598;
+	z-index: 1;
+}
+
+#navigation li:hover ul.nav-list ul,
+#navigation li.hover ul.nav-list ul {
+    z-index: 598;
 }
 
 #navigation  ul.nav-list ul li {
