@@ -1461,6 +1461,13 @@ ul.rp-toolbar li a.active {
     margin: 0 0 0.4em 0;
 }
 
+/*------- Add This Social Sharing -------*/
+
+/* Hide social sharing when idea private view */
+
+.idea-private-view .addthis-smartlayers {
+    display: none;
+}
 
 /*----------------------------------------------------------------------
 =Liferay Components
