@@ -132,6 +132,7 @@
 	"modules/rp-footer-plugin.js",
 	"modules/rp-iframe-link-plugin.js",
 	"modules/rp-expanding-textarea-plugin.js",
+	"modules/select-to-dropdown-plugin.js",
 	"modules/innovationsslussen-signin-prompt.js",
 	"modules/innovationsslussen-signin-prompt-link-plugin.js",
 	"modules/innovationsslussen-banner-communicate-plugin.js",

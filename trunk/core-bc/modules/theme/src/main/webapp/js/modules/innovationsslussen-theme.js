@@ -41,9 +41,9 @@ AUI().add('innovationsslussen-theme',function(A) {
                         instance._initActionConfirmation();
                         instance._initSigninPrompt();
                         instance._initBannerCommunicate();
-                        instance._initBreadcrumbs();
                         instance._initMainNavigation();
                         instance._initOverlayLinks();
+                        instance._initSelectToDropdown();
                         instance._initExpandingTextareas();
                         instance._fixToolbar();
                     },
@@ -220,20 +220,6 @@ AUI().add('innovationsslussen-theme',function(A) {
 						}
 					},
                     
-                    _initBreadcrumbs: function() {
-                    	var instance = this;
-                    	
-                    	var breadcrumbItems = A.all('#breadcrumbs ul.breadcrumbs li');
-                    	if(breadcrumbItems.size() > 0) {
-                    		var firstItem = breadcrumbItems.item(0);
-                    		var lastItem = breadcrumbItems.item(breadcrumbItems.size() - 1);
-                    		
-                    		firstItem.addClass('first');
-                    		lastItem.addClass('last');
-                    	}
-                    	
-                    },
-                    
             		_initExpandingTextareas: function() {
             			var instance = this;
             			
@@ -270,6 +256,14 @@ AUI().add('innovationsslussen-theme',function(A) {
                 			mainNavList.on('mouseleave', instance._onMainNavLeave, instance);
             			}
             		},
+            		
+            		_initSelectToDropdown: function() {
+            			var instance = this;
+            			
+            			var selects = A.all('select.select-to-dropdown');
+            			selects.plug(A.Plugin.SelectToDropdown);
+            		},
+            		
                     
                     _onFaqQuestionClick: function(e) {
                     	var instance = this;
@@ -334,7 +328,8 @@ AUI().add('innovationsslussen-theme',function(A) {
 	    	'innovationsslussen-signin-prompt-link-plugin',
 	    	'rp-action-confirmation-plugin',
 	    	'rp-iframe-link-plugin',
-	    	'rp-expanding-textarea-plugin'
+	    	'rp-expanding-textarea-plugin',
+	    	'select-to-dropdown-plugin'
       ]
     }
 );
