@@ -1471,6 +1471,71 @@ ul.rp-toolbar li a.active {
     margin: 0 0 0.4em 0;
 }
 
+/*------- Filter toolbar -------*/
+
+.idea-filters-wrap {
+    min-width: 690px;
+    width: 97.65%;
+}
+
+.idea-filters {
+    margin-right: 15px;
+}
+
+.idea-filters-toolbar {
+    background: #fff url(../images/toolbar/toolbar-bg.png) bottom left repeat-x;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0px 1px 4px 0px #cccccc;
+    -webkit-box-shadow: 0px 1px 4px 0px #cccccc;
+    box-shadow: 0px 1px 4px 0px #cccccc;    
+    border: 1px solid #d5e0ea;
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    position: relative;
+}
+
+.filter-item {
+    background: transparent url(../images/toolbar/toolbar-sep.png) 100% 50% no-repeat;
+    float: left;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+.filter-item-label {
+    color: #3177ae;
+    float: left;
+    line-height: 20px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.filter-item-element {
+    float: left;
+}
+
+/*------- Select To Dropdown (js plugin) -------*/
+
+.select-to-dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide dropdown list */
+.select-to-dropdown-list {
+    display: none;
+}
+
+.select-to-dropdown-trigger {
+    background: blue;
+    display: block;
+    height: 13px;
+    width: 13px;
+}
+
 /*------- Add This Social Sharing -------*/
 
 /* Hide social sharing when idea private view */
