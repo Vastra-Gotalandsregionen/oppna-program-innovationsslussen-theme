@@ -370,6 +370,21 @@ h4 {
 	margin-right: 10px;
 }
 
+/* ----------------- Modules and Content ----------------------- */
+
+/*------- Filter toolbar -------*/
+
+.filter-item-label {
+    float: none;
+    margin-right: 0;
+}
+
+.filter-item-element {
+    float: none;
+    margin-right: 0;
+}
+
+
 /* ----------------- Liferay Portlets ----------------------- */
 
 /* ----------------- Custom Portlets ----------------------- */

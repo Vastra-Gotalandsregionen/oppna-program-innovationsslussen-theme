@@ -1474,13 +1474,20 @@ ul.rp-toolbar li a.active {
 /*------- Filter toolbar -------*/
 
 .idea-filters-wrap {
-    min-width: 690px;
-    width: 97.65%;
+    width: 96.65%;
 }
 
-.idea-filters {
-    margin-right: 15px;
+.ie7 .idea-filters-wrap {
+    width: 95.65%;
 }
+
+
+/* Needed for select-to-dropdown module to work properly in ie7 (and in some occasions ie8) */
+.ie7 .idea-filters,
+.ie8 .idea-filters {
+    position: relative;
+    z-index: 3000;
+} 
 
 .idea-filters-toolbar {
     background: #fff url(../images/toolbar/toolbar-bg.png) bottom left repeat-x;
@@ -1504,6 +1511,11 @@ ul.rp-toolbar li a.active {
     margin-right: 15px;
 }
 
+.filter-item:last-child,
+.filter-item-last {
+    background: none;
+}
+
 .filter-item-label {
     color: #3177ae;
     float: left;
@@ -1516,25 +1528,73 @@ ul.rp-toolbar li a.active {
     float: left;
 }
 
-/*------- Select To Dropdown (js plugin) -------*/
-
-.select-to-dropdown-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.js .idea-filters select.select-to-dropdown {
+    visibility: hidden;
 }
 
-/* Hide dropdown list */
-.select-to-dropdown-list {
+.js .idea-filters input[type="submit"] {
     display: none;
 }
 
-.select-to-dropdown-trigger {
-    background: blue;
+/*------- Select To Dropdown (js plugin) -------*/
+
+.select-to-dropdown-wrap {
     display: block;
-    height: 13px;
-    width: 13px;
+    position: relative;
+    z-index: 600;
 }
+
+.select-to-dropdown-trigger {
+    background: transparent url(../images/icons/dropdown.png) right center no-repeat;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 25px;
+}
+
+.select-to-dropdown-list {
+    background: #f9f9fb;
+    border: 1px solid #bbc6ce;
+    border-top: none;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 19px;
+    width: 200px;
+    z-index: 598;
+}
+
+.select-to-dropdown-list-active {
+    display: block;
+}
+
+.ie7 .select-to-dropdown-list-active {
+    zoom: 1;
+}
+
+.select-to-dropdown-list li {
+    background: #f9f9fb;
+    border-bottom: 1px solid #dadfe5;
+    color: #2f72a9;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.select-to-dropdown-list li:hover,
+.select-to-dropdown-list li.hover {
+    background: #3a84c1 url(../images/navigation/navigation-bg-hover.png) top left repeat-x;
+    color: #fff;
+}
+
+.select-to-dropdown-list li:last-child,
+.select-to-dropdown-list li.last {
+    border-bottom: none;
+}
+
+
 
 /*------- Add This Social Sharing -------*/
 
@@ -2198,9 +2258,14 @@ ul.idea-list > li {
 }
 
 .idea-list .idea-item {
-	margin: 0 15px 0 0;
 	background: url(../images/articles/box-shadow-24.png) bottom center no-repeat;
-	padding-bottom: 15px;
+	margin: 0 5% 0 0;
+	padding-bottom: 5%;
+}
+
+.ie7 .idea-list .idea-item {
+    margin-right: 15px;
+    padding-bottom: 15px;
 }
 
 .idea-list > li a {

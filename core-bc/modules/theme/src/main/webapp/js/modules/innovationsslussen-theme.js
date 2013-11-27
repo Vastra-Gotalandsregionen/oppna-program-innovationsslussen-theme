@@ -261,7 +261,9 @@ AUI().add('innovationsslussen-theme',function(A) {
             			var instance = this;
             			
             			var selects = A.all('select.select-to-dropdown');
-            			selects.plug(A.Plugin.SelectToDropdown);
+            			selects.plug(A.Plugin.SelectToDropdown, {
+            				bindFormSubmit: true
+            			});
             		},
             		
                     

@@ -5,27 +5,31 @@ AUI.add('select-to-dropdown-plugin', function(A) {
     	isString = Lang.isString,
 	
 		getClassName = A.ClassNameManager.getClassName,
-	
+		
 		NAME = 'select-to-dropdown-plugin',
 		NS = 'select-to-dropdown',
 		
 		// Property keys
+		BIND_FORM_SUBMIT = 'bindFormSubmit',
 		HOST = 'host'
 	;
     
     var
     	TPL_WRAP = '<span class="select-to-dropdown-wrap"></span>',
-    	TPL_CURRENT = '<span class="select-to-dropdown-current">{value}</span>',
-    	TPL_TRIGGER = '<span class="select-to-dropdown-trigger"></span>',
+    	TPL_TRIGGER = '<span class="select-to-dropdown-trigger">{value}</span>',
     
     	TPL_LIST = '<ul class="select-to-dropdown-list"></ul>',
-    	TPL_LIST_ITEM = '<li data-value="{value}">{text}</li>'
+    	TPL_LIST_ITEM = '<li class="{cssClass}" data-value="{value}">{text}</li>'
     ;
 	
     // This module is not yet finished
 	var SelectToDropdown = A.Component.create(
 		{
             ATTRS: {
+            	
+            	bindFormSubmit: {
+            		value: false
+            	},
             	
                 someAttr: {
                     value : ''
@@ -39,9 +43,83 @@ AUI.add('select-to-dropdown-plugin', function(A) {
 	
 			prototype: {
 				
+				listVisible: false,
+				listNode: null,
+				triggerNode: null,
 				selectedValue: null,
+				wrapNode: null,
 				
 				initializer: function() {
+					var instance = this;
+					
+					instance._setupUI();
+					instance._setupBind();
+				},
+				
+				destructor: function() {
+					var instance = this;
+					
+			        var host = instance.get(HOST);
+				},
+				
+				_onDocumentClick: function(e) {
+					var instance = this;
+					
+					var target = e.target;
+					
+					var isChildOfWrap = instance.wrapNode.contains(target);
+					
+					if(instance.listVisible && !isChildOfWrap) {
+						instance.listNode.removeClass('select-to-dropdown-list-active');
+						instance.listVisible = !instance.listVisible;
+					}
+				},
+				
+				_onListItemClick: function(e) {
+					var instance = this;
+					
+					var currentTarget = e.currentTarget;
+					
+					var selectedValue = currentTarget.getAttribute('data-value');
+					var selectedNodeInnerHtml = currentTarget.html();
+					
+					instance.selectedValue = selectedValue;
+					
+					instance.triggerNode.html(selectedNodeInnerHtml);
+					
+					var host = instance.get(HOST);
+					host.set('value', instance.selectedValue);
+					
+					if(instance.get(BIND_FORM_SUBMIT)) {
+						var form = host.ancestor('form');
+						submitForm(form);
+					}
+					
+				},
+				
+				_onTriggerClick: function(e) {
+					var instance = this;
+					
+					instance.listNode.toggleClass('select-to-dropdown-list-active');
+					
+					instance.listVisible = !instance.listVisible;
+				},
+				
+				_setupBind: function() {
+					var instance = this;
+					
+					// Trigger click
+					instance.triggerNode.on('click', instance._onTriggerClick, instance)
+					
+					// Document click
+					A.one(document.body).on('click', instance._onDocumentClick, instance);
+					
+					// List item click
+					var listItems = instance.listNode.all('li');
+					listItems.on('click', instance._onListItemClick, instance);
+				},
+				
+				_setupUI: function() {
 					var instance = this;
 					
 					var host = instance.get(HOST);
@@ -61,28 +139,33 @@ AUI.add('select-to-dropdown-plugin', function(A) {
 	                host.insert(wrap, 'after');
 	                
 	                var wrapNode = parent.one('.select-to-dropdown-wrap');
+	                instance.wrapNode = wrapNode;
 	                
-	                var current = A.substitute(TPL_CURRENT, {
-	                	value: selectedText
-	                });
-
 	                var trigger = A.substitute(TPL_TRIGGER, {
+	                	value: selectedText
 	                });
 	                
 	                var list = A.substitute(TPL_LIST, {
 	                });
 	                
-	                wrapNode.append(current);
 	                wrapNode.append(trigger);
 	                wrapNode.append(list);
 	                
 					var listNode = parent.one('ul.select-to-dropdown-list');
+					instance.listNode = listNode;
 					
 					options.each(function(option, index, list){
 						var value = option.get('value');
 						var text = option.get('text');
 						
+						var cssClass = '';
+						
+						if(index+1 == list.size()) {
+							cssClass = 'last';
+						}
+						
 		                var listItem = A.substitute(TPL_LIST_ITEM, {
+		                	cssClass: cssClass,
 		                	value: value,
 		                	text: text
 		                });
@@ -92,12 +175,9 @@ AUI.add('select-to-dropdown-plugin', function(A) {
 					
 					host.hide();
 					
-				},
-				
-				destructor: function() {
-					var instance = this;
 					
-			        var host = instance.get(HOST);
+					var triggerNode = parent.one('.select-to-dropdown-trigger');
+					instance.triggerNode = triggerNode;
 				},
 				
 				_someFunction: function() {}
