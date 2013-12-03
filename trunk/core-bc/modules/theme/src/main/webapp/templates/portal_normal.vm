@@ -5,7 +5,7 @@
 <html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
 
 <head>
-	<title>$the_title - $company_name</title>
+	<title>$the_title - $page_group.name</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
