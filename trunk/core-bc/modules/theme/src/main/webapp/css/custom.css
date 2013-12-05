@@ -2571,8 +2571,19 @@ ul.idea-list > li {
 	background-image: url(../images/file_system/small/pdf.png);
 }
 
-.idea-meta ul.documents-list li.doc a {
+.idea-meta ul.documents-list li.doc a,
+.idea-meta ul.documents-list li.docx a {
 	background: url(../images/file_system/small/docx.png) left center no-repeat;
+}
+
+.idea-meta ul.documents-list li.xls a,
+.idea-meta ul.documents-list li.xlsx a {
+    background: url(../images/file_system/small/xlsx.png) left center no-repeat;
+}
+
+.idea-meta ul.documents-list li.ppt a,
+.idea-meta ul.documents-list li.pptx a {
+    background: url(../images/file_system/small/pptx.png) left center no-repeat;
 }
 
 .idea-meta ul.documents-list li.img a {
