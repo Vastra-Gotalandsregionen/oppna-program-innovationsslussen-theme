@@ -7,7 +7,7 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
         
 		// Custom Attributes
         PROMPT_MSG = 'promptMsg',
-        PROMPT_MSG_DEFAULT = 'Du m&aring;ste vara inloggad f&ouml;r att f&aring; g&ouml;ra detta. Du m&aring;ste ha en VGR-anv&auml;ndare för att logga in. Mer information om inloggning finns på sidan Fr&aring;gor och Svar.',
+        PROMPT_MSG_DEFAULT = 'Du m&aring;ste vara inloggad f&ouml;r att f&aring; skicka in en id&eacute;, information om inloggning finns p&aring; sidan Fr&aring;gor och Svar.',
 		SIGNIN_URL = 'signinUrl',
         
         CSS_HIDDEN = 'aui-helper-hidden'
