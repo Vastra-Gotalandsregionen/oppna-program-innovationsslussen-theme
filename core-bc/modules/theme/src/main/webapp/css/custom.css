@@ -2241,7 +2241,7 @@ ul.idea-list {
 	padding: 0;
 }
 
-ul.idea-list > li {
+ul.idea-list-open > li {
 	display: -moz-inline-stack;
 	display: inline-block;
 	list-style: none;
@@ -2249,7 +2249,18 @@ ul.idea-list > li {
 	min-width: 230px;
 	padding: 0;
 	vertical-align: top;
-	width: 32.55%;
+    width: 32.55%;
+}
+
+ul.idea-list-closed > li {
+	display: -moz-inline-stack;
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	min-width: 230px;
+	padding: 0;
+	vertical-align: top;
+    width: 24.25%;
 }
 
 .ie7 ul.idea-list > li {
@@ -2350,6 +2361,10 @@ ul.idea-list > li {
 	right: 10px;
 }
 
+.idea-list ul.idea-stats-state {
+    left: 6%;
+}
+
 .idea-list ul.idea-stats {
 	bottom: 6%;
 	right: 6%;
@@ -2369,12 +2384,25 @@ ul.idea-list > li {
 	text-align: center;
 }
 
+.idea-list ul.idea-stats-state li.first {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
 .idea-list ul.idea-stats li.likes {
 	background: url(../images/toolbar/idea-toolbar-icon-sprite-default.png) 0  -100px no-repeat;
 }
 
 .idea-list ul.idea-stats li.comments {
 	background: url(../images/toolbar/idea-toolbar-icon-sprite-default.png) 0  3px no-repeat;
+}
+
+.idea-list ul.idea-stats li.open {
+    background: url(../images/toolbar/idea-toolbar-icon-sprite-default.png) 0  -298px no-repeat;
+}
+
+.idea-list ul.idea-stats li.closed {
+    background: url(../images/toolbar/idea-toolbar-icon-sprite-private.png) 0  -398px no-repeat;
 }
 
 .idea-list .idea-label {
