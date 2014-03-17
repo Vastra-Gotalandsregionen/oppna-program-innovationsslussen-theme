@@ -114,7 +114,9 @@
 	$permissionChecker.isOmniadmin() ||
 	$permissionChecker.isCompanyAdmin($company_id) ||
 	$permissionChecker.isCommunityAdmin($group_id) ||
-	$permissionChecker.isCommunityOwner($group_id)
+	$permissionChecker.isCommunityOwner($group_id) ||
+    $permissionChecker.hasPermission($group_id, "90", $company_id, "VIEW") ||
+    $permissionChecker.hasPermission($group_id, "125", $company_id, "ACCESS_IN_CONTROL_PANEL")
 )
 
 ##--------------------------------------------------------------------------
