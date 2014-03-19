@@ -14,7 +14,7 @@
         	'theme' : 'transparent',
         	'share' : {
           		'position' : 'right',
-          		'numPreferredServices' : 5,
+              services' : 'facebook,yammer,mail,twitter,more',
         		'offset' : {
         			'top': '200px'
         		}
