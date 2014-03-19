@@ -1,25 +1,25 @@
 #if($add_this_code != "" && $show_social_sharing)
 	
-    <!-- AddThis Smart Layers BEGIN -->
-    <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-	<script type="text/javascript" src="$add_this_script_url"></script>
-    <script type="text/javascript">
+  <!-- AddThis Smart Layers BEGIN -->
+  <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+  <script type="text/javascript" src="$add_this_script_url"></script>
+  <script type="text/javascript">
 
 
-		addthis_config = {
-			'ui_language': 'sv' 
+    addthis_config = {
+      'ui_language': 'sv' 
 		};
 
 		addthis.layers({
-        	'theme' : 'transparent',
-        	'share' : {
-          		'position' : 'right',
-              services' : 'facebook,yammer,mail,twitter,more',
-        		'offset' : {
-        			'top': '200px'
-        		}
-        	}
-      	});
-    </script>
-    <!-- AddThis Smart Layers END -->
+      'theme' : 'transparent',
+      'share' : {
+        'position' : 'right',
+        'services' : 'facebook,yammer,email,twitter,more',
+        'offset' : {
+          'top': '200px'
+        }
+      }
+    });
+  </script>
+  <!-- AddThis Smart Layers END -->
 #end
